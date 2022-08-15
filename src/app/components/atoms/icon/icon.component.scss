@@ -1,0 +1,11 @@
+:host {
+  .icon-container {
+    width: calc(var(--ref-size) * 2);
+    height: calc(var(--ref-size) * 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .icon {
+    }
+  }
+}

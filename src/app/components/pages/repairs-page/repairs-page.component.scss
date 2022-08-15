@@ -1,0 +1,13 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ref-size);
+  height: 100%;
+
+  .parent {
+    height: 100%;
+  }
+  .child {
+    flex-grow: 1;
+  }
+}

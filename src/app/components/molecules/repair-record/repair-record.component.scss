@@ -1,0 +1,21 @@
+@use '../../../styles/mixins/repair-record';
+
+:host {
+  width: 100%;
+  .main {
+    margin: 0 0.5em 0 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .main--repair--record {
+      width: 100%;
+      font-size: calc(var(--ref-size-tenth) * 9);
+      row-gap: calc(var(--ref-size-tenth) * 1);
+      @include repair-record.grid-parent;
+      @include repair-record.grid-children;
+    }
+  }
+}
+

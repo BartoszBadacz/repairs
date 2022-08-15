@@ -1,0 +1,15 @@
+:host {
+width: 100%;
+  .main--title {
+    user-select: none;
+    height: 2em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .title--icon {
+    padding: 0 .15em 0 .15em;
+  }
+
+}

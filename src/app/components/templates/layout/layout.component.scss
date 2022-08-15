@@ -1,0 +1,23 @@
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  .top {
+    position: sticky;
+    top: 0;
+    flex-grow: 0;
+  }
+  .content {
+    flex-grow: 1;
+    height: 100%;
+  }
+  .bottom {
+    position: sticky;
+    flex-grow: 0;
+    bottom: 0;
+  }
+}
+
+
+

@@ -1,0 +1,22 @@
+:host {
+  width: 100%;
+
+
+  .main--header {
+    height: 3em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1em;
+
+    &-home-icon {
+
+    }
+  }
+
+  .form {
+  width: 5em;
+    border-radius: 50%
+  }
+}

@@ -1,0 +1,44 @@
+@mixin grid-parent {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+      "col-1 col-2 col-2 col-2 col-2 col-3 col-3 col-3 col-4 col-4 col-4 col-5"
+    " . col-6 col-6 col-6 col-6 col-6 col-6 col-6 col-6 col-6 col-6 col-6";
+}
+
+@mixin grid-children {
+  &-field1 {
+    grid-area: col-1;
+  }
+
+  &-field2 {
+    grid-area: col-2;
+    justify-self: start;
+  }
+
+  &-field3 {
+    justify-self: start;
+    grid-area: col-3;
+  }
+
+  &-field4 {
+    grid-area: col-4;
+    justify-self: start;
+  }
+
+  &-field5 {
+    grid-area: col-5;
+    justify-self: end;
+  }
+
+  &-field6 {
+    grid-area: col-6;
+    justify-self: start;
+  }
+
+  .text-description {
+    white-space: nowrap;
+    font-size: calc(var(--ref-size-tenth) * 8);
+  }
+}

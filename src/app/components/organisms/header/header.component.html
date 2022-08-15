@@ -1,0 +1,34 @@
+<main class="main--header">
+  <app-icon
+    [iconName]="icon('keyboard_arrow_left')"
+    (click)="onBackClick()"
+  ></app-icon>
+  <app-icon
+    routerLink="/start"
+    class="main--header-home-icon"
+    (click)="onHomeClick()"
+    [iconName]="icon('home')">
+  </app-icon>
+  <app-icon
+  routerLink="/repairs"
+  [iconName]="icon('view_list')"
+  (click)="onRepairsClick()"
+  ></app-icon>
+  <app-icon
+    [iconName]="icon('refresh')"
+    (click)="onRefreshClick()"
+  ></app-icon>
+<app-icon
+[iconName]="icon('settings')"
+(click)="onSettingsClick()"
+></app-icon>
+  <app-icon
+  [iconName]="icon('keyboard_arrow_right')"
+  ></app-icon>
+</main>
+
+
+<!--  <mat-form-field class="form"  appearance="outline" floatLabel="never">-->
+<!--    <mat-label>Wyszukiwanie</mat-label>-->
+<!--    <input  #search type="search" matInput (input)="onInput(search.value)">-->
+<!--  </mat-form-field>-->

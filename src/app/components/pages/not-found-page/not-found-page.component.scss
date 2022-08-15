@@ -1,0 +1,12 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .parent {
+    height: 100%;
+  }
+  .child {
+    flex-grow: 1;
+  }
+}
