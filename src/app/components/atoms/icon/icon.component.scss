@@ -9,11 +9,5 @@
     color: var(--color--text);
     border-radius: 0.5em;
     background-color: var(--color--background);
-    transition: background-color 500ms ease-in-out, color 500ms ease-in-out;
-  }
-
-  .icon-container:hover {
-    background-color: var(--color-secondary);
-    color: var(--color--background);
   }
 }

@@ -18,10 +18,7 @@ export class ColorSchemeService {
 
   setScheme(colorScheme: ColorScheme): void {
     this.currentScheme = colorScheme;
-    this.changeScheme();
-  }
-
-  private changeScheme() {
     document.body.setAttribute('color-scheme', this.currentScheme)
   }
+
 }
