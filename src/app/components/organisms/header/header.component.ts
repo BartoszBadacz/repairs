@@ -12,10 +12,10 @@ import {
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private colorScheme: ColorSchemeService) {
+  constructor(private colorSchemeService: ColorSchemeService) {
   }
 
-  scheme: ColorScheme = this.colorScheme.getScheme();
+  colorScheme: ColorScheme = this.colorSchemeService.getScheme();
 
   ngOnInit(): void {
   }
@@ -32,25 +32,21 @@ export class HeaderComponent implements OnInit {
     console.log('REPAIRS clicked')
   }
 
-  toggleScheme() {
-    if (this.scheme === 'light') {
-      this.scheme = 'dark'
+  setScheme() {
+    if (this.colorScheme === 'light') {
+      this.colorScheme = 'dark'
     } else {
-      this.scheme = 'light';
+      this.colorScheme = 'light';
     }
   }
 
   onColorSchemeClick() {
-    this.toggleScheme();
-    this.colorScheme.setScheme(this.scheme);
+    this.setScheme();
+    this.colorSchemeService.setScheme(this.colorScheme);
   }
 
   icon(iconName: Icon): Icon {
     return iconName
-  }
-
-  onInput(searchValue: string) {
-    console.log(searchValue)
   }
 
   onBackClick(): void {

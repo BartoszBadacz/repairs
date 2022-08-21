@@ -11,10 +11,9 @@ import {ColorSchemeService} from "../../../services/color-scheme.service";
 })
 export class LayoutComponent implements OnInit {
 
-  constructor(private colorScheme: ColorSchemeService ) {
+  constructor() {
   }
 
-  scheme = this.colorScheme.getScheme();
 
   ngOnInit(): void {
   }

@@ -1,10 +1,9 @@
-<main class="main {{scheme}}">
+<main class="main">
   <div class="top">
     <app-header></app-header>
     <app-title *ngIf="!notFound"></app-title>
   </div>
-
-    <ng-content class="content"></ng-content>
+  <ng-content class="content"></ng-content>
   <div class="bottom">
     <app-header></app-header>
   </div>
