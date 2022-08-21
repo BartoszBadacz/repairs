@@ -2,6 +2,8 @@
 
 :host {
   width: 100%;
+  position: relative;
+
   .main {
     margin: 0 0.5em 0 0.5em;
     display: flex;
@@ -11,11 +13,14 @@
 
     .main--repair--record {
       width: 100%;
-      font-size: calc(var(--ref-size-tenth) * 9);
-      row-gap: calc(var(--ref-size-tenth) * 1);
+      font-size: 0.9em;
+      row-gap: 0.1em;
       @include repair-record.grid-parent;
       @include repair-record.grid-children;
     }
   }
-}
 
+  app-separator {
+    margin-bottom: 1em;
+  }
+}

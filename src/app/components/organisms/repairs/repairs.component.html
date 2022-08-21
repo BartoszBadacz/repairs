@@ -1,4 +1,4 @@
 <main>
   <app-repair-record-heading></app-repair-record-heading>
-  <app-repair-record></app-repair-record>
+  <app-repair-record *ngFor="let repair of repairs" [repair]="repair"></app-repair-record>
 </main>

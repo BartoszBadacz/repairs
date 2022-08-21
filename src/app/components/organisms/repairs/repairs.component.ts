@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {RepairModel, repairs} from "../../../models/repair.model";
 
 @Component({
   selector: 'app-repairs',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class RepairsComponent implements OnInit {
 
   constructor() { }
+
+  repairs: RepairModel[] = repairs;
 
   ngOnInit(): void {
   }

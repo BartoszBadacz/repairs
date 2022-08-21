@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {RepairModel} from "../../../models/repair.model";
 
 @Component({
   selector: 'app-repair-record',
@@ -9,7 +10,15 @@ export class RepairRecordComponent implements OnInit {
 
   constructor() { }
 
+  showDetails: boolean = false;
+
   ngOnInit(): void {
+  }
+
+  @Input() repair: RepairModel = {};
+
+  onDetailsClick() {
+    this.showDetails = !this.showDetails;
   }
 
 }

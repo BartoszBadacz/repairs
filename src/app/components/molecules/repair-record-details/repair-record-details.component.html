@@ -1,1 +1,39 @@
-<p>repair-record-details works!</p>
+<main>
+  <p>Dostawca: {{repairRecord.vendor}}</p>
+  <p>Nazwa Klienta: {{repairRecord.customerName}}</p>
+  <div>
+    <ul>
+      <li *ngIf="repairRecord.dateOfEntry">Data
+        wejścia: {{repairRecord.dateOfEntry}}
+        <p *ngIf="repairRecord.customerDocumentNumber">Dokument
+          klienta: {{repairRecord.customerDocumentNumber}}</p>
+      </li>
+      <li *ngIf="repairRecord.dateOfPriceQuotation">Data
+        kosztorysu: {{repairRecord.dateOfPriceQuotation}}
+        <p>Numer kosztorysu: {{repairRecord.priceQuotationNumber}}</p>
+      </li>
+      <li *ngIf="repairRecord.dateOfApproval">Data
+        akceptacji: {{repairRecord.dateOfApproval}}
+        <p>Numer zamówienia klienta: {{repairRecord.customerApprovalNumber}}</p>
+      </li>
+      <li *ngIf="repairRecord.dateOfSentToRepairCenter">Data wysyłki do
+        serwisu: {{repairRecord.dateOfSentToRepairCenter}}
+        <p>Numer zgłoszenia serwisowego {{repairRecord.invoiceNumber}}</p>
+      </li>
+      <li *ngIf="repairRecord.dateOfReturnFromRepairCenter">Data powrotu z
+        serwisu: {{repairRecord.dateOfReturnFromRepairCenter}}
+      </li>
+      <li *ngIf="repairRecord.dateOfClosureDate">Data
+        zamknięcia: {{repairRecord.dateOfClosureDate}}</li>
+      <p *ngIf="repairRecord.invoiceSystemOrderNumber">FV numer
+        oracle: {{repairRecord.invoiceSystemOrderNumber}}</p>
+      <p *ngIf="repairRecord.invoiceNumber">FV
+        numer: {{repairRecord.invoiceNumber}}</p>
+    </ul>
+    <p *ngIf="repairRecord.entryComments">
+      Notatki: {{repairRecord.entryComments}}</p>
+  </div>
+  <div>
+  </div>
+</main>
+

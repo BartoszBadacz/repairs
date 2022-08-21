@@ -1,12 +1,17 @@
 <main class="main">
   <div class="main--repair--record">
-    <div class="main--repair--record-field1">1</div>
-    <div class="main--repair--record-field2">005071012500</div>
-    <div class="main--repair--record-field3">LAA07505</div>
-    <div class="main--repair--record-field4">112556</div>
+    <div class="main--repair--record-field1">{{repair.id}}</div>
+    <div class="main--repair--record-field2">{{repair.itemRef}}</div>
+    <div class="main--repair--record-field3">{{repair.itemNumber}}</div>
+    <div class="main--repair--record-field4">{{repair.customerAcc}}</div>
     <mat-icon class="main--repair--record-field5">edit</mat-icon>
-    <span class="main--repair--record-field6 text-description">Status: Wysłano kosztorys</span>
+    <span
+      class="main--repair--record-field6 text-description">Status: {{repair.currentStepDesc}}</span>
+    <span
+      class="main--repair--record-field7 text-description">Typ: {{repair.repairType}}</span>
   </div>
-  <mat-icon>keyboard_arrow_down</mat-icon>
+  <app-repair-record-details *ngIf="showDetails" [repairRecord]="repair"></app-repair-record-details>
+  <mat-icon
+    (click)="onDetailsClick()">{{showDetails ? 'keyboard_arrow_up' : 'keyboard_arrow_down'}}</mat-icon>
   <app-separator [params]="{orientation: 'vertical', color: 'blue'}"></app-separator>
 </main>

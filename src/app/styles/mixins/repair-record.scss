@@ -4,7 +4,8 @@
   grid-template-rows: 1fr 1fr;
   grid-template-areas:
       "col-1 col-2 col-2 col-2 col-2 col-3 col-3 col-3 col-4 col-4 col-4 col-5"
-    " . col-6 col-6 col-6 col-6 col-6 col-6 col-6 col-6 col-6 col-6 col-6";
+    " . col-6 col-6 col-6 col-6 col-6 col-6 col-6 col-6 col-6 col-6 . "
+  " . col-7 col-7 col-7 col-7 col-7 col-7 col-7 col-7 col-7 col-7 . ";
 }
 
 @mixin grid-children {
@@ -34,6 +35,10 @@
 
   &-field6 {
     grid-area: col-6;
+    justify-self: start;
+  }
+  &-field7 {
+    grid-area: col-7;
     justify-self: start;
   }
 
