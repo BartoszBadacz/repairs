@@ -25,6 +25,7 @@ import { NotFoundComponent } from './components/organisms/not-found/not-found.co
 import { IconComponent } from './components/atoms/icon/icon.component';
 import { RepairRecordHeadingComponent } from './components/molecules/repair-record-heading/repair-record-heading.component';
 import { NotFoundPageComponent } from './components/pages/not-found-page/not-found-page.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -43,7 +44,6 @@ import { NotFoundPageComponent } from './components/pages/not-found-page/not-fou
     IconComponent,
     RepairRecordHeadingComponent,
     NotFoundPageComponent,
-
   ],
   imports: [
     BrowserModule,
@@ -53,6 +53,7 @@ import { NotFoundPageComponent } from './components/pages/not-found-page/not-fou
     MatInputModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
