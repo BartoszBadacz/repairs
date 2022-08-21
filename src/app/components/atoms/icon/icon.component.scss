@@ -1,11 +1,19 @@
 :host {
   .icon-container {
-    width: calc(var(--ref-size) * 2);
-    height: calc(var(--ref-size) * 2);
+    width: 2em;
+    height: 2em;
     display: flex;
     align-items: center;
     justify-content: center;
-    .icon {
-    }
+    border: 1px solid gray;
+    color: var(--color--text);
+    border-radius: 0.5em;
+    background-color: var(--color--background);
+    transition: background-color 500ms ease-in-out, color 500ms ease-in-out;
+  }
+
+  .icon-container:hover {
+    background-color: var(--color-secondary);
+    color: var(--color--background);
   }
 }

@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+
+export type SeparatorParams = {
+  orientation?: 'horizontal' | 'vertical';
+  color?: string;
+}
 
 @Component({
   selector: 'app-separator',
@@ -6,10 +11,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./separator.component.scss']
 })
 export class SeparatorComponent implements OnInit {
-
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
+
+  @Input() params: SeparatorParams = {};
+
 
 }

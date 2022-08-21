@@ -1,0 +1,16 @@
+body {
+  --color--background: white;
+  --color-text: black;
+  --color-primary: #89d7e3;
+  --color-secondary: #1b8fb8;
+}
+
+body[color-scheme="dark"] {
+  --color--background: #444444;
+  --color-text: white;
+  --color-primary: #1b8fb8;
+  --color-secondary: #1b8fb8;
+}
+
+
+

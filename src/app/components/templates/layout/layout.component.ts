@@ -2,7 +2,7 @@ import {
   Component,
   OnInit,
 } from '@angular/core';
-
+import {ColorSchemeService} from "../../../services/color-scheme.service";
 
 @Component({
   selector: 'app-layout',
@@ -11,9 +11,10 @@ import {
 })
 export class LayoutComponent implements OnInit {
 
-  constructor() {
+  constructor(private colorScheme: ColorSchemeService ) {
   }
 
+  scheme = this.colorScheme.getScheme();
 
   ngOnInit(): void {
   }

@@ -19,16 +19,10 @@
     (click)="onRefreshClick()"
   ></app-icon>
 <app-icon
-[iconName]="icon('settings')"
-(click)="onSettingsClick()"
+[iconName]="icon(scheme === 'light' ? 'brightness_5' : 'brightness_3')"
+(click)="onColorSchemeClick()"
 ></app-icon>
   <app-icon
   [iconName]="icon('keyboard_arrow_right')"
   ></app-icon>
 </main>
-
-
-<!--  <mat-form-field class="form"  appearance="outline" floatLabel="never">-->
-<!--    <mat-label>Wyszukiwanie</mat-label>-->
-<!--    <input  #search type="search" matInput (input)="onInput(search.value)">-->
-<!--  </mat-form-field>-->

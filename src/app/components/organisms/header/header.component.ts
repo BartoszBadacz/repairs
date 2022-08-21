@@ -1,5 +1,9 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Icon} from "../../../models/icon.model";
+import {
+  ColorScheme,
+  ColorSchemeService
+} from "../../../services/color-scheme.service";
 
 @Component({
   selector: 'app-header',
@@ -8,26 +12,37 @@ import {Icon} from "../../../models/icon.model";
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() {
+  constructor(private colorScheme: ColorSchemeService) {
   }
 
+  scheme: ColorScheme = this.colorScheme.getScheme();
 
   ngOnInit(): void {
   }
 
   onHomeClick(): void {
-    console.log('Home Clicked')
+
   }
 
   onRefreshClick(): void {
     console.log('Refresh Clicked')
   }
+
   onRepairsClick() {
     console.log('REPAIRS clicked')
   }
 
-  onSettingsClick() {
-    console.log('SETTINGS clicked')
+  toggleScheme() {
+    if (this.scheme === 'light') {
+      this.scheme = 'dark'
+    } else {
+      this.scheme = 'light';
+    }
+  }
+
+  onColorSchemeClick() {
+    this.toggleScheme();
+    this.colorScheme.setScheme(this.scheme);
   }
 
   icon(iconName: Icon): Icon {
@@ -45,4 +60,5 @@ export class HeaderComponent implements OnInit {
   onForwardClick(): void {
     console.log('FORWARD clicked')
   }
+
 }

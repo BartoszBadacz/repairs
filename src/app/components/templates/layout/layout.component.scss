@@ -1,4 +1,5 @@
-main {
+:host {
+.main {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -19,5 +20,14 @@ main {
   }
 }
 
+//.light {
+//  background-color: yellow;
+//  color: rebeccapurple;
+//}
+//
+//.dark {
+//  background-color: red;
+//  color: pink;
+//}
 
-
+}
