@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   constructor(private colorSchemeService: ColorSchemeService) {
   }
 
-  colorScheme: ColorScheme = this.colorSchemeService.getScheme();
+  currentColorScheme: ColorScheme = this.colorSchemeService.getScheme();
 
   ngOnInit(): void {
   }
@@ -33,16 +33,16 @@ export class HeaderComponent implements OnInit {
   }
 
   setScheme() {
-    if (this.colorScheme === 'light') {
-      this.colorScheme = 'dark'
+    if (this.currentColorScheme === 'light') {
+      this.currentColorScheme = 'dark'
     } else {
-      this.colorScheme = 'light';
+      this.currentColorScheme = 'light';
     }
   }
 
   onColorSchemeClick() {
     this.setScheme();
-    this.colorSchemeService.setScheme(this.colorScheme);
+    this.colorSchemeService.setScheme(this.currentColorScheme);
   }
 
   icon(iconName: Icon): Icon {
