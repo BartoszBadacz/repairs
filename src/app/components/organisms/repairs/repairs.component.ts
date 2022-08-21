@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {RepairModel, repairs} from "../../../models/repair.model";
+import {Component, OnInit} from '@angular/core';
+import {RepairModel} from "../../../models/repair.model";
+import {RepairsService} from "../../../services/repairs.service";
 
 @Component({
   selector: 'app-repairs',
@@ -8,11 +9,17 @@ import {RepairModel, repairs} from "../../../models/repair.model";
 })
 export class RepairsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private repairsService: RepairsService) {
+  }
 
-  repairs: RepairModel[] = repairs;
+  repairs: RepairModel[] = [];
 
   ngOnInit(): void {
+    this.loadRepairs();
+  }
+
+  loadRepairs() {
+    this.repairsService.getRepairs().subscribe(repairs => this.repairs = repairs);
   }
 
 }

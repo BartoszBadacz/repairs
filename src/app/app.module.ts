@@ -9,23 +9,41 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
-import { RepairRecordComponent } from './components/molecules/repair-record/repair-record.component';
-import { SeparatorComponent } from './components/atoms/separator/separator.component';
+import {
+  RepairRecordComponent
+} from './components/molecules/repair-record/repair-record.component';
+import {
+  SeparatorComponent
+} from './components/atoms/separator/separator.component';
 import {
   RepairsPageComponent
 } from "./components/pages/repairs-page/repairs-page.component";
-import { AppRoutingModule } from './app-routing.module';
+import {AppRoutingModule} from './app-routing.module';
 import {
   StartPageComponent
 } from "./components/pages/start-page/start-page.component";
-import { DashboardComponent } from './components/organisms/dashboard/dashboard.component';
-import { RepairRecordDetailsComponent } from './components/molecules/repair-record-details/repair-record-details.component';
-import { RepairsComponent } from './components/organisms/repairs/repairs.component';
-import { NotFoundComponent } from './components/organisms/not-found/not-found.component';
-import { IconComponent } from './components/atoms/icon/icon.component';
-import { RepairRecordHeadingComponent } from './components/molecules/repair-record-heading/repair-record-heading.component';
-import { NotFoundPageComponent } from './components/pages/not-found-page/not-found-page.component';
+import {
+  DashboardComponent
+} from './components/organisms/dashboard/dashboard.component';
+import {
+  RepairRecordDetailsComponent
+} from './components/molecules/repair-record-details/repair-record-details.component';
+import {
+  RepairsComponent
+} from './components/organisms/repairs/repairs.component';
+import {
+  NotFoundComponent
+} from './components/organisms/not-found/not-found.component';
+import {IconComponent} from './components/atoms/icon/icon.component';
+import {
+  RepairRecordHeadingComponent
+} from './components/molecules/repair-record-heading/repair-record-heading.component';
+import {
+  NotFoundPageComponent
+} from './components/pages/not-found-page/not-found-page.component';
 import {HttpClientModule} from "@angular/common/http";
+import {HttpClientInMemoryWebApiModule} from "angular-in-memory-web-api";
+import {InMemoryDataService} from "./services/in-memory-data.service";
 
 @NgModule({
   declarations: [
@@ -54,6 +72,9 @@ import {HttpClientModule} from "@angular/common/http";
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService,  {dataEncapsulation: false}
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
