@@ -1,7 +1,5 @@
 :host {
   width: 100%;
-
-
   .main--header {
     height: 3em;
     display: flex;
@@ -9,15 +7,6 @@
     align-items: center;
     justify-content: space-around;
     gap: 1em;
-    //background-color: var(--color-background);
     background-color: var(--color-primary);
-    &-home-icon {
-
-    }
-  }
-
-  .form {
-  width: 5em;
-    border-radius: 50%
   }
 }
