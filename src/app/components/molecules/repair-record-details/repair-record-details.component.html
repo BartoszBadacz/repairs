@@ -1,7 +1,11 @@
-<main>
-  <p>Dostawca: {{repairRecord.vendor}}</p>
-  <p>Nazwa Klienta: {{repairRecord.customerName}}</p>
-  <div>
+<main class="record-details">
+  <div class="record-details--info">
+    <p>Dostawca: {{repairRecord.vendor}}</p>
+    <p>Nazwa Klienta: {{repairRecord.customerName}}</p>
+    <p *ngIf="repairRecord.entryComments">
+      Notatki: {{repairRecord.entryComments}}</p>
+  </div>
+  <div class="record-details--timeline">
     <ul>
       <li *ngIf="repairRecord.dateOfEntry">Data
         wejścia: {{repairRecord.dateOfEntry}}
@@ -30,8 +34,7 @@
       <p *ngIf="repairRecord.invoiceNumber">FV
         numer: {{repairRecord.invoiceNumber}}</p>
     </ul>
-    <p *ngIf="repairRecord.entryComments">
-      Notatki: {{repairRecord.entryComments}}</p>
+
   </div>
   <div>
   </div>

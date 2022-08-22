@@ -13,5 +13,5 @@
   <app-repair-record-details *ngIf="showDetails" [repairRecord]="repair"></app-repair-record-details>
   <mat-icon
     (click)="onDetailsClick()">{{showDetails ? 'keyboard_arrow_up' : 'keyboard_arrow_down'}}</mat-icon>
-  <app-separator [params]="{orientation: 'vertical', color: 'blue'}"></app-separator>
+  <app-separator *ngIf="!showDetails" [params]="{orientation: 'vertical', color: 'blue'}"></app-separator>
 </main>

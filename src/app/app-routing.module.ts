@@ -14,7 +14,9 @@ import {
 const routes: Routes = [
   {path: 'start', component: StartPageComponent},
   {path: 'repairs', component: RepairsPageComponent},
-  {path: `**`, component: NotFoundPageComponent}
+  {path: '', component: StartPageComponent},
+  {path: `**`, component: NotFoundPageComponent},
+
 ];
 
 
