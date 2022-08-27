@@ -1,6 +1,6 @@
 <main class="main">
   <div class="main--repair--record">
-    <div class="main--repair--record-field1">{{repair.id}}</div>
+<!--    <div class="main&#45;&#45;repair&#45;&#45;record-field1">{{repair.id}}</div>-->
     <div class="main--repair--record-field2">{{repair.itemRef}}</div>
     <div class="main--repair--record-field3">{{repair.itemNumber}}</div>
     <div class="main--repair--record-field4">{{repair.customerAcc}}</div>
@@ -10,8 +10,11 @@
     <span
       class="main--repair--record-field7 text-description">Typ: {{repair.repairType}}</span>
   </div>
-  <app-repair-record-details *ngIf="showDetails" [repairRecord]="repair"></app-repair-record-details>
+  <div class="details">
+    <app-repair-record-details *ngIf="showDetails" [repairRecord]="repair"></app-repair-record-details>
+  </div>
+
   <mat-icon
     (click)="onDetailsClick()">{{showDetails ? 'keyboard_arrow_up' : 'keyboard_arrow_down'}}</mat-icon>
-  <app-separator *ngIf="!showDetails" [params]="{orientation: 'vertical', color: 'blue'}"></app-separator>
+<!--  <app-separator *ngIf="!showDetails"></app-separator>-->
 </main>

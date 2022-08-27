@@ -18,6 +18,7 @@
       </li>
       <li *ngIf="repairRecord.dateOfApproval">Data
         akceptacji: {{repairRecord.dateOfApproval}}
+        <p *ngIf="repairRecord.discount">Rabat: {{repairRecord.discount/100 | percent:}</p>
         <p>Numer zamówienia klienta: {{repairRecord.customerApprovalNumber}}</p>
       </li>
       <li *ngIf="repairRecord.dateOfSentToRepairCenter">Data wysyłki do

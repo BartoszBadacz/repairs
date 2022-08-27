@@ -12,6 +12,7 @@ export class RepairRecordDetailsComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
   @Input() repairRecord: RepairModel = {};
 
 }
