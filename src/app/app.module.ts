@@ -45,7 +45,6 @@ import {HttpClientModule} from "@angular/common/http";
 import {HttpClientInMemoryWebApiModule} from "angular-in-memory-web-api";
 import {InMemoryDataService} from "./services/in-memory-data.service";
 import {MatDialogModule} from "@angular/material/dialog";
-import {NgMaterialModule} from "./ng-material/ng-material.module";
 import {
   BasicModalComponent
 } from "./components/molecules/basic-modal/basic-modal.component";
@@ -67,6 +66,7 @@ import {
     IconComponent,
     RepairRecordHeadingComponent,
     NotFoundPageComponent,
+    BasicModalComponent
   ],
     imports: [
         BrowserModule,
@@ -81,7 +81,7 @@ import {
             InMemoryDataService, {dataEncapsulation: false}
         ),
         MatDialogModule,
-      // NgMaterialModule
+
     ],
   providers: [],
   bootstrap: [AppComponent]
