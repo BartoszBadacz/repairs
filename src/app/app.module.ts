@@ -44,6 +44,11 @@ import {
 import {HttpClientModule} from "@angular/common/http";
 import {HttpClientInMemoryWebApiModule} from "angular-in-memory-web-api";
 import {InMemoryDataService} from "./services/in-memory-data.service";
+import {MatDialogModule} from "@angular/material/dialog";
+import {NgMaterialModule} from "./ng-material/ng-material.module";
+import {
+  BasicModalComponent
+} from "./components/molecules/basic-modal/basic-modal.component";
 
 @NgModule({
   declarations: [
@@ -63,19 +68,21 @@ import {InMemoryDataService} from "./services/in-memory-data.service";
     RepairRecordHeadingComponent,
     NotFoundPageComponent,
   ],
-  imports: [
-    BrowserModule,
-    NoopAnimationsModule,
-    MatIconModule,
-    MatFormFieldModule,
-    MatInputModule,
-    ReactiveFormsModule,
-    AppRoutingModule,
-    HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService,  {dataEncapsulation: false}
-    )
-  ],
+    imports: [
+        BrowserModule,
+        NoopAnimationsModule,
+        MatIconModule,
+        MatFormFieldModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        AppRoutingModule,
+        HttpClientModule,
+        HttpClientInMemoryWebApiModule.forRoot(
+            InMemoryDataService, {dataEncapsulation: false}
+        ),
+        MatDialogModule,
+      // NgMaterialModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

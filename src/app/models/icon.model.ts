@@ -8,4 +8,5 @@ export type Icon =
   'ac_unit' |
   'brightness_5' |
   'brightness_3' |
+  'sentiment_satisfied_alt' |
   '';
