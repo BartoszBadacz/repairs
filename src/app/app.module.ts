@@ -66,7 +66,7 @@ import {
     IconComponent,
     RepairRecordHeadingComponent,
     NotFoundPageComponent,
-    BasicModalComponent
+    BasicModalComponent,
   ],
     imports: [
         BrowserModule,
