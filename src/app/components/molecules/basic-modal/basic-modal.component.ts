@@ -21,8 +21,8 @@ export class BasicModalComponent implements OnInit {
 
 
   form = this.formBuilder.group({
-    firstName: ['', [Validators.required, Validators.minLength(5)]],
-    lastName: [''],
+    firstName: <string[] | null>['', [Validators.required, Validators.minLength(5)]],
+    lastName: <string[] | null>[''],
     address: this.formBuilder.group({
       city: [''],
       zipCode: [''],
