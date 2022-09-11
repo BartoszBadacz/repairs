@@ -3,13 +3,10 @@ import {CommonModule} from '@angular/common';
 import {BasicModalComponent} from '../components/molecules/basic-modal/basic-modal.component';
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatButtonModule} from "@angular/material/button";
-// import {
-//   BasicModalComponent
-// } from "./components/molecules/basic-modal/basic-modal.component";
 
 @NgModule({
   declarations: [
-    BasicModalComponent
+    // BasicModalComponent
   ],
   imports: [
     CommonModule,
