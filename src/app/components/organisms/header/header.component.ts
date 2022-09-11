@@ -1,4 +1,4 @@
-import {Component,  OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Icon} from "../../../models/icon.model";
 import {
   ColorScheme,
@@ -8,6 +8,7 @@ import {MatDialog} from "@angular/material/dialog";
 import {
   BasicModalComponent
 } from "../../molecules/basic-modal/basic-modal.component";
+import {DialogService} from "../../../services/dialog.service";
 
 @Component({
   selector: 'app-header',
@@ -16,7 +17,7 @@ import {
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private colorSchemeService: ColorSchemeService, private dialog: MatDialog) {
+  constructor(private colorSchemeService: ColorSchemeService, private popup: DialogService) {
   }
 
   currentColorScheme: ColorScheme = this.colorSchemeService.getScheme();
@@ -63,11 +64,7 @@ export class HeaderComponent implements OnInit {
   }
 
   openDialog() {
-    const dialogRef = this.dialog.open(BasicModalComponent);
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`)
-    })
-
+    this.popup.open(BasicModalComponent);
   }
 
 }

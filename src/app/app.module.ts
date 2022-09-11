@@ -68,21 +68,21 @@ import {
     NotFoundPageComponent,
     BasicModalComponent,
   ],
-    imports: [
-        BrowserModule,
-        NoopAnimationsModule,
-        MatIconModule,
-        MatFormFieldModule,
-        MatInputModule,
-        ReactiveFormsModule,
-        AppRoutingModule,
-        HttpClientModule,
-        HttpClientInMemoryWebApiModule.forRoot(
-            InMemoryDataService, {dataEncapsulation: false}
-        ),
-        MatDialogModule,
+  imports: [
+    BrowserModule,
+    NoopAnimationsModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, {dataEncapsulation: false}
+    ),
+    MatDialogModule,
 
-    ],
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
