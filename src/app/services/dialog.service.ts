@@ -1,9 +1,5 @@
-import {Component, Injectable} from '@angular/core';
+import {Injectable} from '@angular/core';
 import {MatDialog} from "@angular/material/dialog";
-import {NgClass} from "@angular/common";
-import {
-  BasicModalComponent
-} from "../components/molecules/basic-modal/basic-modal.component";
 import {ComponentType} from "@angular/cdk/overlay";
 
 @Injectable({
@@ -16,6 +12,10 @@ export class DialogService {
 
   open<T>(component: ComponentType<T>) {
     return this.dialog.open(component);
+  }
+
+  close() {
+    return this.dialog.closeAll();
   }
 
 }

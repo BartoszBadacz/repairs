@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl} from "@angular/forms";
+import {FormBuilder, Validators, FormArray} from "@angular/forms";
 
 @Component({
   selector: 'app-basic-modal',
@@ -8,22 +8,41 @@ import {FormControl} from "@angular/forms";
 })
 export class BasicModalComponent implements OnInit {
 
-  constructor() {
+  constructor(private formBuilder: FormBuilder) {
   }
 
-  name = new FormControl('');
+  get aliases() {
+    return this.form.get('aliases') as FormArray;
+  }
+
+  addAlias() {
+    this.aliases.push(this.formBuilder.control(''));
+  }
+
+
+  form = this.formBuilder.group({
+    firstName: ['', [Validators.required, Validators.minLength(5)]],
+    lastName: [''],
+    address: this.formBuilder.group({
+      city: [''],
+      zipCode: [''],
+      street: ['']
+    }),
+    aliases: this.formBuilder.array([
+      this.formBuilder.control('')
+    ])
+  })
 
   ngOnInit(): void {
     this.printName();
   }
 
+  onSubmit(): void {
+    console.error(this.form.value)
+  }
 
   printName() {
-    console.log(this.name.value)
-    let counter = 0;
-    window.setInterval(() => {
-      counter++;
-      this.name.setValue(counter.toString())
-    }, 1000)
+    this.form.controls.address.controls.city.setValue('Blumbuland');
+
   }
 }

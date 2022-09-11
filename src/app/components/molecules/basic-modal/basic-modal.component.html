@@ -2,11 +2,38 @@
 <mat-dialog-content class="mat-typography">
   <p>Lorem coś tam coś tam...</p>
 </mat-dialog-content>
-<label for="name">Name: </label>
-<input id="name" type="text" [formControl]="name">
-<p>Value: {{name.value}}</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <label for="first-name">First name: </label>
+  <input [ngClass]="!form.controls.firstName.valid ? 'invalid' : ''"
+         id="first-name"
+         type="text"
+         autocomplete="off"
+         formControlName="firstName">
+  <p *ngIf="!form.controls.firstName.valid">To pole jest wymagane</p>
+  <label for="last-name">First name: </label>
+  <input id="last-name" type="text" formControlName="lastName">
+  <div formGroupName="address">
+    <h2>Address</h2>
+    <label for="city">City: </label>
+    <input id="city" type="text" formControlName="city">
+    <label for="zip-code">Zip Code: </label>
+    <input id="zip-code" type="text" formControlName="zipCode">
+    <label for="street">Street: </label>
+    <input id="street" type="text" formControlName="street">
+  </div>
+  <div formArrayName="aliases">
+    <h2>Aliases</h2>
+    <button (click)="addAlias()"></button>
+    <div *ngFor="let alias of aliases.controls; let i=index">
+      <label for="alias-{{ i }}">Alias:</label>
+      <input id="alias-{{ i }}" type="text" [formControlName]="i">
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="!form.valid" (click)="onSubmit()">Wyślij
+  </button>
+</form>
+<p>Form status {{form.controls.firstName.dirty}}</p>
 <mat-dialog-actions>
   <button mat-button [mat-dialog-close]="true">Anuluj</button>
-  <button mat-button [mat-dialog-close]="true" (click)="printName()">Potwierdź
-  </button>
 </mat-dialog-actions>

@@ -1,0 +1,20 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  label {
+    font-size: 0.8em;
+    color: rebeccapurple;
+  }
+
+  .invalid {
+    color: red;
+  }
+}
