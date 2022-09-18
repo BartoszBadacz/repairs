@@ -48,6 +48,9 @@ import {MatDialogModule} from "@angular/material/dialog";
 import {
   BasicModalComponent
 } from "./components/molecules/basic-modal/basic-modal.component";
+import { FormControlTextComponent } from './components/dynamic-form/form-control-text/form-control-text.component';
+import { FormControlSelectComponent } from './components/dynamic-form/form-control-select/form-control-select.component';
+import { DynamicFormComponent } from './components/dynamic-form/dynamic-form/dynamic-form.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +70,9 @@ import {
     RepairRecordHeadingComponent,
     NotFoundPageComponent,
     BasicModalComponent,
+    FormControlTextComponent,
+    FormControlSelectComponent,
+    DynamicFormComponent,
   ],
   imports: [
     BrowserModule,

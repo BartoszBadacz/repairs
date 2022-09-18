@@ -1,0 +1,6 @@
+<label [for]="controlState.name">{{controlState.label}}</label>
+<select [id]="controlState.name" [disabled]="controlState.disabled">
+  <option *ngFor="let option of controlState.options">{{option.value}}</option>
+</select>
+<p *ngIf="controlState.errorMessage"
+   class="error">{{controlState.errorMessage}}</p>

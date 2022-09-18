@@ -8,11 +8,12 @@
          id="first-name"
          type="text"
          autocomplete="off"
-         formControlName="firstName">
-  <p *ngIf="!form.controls.firstName.valid">To pole jest wymagane</p>
+         formControlName="firstName"
+  >
+  <p>To pole jest wymagane</p>
   <label for="last-name">First name: </label>
-  <input id="last-name" type="text" formControlName="lastName">
-  <div formGroupName="address">
+  <input id="last-name" type="text" formControlName="lastName" class="dupa">
+  <div formGroupName="address" class="address">
     <h2>Address</h2>
     <label for="city">City: </label>
     <input id="city" type="text" formControlName="city">
@@ -21,15 +22,19 @@
     <label for="street">Street: </label>
     <input id="street" type="text" formControlName="street">
   </div>
+  <label for="cars">Cars: </label>
+  <select id="cars" formControlName="cars" multiple size="2">
+    <option *ngFor="let option of options"
+            [ngValue]="option">{{option}}</option>
+  </select>
   <div formArrayName="aliases">
     <h2>Aliases</h2>
-    <button (click)="addAlias()"></button>
+    <button (click)="addAlias()">Ad Alias</button>
     <div *ngFor="let alias of aliases.controls; let i=index">
       <label for="alias-{{ i }}">Alias:</label>
       <input id="alias-{{ i }}" type="text" [formControlName]="i">
     </div>
   </div>
-
   <button type="submit" [disabled]="!form.valid" (click)="onSubmit()">Wyślij
   </button>
 </form>
