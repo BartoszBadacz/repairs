@@ -1,0 +1,41 @@
+{
+  "title": "Przykładowy formularz testowy",
+  "isNullable": false,
+  "controls": [
+    {
+      "type": "text",
+      "state": {
+        "type": "text",
+        "label": "Label do Text",
+        "name": "firstName",
+        "value": "Bartosz",
+        "validations": [
+          "required"
+        ]
+      }
+    },
+    {
+      "type": "select",
+      "state": {
+        "name": "colors",
+        "value": "red",
+        "type": "select",
+        "label": "Favourite color",
+        "options": [
+          {
+            "id": "1",
+            "value": "Blue"
+          },
+          {
+            "id": "2",
+            "value": "Red"
+          },
+          {
+            "id": "1",
+            "value": "White"
+          }
+        ]
+      }
+    }
+  ]
+}

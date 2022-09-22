@@ -1,6 +1,8 @@
-<label [for]="controlState.name">{{controlState.label}}</label>
-<select [id]="controlState.name" [disabled]="controlState.disabled">
-  <option *ngFor="let option of controlState.options">{{option.value}}</option>
-</select>
-<p *ngIf="controlState.errorMessage"
-   class="error">{{controlState.errorMessage}}</p>
+<div [formGroup]="form">
+<!--  <label [for]="meta.name">{{meta.label}}</label>-->
+<!--  <select [id]="meta.name" [disabled]="meta.disabled" [formControlName]="meta.name">-->
+<!--    <option *ngFor="let option of meta.options" [value]="option.value">{{option.value}}</option>-->
+<!--  </select>-->
+<!--  <p *ngIf="meta.errorMessage"-->
+<!--     class="error">{{meta.errorMessage}}</p>-->
+</div>

@@ -1,13 +1,17 @@
 <main class="form">
-  <h2>{{formState.title}}</h2>
-  <ng-container *ngFor="let control of formState.controls">
-    <ng-container [ngSwitch]="control.type">
-      <app-form-control-text
-        *ngSwitchCase="'text'"
-        [controlState]="control.state"></app-form-control-text>
-      <app-form-control-select
-        *ngSwitchCase="'select'"
-        [controlState]="control.state"></app-form-control-select>
+  <h2>{{data.title}}</h2>
+  <form>
+    <ng-container *ngFor="let controlData of data.controls">
+        <ng-container [ngSwitch]="controlData.type">
+          <app-form-control-text
+            *ngSwitchCase="'text'"
+            [data]="controlData.state"
+            [form]="form"
+          ></app-form-control-text>
+          <!--        <app-form-control-select-->
+          <!--          *ngSwitchCase="'select'"-->
+          <!--          [controlState]="control.state"></app-form-control-select>-->
+        </ng-container>
     </ng-container>
-  </ng-container>
+  </form>
 </main>

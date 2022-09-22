@@ -1,4 +1,4 @@
-import {Validator} from "@angular/forms";
+import {Validator, Validators} from "@angular/forms";
 
 export interface DynamicFormState {
   title?: string,
@@ -7,7 +7,7 @@ export interface DynamicFormState {
 }
 
 interface Control<T> {
-  type: ControlType,
+  type?: ControlType,
   state?: T;
 }
 
@@ -27,18 +27,19 @@ interface ControlOption {
 
 interface FormControlBaseState {
   type?: ControlType,
-  name?: string,
+  name?: any;
   value?: any;
-  validations?: Validator[];
+  validations?: Validators[] | null;
   label?: string,
   errorMessage?: string,
   disabled?: boolean,
 }
 
-export interface FormControlTextState extends FormControlBaseState {}
+export interface FormControlTextState extends FormControlBaseState {
+}
 
 export interface FormControlNumberState extends FormControlBaseState {
-  counter: number,
+  counter?: number,
 }
 
 export interface FormControlSelectState extends FormControlBaseState {

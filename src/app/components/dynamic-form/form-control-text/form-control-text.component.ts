@@ -1,5 +1,11 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {FormControlTextState} from "../../../models/form/dynamic-form.state";
+import {
+  FormControlTextState
+} from "../../../models/form/dynamic-form.state";
+import {FormControl, FormGroup} from "@angular/forms";
+
+class Control {
+}
 
 @Component({
   selector: 'app-form-control-text',
@@ -8,10 +14,13 @@ import {FormControlTextState} from "../../../models/form/dynamic-form.state";
 })
 export class FormControlTextComponent implements OnInit {
 
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
-  @Input() controlState: FormControlTextState = {}
 
+  @Input() data!: FormControlTextState;
+  @Input() form!: FormGroup;
 }
