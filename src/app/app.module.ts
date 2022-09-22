@@ -48,9 +48,18 @@ import {MatDialogModule} from "@angular/material/dialog";
 import {
   BasicModalComponent
 } from "./components/molecules/basic-modal/basic-modal.component";
-import { FormControlTextComponent } from './components/dynamic-form/form-control-text/form-control-text.component';
-import { FormControlSelectComponent } from './components/dynamic-form/form-control-select/form-control-select.component';
-import { DynamicFormComponent } from './components/dynamic-form/dynamic-form/dynamic-form.component';
+import {
+  FormControlTextComponent
+} from './components/dynamic-form/form-control-text/form-control-text.component';
+import {
+  FormControlSelectComponent
+} from './components/dynamic-form/form-control-select/form-control-select.component';
+import {
+  DynamicFormComponent
+} from './components/dynamic-form/dynamic-form/dynamic-form.component';
+import {
+  ExemplaryFormComponent
+} from './componets/exemplary-form/exemplary-form.component';
 
 @NgModule({
   declarations: [
@@ -73,6 +82,7 @@ import { DynamicFormComponent } from './components/dynamic-form/dynamic-form/dyn
     FormControlTextComponent,
     FormControlSelectComponent,
     DynamicFormComponent,
+    ExemplaryFormComponent,
   ],
   imports: [
     BrowserModule,
