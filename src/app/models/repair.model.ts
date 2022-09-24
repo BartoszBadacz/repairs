@@ -6,6 +6,7 @@ export interface RepairModel {
   currentStep?: CurrentRepairStep,
   currentStepDesc?: string,
   vendor?: Vendors,
+  initialNotes?: string,
   dateOfEntry?: string,
   entryComments?: string,
   itemRef?: string,

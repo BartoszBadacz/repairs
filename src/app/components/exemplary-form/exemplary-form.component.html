@@ -1,7 +1,7 @@
 <main class="form--">
   <h2>{{formDesc.title}}</h2>
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
-    <section class="repairEntry">
+    <section class="repairEntry" formGroupName="repairEntrySection">
       <div class="section-title-wrapper">
         <p class="section-title">{{formDesc.sections.repairEntry.title}}</p>
       </div>
@@ -9,7 +9,8 @@
         <div class="control">
           <label
             for="dateOfEntry">{{formDesc.sections.repairEntry.labels.dateOfEntry}}</label>
-          <input id="dateOfEntry" type="date" autocomplete="off">
+          <input id="dateOfEntry" type="date" autocomplete="off"
+                 formControlName="dateOfEntry">
           <div class="error-wrapper">
             <p class="">{{formDesc.errorDesc.required}}</p>
           </div>
@@ -17,7 +18,7 @@
         <div class="control">
           <label
             for="itemRef">{{formDesc.sections.repairEntry.labels.itemRef}}</label>
-          <input id="itemRef" autocomplete="off">
+          <input id="itemRef" autocomplete="off" formControlName="itemRef">
           <div class="error-wrapper">
             <p>{{formDesc.errorDesc.required}}</p>
           </div>
@@ -25,7 +26,8 @@
         <div class="control">
           <label
             for="itemNumber">{{formDesc.sections.repairEntry.labels.itemNumber}}</label>
-          <input id="itemNumber" autocomplete="off">
+          <input id="itemNumber" autocomplete="off"
+                 formControlName="itemNumber">
           <div class="error-wrapper">
             <p>{{formDesc.errorDesc}}</p>
           </div>
@@ -33,7 +35,8 @@
         <div class="control">
           <label
             for="customerName">{{formDesc.sections.repairEntry.labels.customerName}}</label>
-          <input id="customerName" autocomplete="off">
+          <input id="customerName" autocomplete="off"
+                 formControlName="customerName">
           <div class="error-wrapper">
             <p>{{formDesc.errorDesc}}</p>
           </div>
@@ -41,7 +44,8 @@
         <div class="control">
           <label
             for="customerAcc">{{formDesc.sections.repairEntry.labels.customerName}}</label>
-          <input id="customerAcc" autocomplete="off">
+          <input id="customerAcc" autocomplete="off"
+                 formControlName="customerAcc">
           <div class="error-wrapper">
             <p>{{formDesc.errorDesc}}</p>
           </div>
@@ -49,7 +53,8 @@
         <div class="control">
           <label
             for="customerDocumentNumber">{{formDesc.sections.repairEntry.labels.customerDocumentNumber}}</label>
-          <input id="customerDocumentNumber" autocomplete="off">
+          <input id="customerDocumentNumber" autocomplete="off"
+                 formControlName="customerDocumentNumber">
           <div class="error-wrapper">
             <p>{{formDesc.errorDesc}}</p>
           </div>
@@ -57,14 +62,23 @@
         <div class="control">
           <label
             for="vendor">{{formDesc.sections.repairEntry.labels.vendor}}</label>
-          <input id="vendor" autocomplete="off">
+          <input id="vendor" autocomplete="off" formControlName="vendor">
+          <div class="error-wrapper">
+            <p>{{formDesc.errorDesc}}</p>
+          </div>
+        </div>
+        <div class="control">
+          <label
+            for="initialNotes">{{formDesc.sections.repairEntry.labels.initialNotes}}</label>
+          <input id="initialNotes" autocomplete="off"
+                 formControlName="initialNotes">
           <div class="error-wrapper">
             <p>{{formDesc.errorDesc}}</p>
           </div>
         </div>
       </div>
     </section>
-    <section class="repairDetails">
+    <section class="repairDetails" formGroupName="repairDetailsSection">
       <div class="section-title-wrapper">
         <p class="section-title">{{formDesc.sections.repairDetails.title}}</p>
       </div>
@@ -72,7 +86,8 @@
         <div class="control">
           <label
             for="repairType">{{formDesc.sections.repairDetails.labels.repairType}}</label>
-          <input id="repairType" autocomplete="off">
+          <input id="repairType" autocomplete="off"
+                 formControlName="repairType">
           <div class="error-wrapper">
             <p>{{formDesc.errorDesc}}</p>
           </div>
@@ -80,14 +95,14 @@
         <div class="control">
           <label
             for="notes">{{formDesc.sections.repairDetails.labels.notes}}</label>
-          <input id="notes" autocomplete="off">
+          <input id="notes" autocomplete="off" formControlName="notes">
           <div class="error-wrapper">
             <p>{{formDesc.errorDesc}}</p>
           </div>
         </div>
       </div>
     </section>
-    <section class="estimationDetails">
+    <section class="estimationDetails" formGroupName="estimationDetailsSection">
       <div class="section-title-wrapper">
         <p
           class="section-title">{{formDesc.sections.estimationDetails.title}}</p>
@@ -96,7 +111,8 @@
         <div class="control">
           <label
             for="dateOfPriceQuotation">{{formDesc.sections.estimationDetails.labels.dateOfPriceQuotation}}</label>
-          <input id="dateOfPriceQuotation" autocomplete="off">
+          <input id="dateOfPriceQuotation" autocomplete="off"
+                 formControlName="dateOfPriceQuotation">
           <div class="error-wrapper">
             <p>{{formDesc.errorDesc}}</p>
           </div>
@@ -104,7 +120,8 @@
         <div class="control">
           <label
             for="priceQuotationNumber">{{formDesc.sections.estimationDetails.labels.priceQuotationNumber}}</label>
-          <input id="priceQuotationNumber">
+          <input id="priceQuotationNumber"
+                 formControlName="priceQuotationNumber">
           <div class="error-wrapper">
             <p>{{formDesc.errorDesc}}</p>
           </div>
@@ -112,7 +129,9 @@
         <div class="control">
           <label
             for="priceQuotationValue">{{formDesc.sections.estimationDetails.labels.priceQuotationValue}}</label>
-          <input id="priceQuotationValue" autocomplete="off">
+          <input id="priceQuotationValue"
+                 autocomplete="off"
+                 formControlName="priceQuotationValue">
           <div class="error-wrapper">
             <p>{{formDesc.errorDesc}}</p>
           </div>
@@ -120,7 +139,9 @@
         <div class="control">
           <label
             for="dateOfDecision">{{formDesc.sections.estimationDetails.labels.dateOfDecision}}</label>
-          <input id="dateOfDecision">
+          <input
+            id="dateOfDecision"
+            formControlName="dateOfDecision">
           <div class="error-wrapper">
             <p>{{formDesc.errorDesc}}</p>
           </div>
@@ -128,7 +149,10 @@
         <div class="control">
           <label
             for="typeOfDecision">{{formDesc.sections.estimationDetails.labels.typeOfDecision}}</label>
-          <input id="typeOfDecision" autocomplete="off">
+          <input
+            id="typeOfDecision"
+            autocomplete="off"
+            formControlName="typeOfDecision">
           <div class="error-wrapper">
             <p>{{formDesc.errorDesc}}</p>
           </div>
@@ -136,16 +160,15 @@
         <div class="control">
           <label
             for="customerDecisionNumber">{{formDesc.sections.estimationDetails.labels.customerDecisionNumber}}</label>
-          <input id="customerDecisionNumber" autocomplete="off">
+          <input id="customerDecisionNumber"
+                 formControlName="customerDecisionNumber">
           <div class="error-wrapper">
             <p>{{formDesc.errorDesc}}</p>
           </div>
         </div>
       </div>
     </section>
-
-
-    <section class="repair-progress">
+    <section class="repairProgress" formGroupName="repairProgressSection">
       <div class="section-title-wrapper">
         <p
           class="section-title">{{formDesc.sections.repairProgress.title}}</p>
@@ -154,7 +177,8 @@
         <div class="control">
           <label
             for="dateOfSentToRepairCenter">{{formDesc.sections.repairProgress.labels.dateOfSentToRepairCenter}}</label>
-          <input id="dateOfSentToRepairCenter" autocomplete="off">
+          <input id="dateOfSentToRepairCenter" autocomplete="off"
+                 formControlName="dateOfSentToRepairCenter">
           <div class="error-wrapper">
             <p></p>
           </div>
@@ -162,7 +186,8 @@
         <div class="control">
           <label
             for="serviceRequestNumber">{{formDesc.sections.repairProgress.labels.serviceRequestNumber}}</label>
-          <input id="serviceRequestNumber">
+          <input id="serviceRequestNumber"
+                 formControlName="serviceRequestNumber">
           <div class="error-wrapper">
             <p></p>
           </div>
@@ -170,7 +195,8 @@
         <div class="control">
           <label
             for="dateOfReturnFromRepairCenter">{{formDesc.sections.repairProgress.labels.dateOfReturnFromRepairCenter}}</label>
-          <input id="dateOfReturnFromRepairCenter" autocomplete="off">
+          <input id="dateOfReturnFromRepairCenter" autocomplete="off"
+                 formControlName="dateOfReturnFromRepairCenter">
           <div class="error-wrapper">
             <p></p>
           </div>
@@ -178,16 +204,14 @@
         <div class="control">
           <label
             for="costOfRepair">{{formDesc.sections.repairProgress.labels.costOfRepair}}</label>
-          <input id="costOfRepair">
+          <input id="costOfRepair" formControlName="costOfRepair">
           <div class="error-wrapper">
             <p></p>
           </div>
         </div>
       </div>
     </section>
-
-
-    <section class="repair-progress">
+    <section class="repairReturn" formGroupName="repairReturnSection">
       <div class="section-title-wrapper">
         <p
           class="section-title">{{formDesc.sections.repairReturn.title}}</p>
@@ -196,7 +220,8 @@
         <div class="control">
           <label
             for="invoiceValue">{{formDesc.sections.repairReturn.labels.invoiceValue}}</label>
-          <input id="invoiceValue" autocomplete="off">
+          <input id="invoiceValue" autocomplete="off"
+                 formControlName="invoiceValue">
           <div class="error-wrapper">
             <p></p>
           </div>
@@ -204,7 +229,8 @@
         <div class="control">
           <label
             for="invoiceSystemOrderNumber">{{formDesc.sections.repairReturn.labels.invoiceSystemOrderNumber}}</label>
-          <input id="invoiceSystemOrderNumber">
+          <input id="invoiceSystemOrderNumber"
+                 formControlName="invoiceSystemOrderNumber">
           <div class="error-wrapper">
             <p></p>
           </div>
@@ -212,7 +238,8 @@
         <div class="control">
           <label
             for="invoiceNumber">{{formDesc.sections.repairReturn.labels.invoiceNumber}}</label>
-          <input id="invoiceNumber" autocomplete="off">
+          <input id="invoiceNumber" autocomplete="off"
+                 formControlName="invoiceNumber">
           <div class="error-wrapper">
             <p></p>
           </div>
@@ -220,7 +247,7 @@
         <div class="control">
           <label
             for="returnDocNumber">{{formDesc.sections.repairReturn.labels.returnDocNumber}}</label>
-          <input id="returnDocNumber">
+          <input id="returnDocNumber" formControlName="returnDocNumber">
           <div class="error-wrapper">
             <p></p>
           </div>
@@ -228,12 +255,13 @@
         <div class="control">
           <label
             for="dateOfClosureDate">{{formDesc.sections.repairReturn.labels.dateOfClosureDate}}</label>
-          <input id="dateOfClosureDate">
+          <input id="dateOfClosureDate" formControlName="dateOfClosureDate">
           <div class="error-wrapper">
             <p></p>
           </div>
         </div>
       </div>
     </section>
+    <button type="submit">Zapisz</button>
   </form>
 </main>
