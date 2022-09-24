@@ -20,8 +20,8 @@ export interface RepairModel {
   priceQuotationValue?: number,
   discount?: number,
   customerApproval?: boolean,
-  dateOfApproval?: string,
-  customerApprovalNumber?: string,
+  dateOfDecision?: string,
+  customerDecisionNumber?: string,
   dateOfSentToRepairCenter?: string,
   dateOfReturnFromRepairCenter?: string,
   costOfRepair?: number,
@@ -30,4 +30,5 @@ export interface RepairModel {
   invoiceNumber?: string,
   dateOfClosureDate?: string,
   returnDocNumber?: string,
+  notes?: string
 }

@@ -57,13 +57,9 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.formData = this.dynamicFormService.getData(dynamicForm);
-    this.formGroup = this.dynamicFormService.formRecord(dynamicForm);
-    console.log(this.formData, this.formGroup)
+
   }
 
-  formData: any;
-  formGroup: any;
 
 
 }

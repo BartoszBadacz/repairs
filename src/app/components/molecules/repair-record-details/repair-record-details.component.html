@@ -16,10 +16,10 @@
         kosztorysu: {{repairRecord.dateOfPriceQuotation}}
         <p>Numer kosztorysu: {{repairRecord.priceQuotationNumber}}</p>
       </li>
-      <li *ngIf="repairRecord.dateOfApproval">Data
-        akceptacji: {{repairRecord.dateOfApproval}}
+      <li *ngIf="repairRecord.dateOfDecision">Data
+        akceptacji: {{repairRecord.dateOfDecision}}
         <p *ngIf="repairRecord.discount">Rabat: {{repairRecord.discount/100 | percent:}</p>
-        <p>Numer zamówienia klienta: {{repairRecord.customerApprovalNumber}}</p>
+        <p>Numer zamówienia klienta: {{repairRecord.customerDecisionNumber}}</p>
       </li>
       <li *ngIf="repairRecord.dateOfSentToRepairCenter">Data wysyłki do
         serwisu: {{repairRecord.dateOfSentToRepairCenter}}

@@ -3,6 +3,12 @@ body {
   --color-text: black;
   --color-primary: #89d7e3;
   --color-secondary: #1b8fb8;
+  --color-warning: #EB1407;
+
+
+  --text-small: 0.8em;
+  --ref-quarter: 0.25em;
+  --ref-half: 0.5em;
 }
 
 body[color-scheme="dark"] {
@@ -10,7 +16,9 @@ body[color-scheme="dark"] {
   --color-text: white;
   --color-secondary: #1b8fb8;
   --color-primary:  #1b8fb8;
+  --color-warning: #EB1407;
 }
+
 
 
 

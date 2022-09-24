@@ -59,7 +59,7 @@ import {
 } from './components/dynamic-form/dynamic-form/dynamic-form.component';
 import {
   ExemplaryFormComponent
-} from './componets/exemplary-form/exemplary-form.component';
+} from "./components/exemplary-form/exemplary-form.component";
 
 @NgModule({
   declarations: [

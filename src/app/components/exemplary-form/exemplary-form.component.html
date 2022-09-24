@@ -1,1 +1,136 @@
-<p>exemplary-form works!</p>
+<main class="form--">
+  <h2>{{formDesc.title}}</h2>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <section class="repairEntry">
+      <h3>{{formDesc.sections.repairEntry.title}}</h3>
+      <div class="control">
+        <label
+          for="dateOfEntry">{{formDesc.sections.repairEntry.labels.dateOfEntry}}</label>
+        <input id="dateOfEntry" type="date" autocomplete="off">
+        <div class="error-wrapper">
+          <p class="">{{formDesc.errorDesc.required}}</p>
+        </div>
+      </div>
+      <div class="control">
+        <label
+          for="itemRef">{{formDesc.sections.repairEntry.labels.itemRef}}</label>
+        <input id="itemRef" autocomplete="off">
+        <div class="error-wrapper">
+          <p>{{formDesc.errorDesc.required}}</p>
+        </div>
+      </div>
+      <div class="control">
+        <label
+          for="itemNumber">{{formDesc.sections.repairEntry.labels.itemNumber}}</label>
+        <input id="itemNumber" autocomplete="off">
+        <div class="error-wrapper">
+          <p>{{formDesc.errorDesc}}</p>
+        </div>
+      </div>
+      <div class="control">
+        <label
+          for="customerName">{{formDesc.sections.repairEntry.labels.customerName}}</label>
+        <input id="customerName" autocomplete="off">
+        <div class="error-wrapper">
+          <p>{{formDesc.errorDesc}}</p>
+        </div>
+      </div>
+      <div class="control">
+        <label
+          for="customerAcc">{{formDesc.sections.repairEntry.labels.customerName}}</label>
+        <input id="customerAcc" autocomplete="off">
+        <div class="error-wrapper">
+          <p>{{formDesc.errorDesc}}</p>
+        </div>
+      </div>
+      <div class="control">
+        <label
+          for="customerDocumentNumber">{{formDesc.sections.repairEntry.labels.customerDocumentNumber}}</label>
+        <input id="customerDocumentNumber" autocomplete="off">
+        <div class="error-wrapper">
+          <p>{{formDesc.errorDesc}}</p>
+        </div>
+      </div>
+      <div class="control">
+        <label
+          for="vendor">{{formDesc.sections.repairEntry.labels.vendor}}</label>
+        <input id="vendor" autocomplete="off">
+        <div class="error-wrapper">
+          <p>{{formDesc.errorDesc}}</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="repairDetails">
+      <h3>{{formDesc.sections.repairDetails.title}}</h3>
+      <div class="control">
+        <label
+          for="repairType">{{formDesc.sections.repairDetails.labels.repairType}}</label>
+        <input id="repairType" autocomplete="off">
+        <div class="error-wrapper">
+          <p>{{formDesc.errorDesc}}</p>
+        </div>
+      </div>
+      <div class="control">
+        <label
+          for="notes">{{formDesc.sections.repairDetails.labels.notes}}</label>
+        <input id="notes" autocomplete="off">
+        <div class="error-wrapper">
+          <p>{{formDesc.errorDesc}}</p>
+        </div>
+      </div>
+    </section>
+    <section class="estimationDetails">
+      <h3>{{formDesc.sections.estimationDetails.title}}</h3>
+      <div class="control">
+        <label
+          for="dateOfPriceQuotation">{{formDesc.sections.estimationDetails.labels.dateOfPriceQuotation}}</label>
+        <input id="dateOfPriceQuotation" autocomplete="off">
+        <div class="error-wrapper">
+          <p>{{formDesc.errorDesc}}</p>
+        </div>
+      </div>
+      <div class="control">
+        <label
+          for="priceQuotationNumber">{{formDesc.sections.estimationDetails.labels.priceQuotationNumber}}</label>
+        <input id="priceQuotationNumber">
+        <div class="error-wrapper">
+          <p>{{formDesc.errorDesc}}</p>
+        </div>
+      </div>
+      <div class="control">
+        <label
+          for="priceQuotationValue">{{formDesc.sections.estimationDetails.labels.priceQuotationValue}}</label>
+        <input id="priceQuotationValue" autocomplete="off">
+        <div class="error-wrapper">
+          <p>{{formDesc.errorDesc}}</p>
+        </div>
+      </div>
+      <div class="control">
+        <label
+          for="dateOfDecision">{{formDesc.sections.estimationDetails.labels.dateOfDecision}}</label>
+        <input id="dateOfDecision">
+        <div class="error-wrapper">
+          <p>{{formDesc.errorDesc}}</p>
+        </div>
+      </div>
+      <div class="control">
+        <label
+          for="typeOfDecision">{{formDesc.sections.estimationDetails.labels.typeOfDecision}}</label>
+        <input id="typeOfDecision" autocomplete="off">
+        <div class="error-wrapper">
+          <p>{{formDesc.errorDesc}}</p>
+        </div>
+      </div>
+      <div class="control">
+        <label
+          for="customerDecisionNumber">{{formDesc.sections.estimationDetails.labels.customerDecisionNumber}}</label>
+        <input id="customerDecisionNumber" autocomplete="off">
+        <div class="error-wrapper">
+          <p>{{formDesc.errorDesc}}</p>
+        </div>
+      </div>
+    </section>
+  </form>
+</main>
