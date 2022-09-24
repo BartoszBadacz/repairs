@@ -28,6 +28,7 @@ export interface RepairModel {
   returnComments?: string,
   invoiceSystemOrderNumber?: number,
   invoiceNumber?: string,
+  invoiceValue?: number,
   dateOfClosureDate?: string,
   returnDocNumber?: string,
   notes?: string

@@ -52,6 +52,26 @@ export class ExemplaryFormComponent implements OnInit {
           typeOfDecision: 'Typ decyzji',
           customerDecisionNumber: 'Numer Decyzji'
         }
+      },
+      repairProgress: {
+        title: 'Proces naprawy',
+        labels: {
+          dateOfSentToRepairCenter: 'Data wysyłki do naprawy',
+          serviceRequestNumber: 'Numer zgłoszenia serwisowego',
+          dateOfReturnFromRepairCenter: 'Data powrotu z serwisu',
+          costOfRepair: 'Koszty wewnętrzne naprawy',
+        }
+      },
+      repairReturn: {
+        title: 'Zwrot do klienta',
+        labels: {
+          invoiceValue: 'Kwota zafakturowana',
+          returnComments: 'Notatki',
+          invoiceSystemOrderNumber: 'Numer zamówienia Oracle',
+          invoiceNumber: 'Numer FV',
+          returnDocNumber: 'Numer dokumentu zwrotu',
+          dateOfClosureDate: 'Data zwrotu do klienta'
+        }
       }
     }
   }
