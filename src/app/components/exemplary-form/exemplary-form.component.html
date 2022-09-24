@@ -15,14 +15,8 @@
             <p class="">{{formDesc.errorDesc.required}}</p>
           </div>
         </div>
-        <div class="control">
-          <label
-            for="itemRef">{{formDesc.sections.repairEntry.labels.itemRef}}</label>
-          <input id="itemRef" autocomplete="off" formControlName="itemRef">
-          <div class="error-wrapper">
-            <p>{{formDesc.errorDesc.required}}</p>
-          </div>
-        </div>
+        <app-form-control-text [state]="inputRef" [controlFormGroup]="form.controls.repairEntrySection"></app-form-control-text>
+        <button (click)="changeLabel()">TESTOWE KLIKNIĘCIE</button>
         <div class="control">
           <label
             for="itemNumber">{{formDesc.sections.repairEntry.labels.itemNumber}}</label>

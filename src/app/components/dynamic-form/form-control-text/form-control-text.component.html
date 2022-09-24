@@ -1,6 +1,16 @@
-<div [formGroup]="form">
-  <label [for]="data.name">{{data.label}}</label>
-  <input [id]="data.name" [value]="data.name" [formControlName]="data.name"
-         type="text">
-  <p class="error">{{data.errorMessage}}</p>
+<div [formGroup]="controlFormGroup"
+     class="control">
+  <label
+    for="textControl"
+    [class]="isRequired() ? 'required' : ''">
+    {{state.label}}
+  </label>
+  <input [formControlName]="state.formControlName"
+         id="textControl"
+         type="text"
+         [autocomplete]="state.autocomplete">
+  <div
+    class="error-wrapper">
+    <p class="error">{{state.errorMessage}}</p>
+  </div>
 </div>

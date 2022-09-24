@@ -4,6 +4,7 @@ import {
   FormGroup,
   Validators
 } from "@angular/forms";
+import {TextControlModel} from "../../models/form/TextControl.model";
 
 @Component({
   selector: 'app-exemplary-form',
@@ -16,6 +17,16 @@ export class ExemplaryFormComponent implements OnInit {
   }
 
   colorOptions: string[] = ['red', 'black', 'white'];
+
+  inputRef: TextControlModel  = {
+    label: 'Numer Ref',
+    required: true,
+    errorMessage: 'pole jest wymagane',
+    formControlName: 'itemRef',
+    autocomplete: "off",
+    disabled: false,
+    validators: [Validators.required]
+  };
 
   formDesc = {
     title: 'Nowa Naprawa',
@@ -113,9 +124,12 @@ export class ExemplaryFormComponent implements OnInit {
       returnDocNumber: new FormControl('', [Validators.required]),
       dateOfClosureDate: new FormControl('', [Validators.required]),
     })
-
-
   })
+
+  changeLabel() {
+    this.inputRef.label = 'dupa';
+    this.inputRef.required = !this.inputRef.required;
+  }
 
   onSubmit() {
     console.log(this.form.value)

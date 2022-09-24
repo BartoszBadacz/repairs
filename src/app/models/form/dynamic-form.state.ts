@@ -29,7 +29,7 @@ interface FormControlBaseState {
   type?: ControlType,
   name?: any;
   value?: any;
-  validations?: Validators[] | null;
+  validations?: Validators[] | [];
   label?: string,
   errorMessage?: string,
   disabled?: boolean,

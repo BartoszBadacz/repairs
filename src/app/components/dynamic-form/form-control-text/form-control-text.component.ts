@@ -1,11 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {
-  FormControlTextState
-} from "../../../models/form/dynamic-form.state";
-import {FormControl, FormGroup} from "@angular/forms";
-
-class Control {
-}
+import {FormGroup, Validators} from "@angular/forms";
+import {TextControlModel} from "../../../models/form/TextControl.model";
 
 @Component({
   selector: 'app-form-control-text',
@@ -21,6 +16,12 @@ export class FormControlTextComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  @Input() data!: FormControlTextState;
-  @Input() form!: FormGroup;
+  isRequired(): boolean {
+    let validat = new Set(this.state.validators)
+    return validat?.has(Validators.required);
+  }
+
+  @Input() controlFormGroup!: FormGroup;
+  @Input() state!: TextControlModel;
+
 }
