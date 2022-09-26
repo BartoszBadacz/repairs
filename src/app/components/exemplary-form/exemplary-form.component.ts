@@ -4,7 +4,6 @@ import {
   FormGroup,
   Validators
 } from "@angular/forms";
-import {InputControlState} from "../../models/form/InputControlState";
 import {FormState} from "../../models/form/form.state";
 
 @Component({
@@ -17,7 +16,13 @@ export class ExemplaryFormComponent implements OnInit {
   constructor() {
   }
 
-  formState: FormState = {
+  classa: string = 'open';
+
+  changeClass() {
+    this.classa = 'closed';
+  }
+
+  newRepairFormState: FormState = {
     title: 'Wprowadź naprawę',
     isNullable: false,
     controls: {
@@ -195,7 +200,7 @@ export class ExemplaryFormComponent implements OnInit {
   })
 
   changeLabel() {
-    this.formState.controls!['itemRef'].label = 'dupa';
+    this.newRepairFormState.controls!['itemRef'].label = 'dupa';
   }
 
   onSubmit() {

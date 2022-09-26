@@ -26,9 +26,6 @@
       }
 
       .section-form-wrapper {
-        //display: none;
-
-
         .control {
           display: flex;
           flex-direction: column;
@@ -48,7 +45,7 @@
           label:before {
             content: "*";
             margin-right: 0.25em;
-            color: red;
+            color: var(--color-warning);
             visibility: hidden;
           }
 
@@ -95,6 +92,9 @@
         }
       }
 
+      .closed {
+        height: 0;
+      }
 
     }
 
