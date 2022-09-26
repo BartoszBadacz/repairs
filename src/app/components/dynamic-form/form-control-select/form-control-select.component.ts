@@ -1,8 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {
-  FormControlSelectState,
-  FormControlTextState
-} from "../../../models/form/dynamic-form.state";
 import {FormGroup} from "@angular/forms";
 
 @Component({
@@ -11,7 +7,7 @@ import {FormGroup} from "@angular/forms";
   styleUrls: ['./form-control-select.component.scss']
 })
 export class FormControlSelectComponent implements OnInit {
-  @Input() meta!: FormControlSelectState;
+  // @Input() meta!: FormControlSelectState;
   @Input() form!: FormGroup;
   constructor() {
   }

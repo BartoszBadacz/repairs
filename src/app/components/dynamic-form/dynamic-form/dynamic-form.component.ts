@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
-import {DynamicFormState} from "../../../models/form/dynamic-form.state";
+import {FormState} from "../../../models/form/form.state";
 
 @Component({
   selector: 'app-dynamic-form',
@@ -19,6 +19,6 @@ export class DynamicFormComponent implements OnInit {
 
 
   @Input() form!: FormGroup;
-  @Input() data!: DynamicFormState;
+  @Input() data!: FormState;
 
 }

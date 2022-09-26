@@ -1,11 +1,13 @@
 import {Validators} from "@angular/forms";
+import {InputControlType} from "./form.state";
 
-export interface TextControlModel {
+export interface InputControlState {
+  name: string,
+  type: InputControlType,
   errorMessage: string,
   autocomplete: 'off' | '',
-  formControlName: string,
-  required: boolean;
   disabled: boolean;
   label: string;
   validators?: Validators[] | [],
 }
+

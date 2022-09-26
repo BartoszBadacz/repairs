@@ -1,13 +1,13 @@
 <div [formGroup]="controlFormGroup"
      class="control">
   <label
-    for="textControl"
+    [for]="state.name"
     [class]="isRequired() ? 'required' : ''">
     {{state.label}}
   </label>
-  <input [formControlName]="state.formControlName"
-         id="textControl"
-         type="text"
+  <input [formControlName]="state.name"
+         [id]="state.name"
+         [type]="state.type"
          [autocomplete]="state.autocomplete">
   <div
     class="error-wrapper">

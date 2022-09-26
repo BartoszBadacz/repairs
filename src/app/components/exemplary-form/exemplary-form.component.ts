@@ -4,7 +4,8 @@ import {
   FormGroup,
   Validators
 } from "@angular/forms";
-import {TextControlModel} from "../../models/form/TextControl.model";
+import {InputControlState} from "../../models/form/InputControlState";
+import {FormState} from "../../models/form/form.state";
 
 @Component({
   selector: 'app-exemplary-form',
@@ -16,17 +17,84 @@ export class ExemplaryFormComponent implements OnInit {
   constructor() {
   }
 
-  colorOptions: string[] = ['red', 'black', 'white'];
-
-  inputRef: TextControlModel  = {
-    label: 'Numer Ref',
-    required: true,
-    errorMessage: 'pole jest wymagane',
-    formControlName: 'itemRef',
-    autocomplete: "off",
-    disabled: false,
-    validators: [Validators.required]
-  };
+  formState: FormState = {
+    title: 'Wprowadź naprawę',
+    isNullable: false,
+    controls: {
+      dateOfEntry: {
+        name: 'dateOfEntry',
+        type: 'date',
+        label: 'Data wprowadzenia',
+        errorMessage: 'pole jest wymagane',
+        autocomplete: "off",
+        disabled: false,
+        validators: [Validators.required]
+      },
+      itemRef: {
+        name: 'itemRef',
+        type: 'text',
+        label: 'Numer Ref',
+        errorMessage: 'pole jest wymagane',
+        autocomplete: "off",
+        disabled: false,
+        validators: [Validators.required]
+      },
+      itemNumber: {
+        name: 'itemNumber',
+        type: 'text',
+        label: 'Numer seryjny / LOT',
+        errorMessage: '',
+        autocomplete: "off",
+        disabled: false,
+        validators: [Validators.required]
+      },
+      customerAcc: {
+        name: 'customerAcc',
+        type: 'number',
+        label: 'Numer konta klienta',
+        errorMessage: '',
+        autocomplete: "off",
+        disabled: false,
+        validators: [Validators.required]
+      },
+      customerName: {
+        name: 'customerName',
+        type: 'text',
+        label: 'Nazwa Klienta',
+        errorMessage: '',
+        autocomplete: "off",
+        disabled: false,
+        validators: [Validators.required]
+      },
+      customerDocumentNumber: {
+        name: 'customerDocumentNumber',
+        type: 'text',
+        label: 'Numer zgłoszenia klienta',
+        errorMessage: '',
+        autocomplete: "off",
+        disabled: false,
+        validators: [Validators.required]
+      },
+      vendor: {
+        name: 'vendor',
+        type: 'text',
+        label: 'Dostawca',
+        errorMessage: '',
+        autocomplete: "off",
+        disabled: false,
+        validators: [Validators.required]
+      },
+      initialNotes: {
+        name: 'initialNotes',
+        type: 'text',
+        label: 'Notatki',
+        errorMessage: '',
+        autocomplete: "off",
+        disabled: false,
+        validators: []
+      },
+    },
+  }
 
   formDesc = {
     title: 'Nowa Naprawa',
@@ -127,8 +195,7 @@ export class ExemplaryFormComponent implements OnInit {
   })
 
   changeLabel() {
-    this.inputRef.label = 'dupa';
-    this.inputRef.required = !this.inputRef.required;
+    this.formState.controls!['itemRef'].label = 'dupa';
   }
 
   onSubmit() {

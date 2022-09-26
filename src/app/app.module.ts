@@ -49,8 +49,8 @@ import {
   BasicModalComponent
 } from "./components/molecules/basic-modal/basic-modal.component";
 import {
-  FormControlTextComponent
-} from './components/dynamic-form/form-control-text/form-control-text.component';
+  FormControlInputComponent
+} from './components/dynamic-form/form-control-text/form-control-input.component';
 import {
   FormControlSelectComponent
 } from './components/dynamic-form/form-control-select/form-control-select.component';
@@ -79,7 +79,7 @@ import {
     RepairRecordHeadingComponent,
     NotFoundPageComponent,
     BasicModalComponent,
-    FormControlTextComponent,
+    FormControlInputComponent,
     FormControlSelectComponent,
     DynamicFormComponent,
     ExemplaryFormComponent,

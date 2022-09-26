@@ -6,70 +6,14 @@
         <p class="section-title">{{formDesc.sections.repairEntry.title}}</p>
       </div>
       <div class="section-form-wrapper">
-        <div class="control">
-          <label
-            for="dateOfEntry">{{formDesc.sections.repairEntry.labels.dateOfEntry}}</label>
-          <input id="dateOfEntry" type="date" autocomplete="off"
-                 formControlName="dateOfEntry">
-          <div class="error-wrapper">
-            <p class="">{{formDesc.errorDesc.required}}</p>
-          </div>
-        </div>
-        <app-form-control-text [state]="inputRef" [controlFormGroup]="form.controls.repairEntrySection"></app-form-control-text>
-        <button (click)="changeLabel()">TESTOWE KLIKNIĘCIE</button>
-        <div class="control">
-          <label
-            for="itemNumber">{{formDesc.sections.repairEntry.labels.itemNumber}}</label>
-          <input id="itemNumber" autocomplete="off"
-                 formControlName="itemNumber">
-          <div class="error-wrapper">
-            <p>{{formDesc.errorDesc}}</p>
-          </div>
-        </div>
-        <div class="control">
-          <label
-            for="customerName">{{formDesc.sections.repairEntry.labels.customerName}}</label>
-          <input id="customerName" autocomplete="off"
-                 formControlName="customerName">
-          <div class="error-wrapper">
-            <p>{{formDesc.errorDesc}}</p>
-          </div>
-        </div>
-        <div class="control">
-          <label
-            for="customerAcc">{{formDesc.sections.repairEntry.labels.customerName}}</label>
-          <input id="customerAcc" autocomplete="off"
-                 formControlName="customerAcc">
-          <div class="error-wrapper">
-            <p>{{formDesc.errorDesc}}</p>
-          </div>
-        </div>
-        <div class="control">
-          <label
-            for="customerDocumentNumber">{{formDesc.sections.repairEntry.labels.customerDocumentNumber}}</label>
-          <input id="customerDocumentNumber" autocomplete="off"
-                 formControlName="customerDocumentNumber">
-          <div class="error-wrapper">
-            <p>{{formDesc.errorDesc}}</p>
-          </div>
-        </div>
-        <div class="control">
-          <label
-            for="vendor">{{formDesc.sections.repairEntry.labels.vendor}}</label>
-          <input id="vendor" autocomplete="off" formControlName="vendor">
-          <div class="error-wrapper">
-            <p>{{formDesc.errorDesc}}</p>
-          </div>
-        </div>
-        <div class="control">
-          <label
-            for="initialNotes">{{formDesc.sections.repairEntry.labels.initialNotes}}</label>
-          <input id="initialNotes" autocomplete="off"
-                 formControlName="initialNotes">
-          <div class="error-wrapper">
-            <p>{{formDesc.errorDesc}}</p>
-          </div>
-        </div>
+        <app-form-control-input [state]="formState.controls!['dateOfEntry']" [controlFormGroup]="form.controls.repairEntrySection"></app-form-control-input>
+        <app-form-control-input [state]="formState.controls!['itemRef']" [controlFormGroup]="form.controls.repairEntrySection"></app-form-control-input>
+        <app-form-control-input [state]="formState.controls!['itemNumber']" [controlFormGroup]="form.controls.repairEntrySection"></app-form-control-input>
+        <app-form-control-input [state]="formState.controls!['customerAcc']" [controlFormGroup]="form.controls.repairEntrySection"></app-form-control-input>
+        <app-form-control-input [state]="formState.controls!['customerName']" [controlFormGroup]="form.controls.repairEntrySection"></app-form-control-input>
+        <app-form-control-input [state]="formState.controls!['customerDocumentNumber']" [controlFormGroup]="form.controls.repairEntrySection"></app-form-control-input>
+        <app-form-control-input [state]="formState.controls!['vendor']" [controlFormGroup]="form.controls.repairEntrySection"></app-form-control-input>
+        <app-form-control-input [state]="formState.controls!['initialNotes']" [controlFormGroup]="form.controls.repairEntrySection"></app-form-control-input>
       </div>
     </section>
     <section class="repairDetails" formGroupName="repairDetailsSection">
