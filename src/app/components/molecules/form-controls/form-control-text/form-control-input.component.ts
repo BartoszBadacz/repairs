@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {FormGroup, Validators} from "@angular/forms";
-import {InputControlState} from "../../../models/form/InputControlState";
+import {InputControlState} from "../../../../models/form/InputControlState";
 
 @Component({
   selector: 'app-form-control-input',

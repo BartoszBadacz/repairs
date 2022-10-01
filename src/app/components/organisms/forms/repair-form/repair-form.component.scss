@@ -26,10 +26,11 @@
       }
 
       .section-form-wrapper {
+
         .control {
           display: flex;
           flex-direction: column;
-          align-items: start;
+          align-items: flex-start;
           justify-content: center;
           margin: 0.25em;
           gap: 0.25em;
@@ -92,11 +93,16 @@
         }
       }
 
-      .closed {
-        height: 0;
-      }
-
     }
-
   }
+}
+
+.repairEntry {
+  background-color: #EB1407;
+
+  transition: background-color 200ms ease-out;
+}
+.repairEntry.closed {
+  height: 0;
+  background-color: yellow;
 }

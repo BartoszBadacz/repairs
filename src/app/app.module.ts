@@ -50,16 +50,13 @@ import {
 } from "./components/molecules/basic-modal/basic-modal.component";
 import {
   FormControlInputComponent
-} from './components/dynamic-form/form-control-text/form-control-input.component';
+} from './components/molecules/form-controls/form-control-text/form-control-input.component';
 import {
   FormControlSelectComponent
-} from './components/dynamic-form/form-control-select/form-control-select.component';
+} from './components/molecules/form-controls/form-control-select/form-control-select.component';
 import {
-  DynamicFormComponent
-} from './components/dynamic-form/dynamic-form/dynamic-form.component';
-import {
-  ExemplaryFormComponent
-} from "./components/exemplary-form/exemplary-form.component";
+  RepairFormComponent
+} from "./components/organisms/forms/repair-form/repair-form.component";
 
 @NgModule({
   declarations: [
@@ -81,8 +78,7 @@ import {
     BasicModalComponent,
     FormControlInputComponent,
     FormControlSelectComponent,
-    DynamicFormComponent,
-    ExemplaryFormComponent,
+    RepairFormComponent,
   ],
   imports: [
     BrowserModule,

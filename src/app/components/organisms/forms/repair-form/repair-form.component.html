@@ -1,12 +1,14 @@
 <main class="form--">
   <h2>{{formDesc.title}}</h2>
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
-    <section class="repairEntry" formGroupName="repairEntrySection">
+    <section class="repairEntry" formGroupName="repairEntrySection"  [ngClass]="isOpened ? 'open' : 'closed'">
       <div class="section-title-wrapper">
         <p class="section-title">{{formDesc.sections.repairEntry.title}}</p>
       </div>
-      <div class="section-form-wrapper"[ngClass]="classa">
-        <button (click)="changeClass()">Zmień klasę</button>
+
+      <div class="section-form-wrapper"
+          >
+
         <app-form-control-input
           [state]="newRepairFormState.controls!['dateOfEntry']"
           [controlFormGroup]="form.controls.repairEntrySection">
