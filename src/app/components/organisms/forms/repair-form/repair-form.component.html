@@ -1,5 +1,7 @@
 <main class="form--">
-  <h2>{{formDesc.title}}</h2>
+  <div class="form-title">
+    <h2>{{formDesc.title}}</h2>
+  </div>
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
     <app-repair-form-entry-section
       [_form_group]="form.controls.repairEntrySection"
