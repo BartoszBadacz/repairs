@@ -1,7 +1,6 @@
 import {InputControlState} from "./InputControlState";
 
-export interface FormState {
-  // controls?: ControlByName;
+export interface FormConfig {
   sections: SectionByName;
 }
 export type ControlByName = Record<string, InputControlState>

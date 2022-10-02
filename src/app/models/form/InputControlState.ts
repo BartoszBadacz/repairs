@@ -1,4 +1,4 @@
-import {InputControlType} from "./form.state";
+import {InputControlType} from "./formConfig";
 
 export interface InputControlState {
   name: string,

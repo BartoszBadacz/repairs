@@ -4,7 +4,7 @@ import {
   FormGroup,
   Validators
 } from "@angular/forms";
-import {FormState} from "../../../../models/form/form.state";
+import {FormConfig} from "../../../../models/form/formConfig";
 
 @Component({
   selector: 'app-repair-form',
@@ -16,9 +16,7 @@ export class RepairFormComponent implements OnInit {
   constructor() {
   }
 
-  isOpened: boolean = true;
-
-  newRepairFormConfig: FormState = {
+  repairFormConfig: FormConfig = {
     sections: {
       repairEntrySection: {
         dateOfEntry: {

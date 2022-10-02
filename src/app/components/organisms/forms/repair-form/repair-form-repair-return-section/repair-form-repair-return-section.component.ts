@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {FormGroup} from "@angular/forms";
-import {ControlByName} from "../../../../../models/form/form.state";
+import {ControlByName} from "../../../../../models/form/formConfig";
 
 @Component({
   selector: 'app-repair-form-repair-return-section',
