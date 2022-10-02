@@ -18,12 +18,6 @@ export class RepairFormComponent implements OnInit {
 
   isOpened: boolean = true;
 
-  changeClass(): boolean {
-    this.isOpened = !this.isOpened;
-    return this.isOpened
-  }
-
-
 newRepairFormState: FormState = {
   title: 'Wprowadź naprawę',
   isNullable: false,

@@ -1,13 +1,21 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {FormGroup, Validators} from "@angular/forms";
+import {Component, forwardRef, Input, OnInit} from '@angular/core';
+import {
+  ControlValueAccessor,
+  FormControl,
+  FormGroup,
+  NG_VALUE_ACCESSOR,
+  Validators
+} from "@angular/forms";
 import {InputControlState} from "../../../../models/form/InputControlState";
+
 
 @Component({
   selector: 'app-form-control-input',
   templateUrl: './form-control-input.component.html',
-  styleUrls: ['./form-control-input.component.scss']
+  styleUrls: ['./form-control-input.component.scss'],
+  providers: []
 })
-export class FormControlInputComponent implements OnInit {
+export class FormControlInputComponent implements OnInit, ControlValueAccessor {
 
 
   constructor() {
@@ -21,7 +29,17 @@ export class FormControlInputComponent implements OnInit {
     return validators.has(Validators.required);
   }
 
-  @Input() controlFormGroup!: FormGroup;
+  writeValue(obj: any) {
+  }
+
+  registerOnChange(fn: any) {
+  }
+
+  registerOnTouched(fn: any) {
+  }
+
+  @Input() control!: FormControl;
   @Input() state!: InputControlState;
+  @Input() fGroup!: FormGroup;
 
 }

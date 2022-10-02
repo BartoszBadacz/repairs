@@ -92,17 +92,6 @@
           }
         }
       }
-
     }
   }
-}
-
-.repairEntry {
-  background-color: #EB1407;
-
-  transition: background-color 200ms ease-out;
-}
-.repairEntry.closed {
-  height: 0;
-  background-color: yellow;
 }

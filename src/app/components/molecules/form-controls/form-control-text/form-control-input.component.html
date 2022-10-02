@@ -1,14 +1,14 @@
-<div [formGroup]="controlFormGroup"
-     class="control">
+<div class="control" [formGroup]="fGroup">
   <label
     [for]="state.name"
     [class]="isRequired() ? 'required' : ''">
     {{state.label}}
   </label>
-  <input [formControlName]="state.name"
-         [id]="state.name"
-         [type]="state.type"
-         [autocomplete]="state.autocomplete">
+  <input
+    [name]="state.name"
+    [id]="state.name"
+    [type]="state.type"
+    [autocomplete]="state.autocomplete">
   <div
     class="error-wrapper">
     <p class="error">{{state.errorMessage}}</p>
