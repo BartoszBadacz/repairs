@@ -1,9 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {
   ControlValueAccessor,
-  FormControl,
   FormGroup,
-  Validators
 } from "@angular/forms";
 import {InputControlState} from "../../../../models/form/InputControlState";
 
@@ -22,10 +20,6 @@ export class FormControlInputComponent implements OnInit, ControlValueAccessor {
   ngOnInit(): void {
   }
 
-  isRequired(): boolean {
-    let validators = new Set(this.state.validators);
-    return validators.has(Validators.required);
-  }
 
   writeValue(obj: any) {
   }

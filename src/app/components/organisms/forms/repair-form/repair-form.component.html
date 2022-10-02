@@ -6,191 +6,26 @@
       [_form_config]="newRepairFormConfig.sections['repairEntrySection']"
       [_title]="formDesc.sections.repairEntry.title">
     </app-repair-form-entry-section>
-
-    <section class="repairDetails" formGroupName="repairDetailsSection">
-      <div class="section-title-wrapper">
-        <p class="section-title">{{formDesc.sections.repairDetails.title}}</p>
-      </div>
-      <div class="section-form-wrapper">
-        <div class="control">
-          <label
-            for="repairType">{{formDesc.sections.repairDetails.labels.repairType}}</label>
-          <input id="repairType" autocomplete="off"
-                 formControlName="repairType">
-          <div class="error-wrapper">
-            <p>{{formDesc.errorDesc}}</p>
-          </div>
-        </div>
-        <div class="control">
-          <label
-            for="notes">{{formDesc.sections.repairDetails.labels.notes}}</label>
-          <input id="notes" autocomplete="off" formControlName="notes">
-          <div class="error-wrapper">
-            <p>{{formDesc.errorDesc}}</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="estimationDetails" formGroupName="estimationDetailsSection">
-      <div class="section-title-wrapper">
-        <p
-          class="section-title">{{formDesc.sections.estimationDetails.title}}</p>
-      </div>
-      <div class="section-form-wrapper">
-        <div class="control">
-          <label
-            for="dateOfPriceQuotation">{{formDesc.sections.estimationDetails.labels.dateOfPriceQuotation}}</label>
-          <input id="dateOfPriceQuotation" autocomplete="off"
-                 formControlName="dateOfPriceQuotation">
-          <div class="error-wrapper">
-            <p>{{formDesc.errorDesc}}</p>
-          </div>
-        </div>
-        <div class="control">
-          <label
-            for="priceQuotationNumber">{{formDesc.sections.estimationDetails.labels.priceQuotationNumber}}</label>
-          <input id="priceQuotationNumber"
-                 formControlName="priceQuotationNumber">
-          <div class="error-wrapper">
-            <p>{{formDesc.errorDesc}}</p>
-          </div>
-        </div>
-        <div class="control">
-          <label
-            for="priceQuotationValue">{{formDesc.sections.estimationDetails.labels.priceQuotationValue}}</label>
-          <input id="priceQuotationValue"
-                 autocomplete="off"
-                 formControlName="priceQuotationValue">
-          <div class="error-wrapper">
-            <p>{{formDesc.errorDesc}}</p>
-          </div>
-        </div>
-        <div class="control">
-          <label
-            for="dateOfDecision">{{formDesc.sections.estimationDetails.labels.dateOfDecision}}</label>
-          <input
-            id="dateOfDecision"
-            formControlName="dateOfDecision">
-          <div class="error-wrapper">
-            <p>{{formDesc.errorDesc}}</p>
-          </div>
-        </div>
-        <div class="control">
-          <label
-            for="typeOfDecision">{{formDesc.sections.estimationDetails.labels.typeOfDecision}}</label>
-          <input
-            id="typeOfDecision"
-            autocomplete="off"
-            formControlName="typeOfDecision">
-          <div class="error-wrapper">
-            <p>{{formDesc.errorDesc}}</p>
-          </div>
-        </div>
-        <div class="control">
-          <label
-            for="customerDecisionNumber">{{formDesc.sections.estimationDetails.labels.customerDecisionNumber}}</label>
-          <input id="customerDecisionNumber"
-                 formControlName="customerDecisionNumber">
-          <div class="error-wrapper">
-            <p>{{formDesc.errorDesc}}</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="repairProgress" formGroupName="repairProgressSection">
-      <div class="section-title-wrapper">
-        <p
-          class="section-title">{{formDesc.sections.repairProgress.title}}</p>
-      </div>
-      <div class="section-form-wrapper">
-        <div class="control">
-          <label
-            for="dateOfSentToRepairCenter">{{formDesc.sections.repairProgress.labels.dateOfSentToRepairCenter}}</label>
-          <input id="dateOfSentToRepairCenter" autocomplete="off"
-                 formControlName="dateOfSentToRepairCenter">
-          <div class="error-wrapper">
-            <p></p>
-          </div>
-        </div>
-        <div class="control">
-          <label
-            for="serviceRequestNumber">{{formDesc.sections.repairProgress.labels.serviceRequestNumber}}</label>
-          <input id="serviceRequestNumber"
-                 formControlName="serviceRequestNumber">
-          <div class="error-wrapper">
-            <p></p>
-          </div>
-        </div>
-        <div class="control">
-          <label
-            for="dateOfReturnFromRepairCenter">{{formDesc.sections.repairProgress.labels.dateOfReturnFromRepairCenter}}</label>
-          <input id="dateOfReturnFromRepairCenter" autocomplete="off"
-                 formControlName="dateOfReturnFromRepairCenter">
-          <div class="error-wrapper">
-            <p></p>
-          </div>
-        </div>
-        <div class="control">
-          <label
-            for="costOfRepair">{{formDesc.sections.repairProgress.labels.costOfRepair}}</label>
-          <input id="costOfRepair" formControlName="costOfRepair">
-          <div class="error-wrapper">
-            <p></p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="repairReturn" formGroupName="repairReturnSection">
-      <div class="section-title-wrapper">
-        <p
-          class="section-title">{{formDesc.sections.repairReturn.title}}</p>
-      </div>
-      <div class="section-form-wrapper">
-        <div class="control">
-          <label
-            for="invoiceValue">{{formDesc.sections.repairReturn.labels.invoiceValue}}</label>
-          <input id="invoiceValue" autocomplete="off"
-                 formControlName="invoiceValue">
-          <div class="error-wrapper">
-            <p></p>
-          </div>
-        </div>
-        <div class="control">
-          <label
-            for="invoiceSystemOrderNumber">{{formDesc.sections.repairReturn.labels.invoiceSystemOrderNumber}}</label>
-          <input id="invoiceSystemOrderNumber"
-                 formControlName="invoiceSystemOrderNumber">
-          <div class="error-wrapper">
-            <p></p>
-          </div>
-        </div>
-        <div class="control">
-          <label
-            for="invoiceNumber">{{formDesc.sections.repairReturn.labels.invoiceNumber}}</label>
-          <input id="invoiceNumber" autocomplete="off"
-                 formControlName="invoiceNumber">
-          <div class="error-wrapper">
-            <p></p>
-          </div>
-        </div>
-        <div class="control">
-          <label
-            for="returnDocNumber">{{formDesc.sections.repairReturn.labels.returnDocNumber}}</label>
-          <input id="returnDocNumber" formControlName="returnDocNumber">
-          <div class="error-wrapper">
-            <p></p>
-          </div>
-        </div>
-        <div class="control">
-          <label
-            for="dateOfClosureDate">{{formDesc.sections.repairReturn.labels.dateOfClosureDate}}</label>
-          <input id="dateOfClosureDate" formControlName="dateOfClosureDate">
-          <div class="error-wrapper">
-            <p></p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <app-repair-form-details-section
+      [_form_group]="form.controls.repairDetailsSection"
+      [_form_config]="newRepairFormConfig.sections['repairDetailsSection']"
+      [_title]="formDesc.sections.repairDetails.title">
+    </app-repair-form-details-section>
+    <app-repair-form-estimation-details-section
+      [_form_group]="form.controls.estimationDetailsSection"
+      [_form_config]="newRepairFormConfig.sections['estimationDetailsSection']"
+      [_title]="formDesc.sections.estimationDetails.title">
+    </app-repair-form-estimation-details-section>
+    <app-repair-form-repair-progress-section
+      [_form_group]="form.controls.repairProgressSection"
+      [_form_config]="newRepairFormConfig.sections['repairProgressSection']"
+      [_title]="formDesc.sections.repairProgress.title">
+    </app-repair-form-repair-progress-section>
+    <app-repair-form-repair-return-section
+      [_form_group]="form.controls.repairReturnSection"
+      [_form_config]="newRepairFormConfig.sections['repairReturnSection']"
+      [_title]="formDesc.sections.repairReturn.title">
+    </app-repair-form-repair-return-section>
     <button type="submit">Zapisz</button>
   </form>
 </main>

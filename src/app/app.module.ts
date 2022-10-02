@@ -60,6 +60,11 @@ import {
 import {
   RepairFormEntrySectionComponent
 } from "./components/organisms/forms/repair-form/repair-form-entry-section/repair-form-entry-section.component";
+import { RepairFormDetailsSectionComponent } from './components/organisms/forms/repair-form/repair-form-details-section/repair-form-details-section.component';
+import { RepairFormRepairProgressSectionComponent } from './components/organisms/forms/repair-form/repair-form-repair-progress-section/repair-form-repair-progress-section.component';
+import { RepairFormRepairReturnSectionComponent } from './components/organisms/forms/repair-form/repair-form-repair-return-section/repair-form-repair-return-section.component';
+import { RepairFormEstimationDetailsSectionComponent } from './components/organisms/forms/repair-form/repair-form-estimation-details-section/repair-form-estimation-details-section.component';
+import { FormSectionWrapperComponent } from './components/molecules/wrappers/form-section-wrapper/form-section-wrapper.component';
 
 @NgModule({
   declarations: [
@@ -82,7 +87,12 @@ import {
     FormControlInputComponent,
     FormControlSelectComponent,
     RepairFormComponent,
-    RepairFormEntrySectionComponent
+    RepairFormEntrySectionComponent,
+    RepairFormDetailsSectionComponent,
+    RepairFormRepairProgressSectionComponent,
+    RepairFormRepairReturnSectionComponent,
+    RepairFormEstimationDetailsSectionComponent,
+    FormSectionWrapperComponent
   ],
   imports: [
     BrowserModule,

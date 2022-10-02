@@ -1,4 +1,3 @@
-import {Validators} from "@angular/forms";
 import {InputControlType} from "./form.state";
 
 export interface InputControlState {
@@ -8,6 +7,5 @@ export interface InputControlState {
   autocomplete: 'off' | '',
   disabled: boolean;
   label: string;
-  validators?: Validators[] | [],
 }
 

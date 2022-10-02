@@ -28,7 +28,6 @@ export class RepairFormComponent implements OnInit {
           errorMessage: 'pole jest wymagane',
           autocomplete: "off",
           disabled: false,
-          validators: [Validators.required]
         },
         itemRef: {
           name: 'itemRef',
@@ -37,7 +36,6 @@ export class RepairFormComponent implements OnInit {
           errorMessage: 'pole jest wymagane',
           autocomplete: "off",
           disabled: false,
-          validators: [Validators.required]
         },
         itemNumber: {
           name: 'itemNumber',
@@ -46,7 +44,6 @@ export class RepairFormComponent implements OnInit {
           errorMessage: '',
           autocomplete: "off",
           disabled: false,
-          validators: [Validators.required]
         },
         customerAcc: {
           name: 'customerAcc',
@@ -55,7 +52,6 @@ export class RepairFormComponent implements OnInit {
           errorMessage: '',
           autocomplete: "off",
           disabled: false,
-          validators: [Validators.required]
         },
         customerName: {
           name: 'customerName',
@@ -64,7 +60,6 @@ export class RepairFormComponent implements OnInit {
           errorMessage: '',
           autocomplete: "off",
           disabled: false,
-          validators: [Validators.required]
         },
         customerDocumentNumber: {
           name: 'customerDocumentNumber',
@@ -73,7 +68,6 @@ export class RepairFormComponent implements OnInit {
           errorMessage: '',
           autocomplete: "off",
           disabled: false,
-          validators: [Validators.required]
         },
         vendor: {
           name: 'vendor',
@@ -82,7 +76,6 @@ export class RepairFormComponent implements OnInit {
           errorMessage: '',
           autocomplete: "off",
           disabled: false,
-          validators: [Validators.required]
         },
         initialNotes: {
           name: 'initialNotes',
@@ -91,8 +84,151 @@ export class RepairFormComponent implements OnInit {
           errorMessage: '',
           autocomplete: "off",
           disabled: false,
-          validators: []
         },
+      },
+      repairDetailsSection: {
+        repairType: {
+          name: 'repairType',
+          type: 'text',
+          label: 'Typ naprawy',
+          errorMessage: '',
+          autocomplete: "off",
+          disabled: false,
+        },
+        notes: {
+          name: 'notes',
+          type: 'text',
+          label: 'Opis uszkodzeń',
+          errorMessage: '',
+          autocomplete: "off",
+          disabled: false,
+        }
+      },
+      estimationDetailsSection: {
+        dateOfPriceQuotation: {
+          name: 'dateOfPriceQuotation',
+          type: 'date',
+          label: 'Data wystawienia kosztorysu',
+          errorMessage: '',
+          autocomplete: "off",
+          disabled: false,
+        },
+        priceQuotationNumber: {
+          name: 'priceQuotationNumber',
+          type: 'text',
+          label: 'Numer kosztorysu',
+          errorMessage: '',
+          autocomplete: "off",
+          disabled: false,
+        },
+        priceQuotationValue: {
+          name: 'priceQuotationValue',
+          type: 'number',
+          label: 'Kwota kosztorysu',
+          errorMessage: '',
+          autocomplete: "off",
+          disabled: false,
+        },
+        dateOfDecision: {
+          name: 'dateOfDecision',
+          type: 'date',
+          label: 'Data decyzji klienta',
+          errorMessage: '',
+          autocomplete: "off",
+          disabled: false,
+        },
+        typeOfDecision: {
+          name: 'typeOfDecision',
+          type: 'text',
+          label: 'Rodzaj decyzji klienta',
+          errorMessage: '',
+          autocomplete: "off",
+          disabled: false,
+        },
+        customerDecisionNumber: {
+          name: 'customerDecisionNumber',
+          type: 'text',
+          label: 'Numer decyzji klienta',
+          errorMessage: '',
+          autocomplete: "off",
+          disabled: false,
+        }
+      },
+      repairProgressSection: {
+        dateOfSentToRepairCenter: {
+          name: 'dateOfSentToRepairCenter',
+          type: 'date',
+          label: 'Data wysyłki do naprawy',
+          errorMessage: '',
+          autocomplete: "off",
+          disabled: false,
+        },
+        serviceRequestNumber: {
+          name: 'serviceRequestNumber',
+          type: 'text',
+          label: 'Numer zgłoszenia serwisowego',
+          errorMessage: '',
+          autocomplete: "off",
+          disabled: false,
+        },
+        dateOfReturnFromRepairCenter: {
+          name: 'dateOfReturnFromRepairCenter',
+          type: 'date',
+          label: 'Data powrotu z serwisu',
+          errorMessage: '',
+          autocomplete: "off",
+          disabled: false,
+        },
+        costOfRepair: {
+          name: 'costOfRepair',
+          type: 'number',
+          label: 'Koszt naprawy',
+          errorMessage: '',
+          autocomplete: "off",
+          disabled: false,
+        },
+      },
+      repairReturnSection: {
+        invoiceValue: {
+          name: 'invoiceValue',
+          type: 'number',
+          label: 'Wartość fakturowana',
+          errorMessage: '',
+          autocomplete: "off",
+          disabled: false,
+        },
+        invoiceSystemOrderNumber: {
+          name: 'invoiceSystemOrderNumber',
+          type: 'number',
+          label: 'Numer zamówienia Oracle',
+          errorMessage: '',
+          autocomplete: "off",
+          disabled: false,
+        },
+        invoiceNumber: {
+          name: 'invoiceNumber',
+          type: 'number',
+          label: 'Numer faktury',
+          errorMessage: '',
+          autocomplete: "off",
+          disabled: false,
+        },
+        returnDocNumber: {
+          name: 'returnDocNumber',
+          type: 'text',
+          label: 'Numer WZ',
+          errorMessage: '',
+          autocomplete: "off",
+          disabled: false,
+        },
+        dateOfClosureDate: {
+          name: 'dateOfClosureDate',
+          type: 'date',
+          label: 'Data odesłania do klienta',
+          errorMessage: '',
+          autocomplete: "off",
+          disabled: false,
+        }
       }
     }
   }
