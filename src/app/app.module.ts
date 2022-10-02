@@ -57,6 +57,9 @@ import {
 import {
   RepairFormComponent
 } from "./components/organisms/forms/repair-form/repair-form.component";
+import {
+  RepairFormEntrySectionComponent
+} from "./components/organisms/forms/repair-form/repair-form-entry-section/repair-form-entry-section.component";
 
 @NgModule({
   declarations: [
@@ -79,6 +82,7 @@ import {
     FormControlInputComponent,
     FormControlSelectComponent,
     RepairFormComponent,
+    RepairFormEntrySectionComponent
   ],
   imports: [
     BrowserModule,

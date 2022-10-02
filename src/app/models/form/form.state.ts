@@ -1,11 +1,11 @@
 import {InputControlState} from "./InputControlState";
 
 export interface FormState {
-  title?: string,
-  isNullable?: boolean;
-  controls?: ControlByName;
+  // controls?: ControlByName;
+  sections: SectionByName;
 }
-type ControlByName = Record<string, InputControlState>
+export type ControlByName = Record<string, InputControlState>
+export type SectionByName = Record<string, ControlByName>
 
 export type InputControlType = 'text'
   | 'number'

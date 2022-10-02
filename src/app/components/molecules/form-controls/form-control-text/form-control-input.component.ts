@@ -1,9 +1,8 @@
-import {Component, forwardRef, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {
   ControlValueAccessor,
   FormControl,
   FormGroup,
-  NG_VALUE_ACCESSOR,
   Validators
 } from "@angular/forms";
 import {InputControlState} from "../../../../models/form/InputControlState";
@@ -13,7 +12,6 @@ import {InputControlState} from "../../../../models/form/InputControlState";
   selector: 'app-form-control-input',
   templateUrl: './form-control-input.component.html',
   styleUrls: ['./form-control-input.component.scss'],
-  providers: []
 })
 export class FormControlInputComponent implements OnInit, ControlValueAccessor {
 
@@ -38,7 +36,7 @@ export class FormControlInputComponent implements OnInit, ControlValueAccessor {
   registerOnTouched(fn: any) {
   }
 
-  @Input() control!: FormControl;
+  // @Input() control!: FormControl;
   @Input() state!: InputControlState;
   @Input() fGroup!: FormGroup;
 

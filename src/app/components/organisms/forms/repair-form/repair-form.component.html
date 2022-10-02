@@ -1,56 +1,12 @@
 <main class="form--">
   <h2>{{formDesc.title}}</h2>
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
-    <section class="repairEntry" formGroupName="repairEntrySection"
-             [ngClass]="isOpened ? 'open' : 'closed'">
-      <div class="section-title-wrapper">
-        <p class="section-title">{{formDesc.sections.repairEntry.title}}</p>
-      </div>
-      <div class="section-form-wrapper">
-        <app-form-control-input
-          [state]="newRepairFormState.controls!['dateOfEntry']"
-          [control]="form.controls.repairEntrySection.controls.dateOfEntry"
-          [fGroup]="form.controls.repairEntrySection"
-        >
+    <app-repair-form-entry-section
+      [_form_group]="form.controls.repairEntrySection"
+      [_form_config]="newRepairFormConfig.sections['repairEntrySection']"
+      [_title]="formDesc.sections.repairEntry.title">
+    </app-repair-form-entry-section>
 
-        </app-form-control-input>
-        <app-form-control-input
-          [state]="newRepairFormState.controls!['itemRef']"
-          [control]="form.controls.repairEntrySection.controls.itemRef"
-          [fGroup]="form.controls.repairEntrySection">
-        </app-form-control-input>
-        <app-form-control-input
-          [state]="newRepairFormState.controls!['itemNumber']"
-          [control]="form.controls.repairEntrySection.controls.itemNumber"
-          [fGroup]="form.controls.repairEntrySection">
-        </app-form-control-input>
-        <app-form-control-input
-          [state]="newRepairFormState.controls!['customerAcc']"
-          [control]="form.controls.repairEntrySection.controls.customerAcc"
-          [fGroup]="form.controls.repairEntrySection">
-        </app-form-control-input>
-        <app-form-control-input
-          [state]="newRepairFormState.controls!['customerName']"
-          [control]="form.controls.repairEntrySection.controls.customerName"
-          [fGroup]="form.controls.repairEntrySection">
-        </app-form-control-input>
-        <app-form-control-input
-          [state]="newRepairFormState.controls!['customerDocumentNumber']"
-          [control]="form.controls.repairEntrySection.controls.customerDocumentNumber"
-          [fGroup]="form.controls.repairEntrySection">
-        </app-form-control-input>
-        <app-form-control-input
-          [state]="newRepairFormState.controls!['vendor']"
-          [control]="form.controls.repairEntrySection.controls.vendor"
-          [fGroup]="form.controls.repairEntrySection">
-        </app-form-control-input>
-        <app-form-control-input
-          [state]="newRepairFormState.controls!['initialNotes']"
-          [control]="form.controls.repairEntrySection.controls.initialNotes"
-          [fGroup]="form.controls.repairEntrySection">
-        </app-form-control-input>
-      </div>
-    </section>
     <section class="repairDetails" formGroupName="repairDetailsSection">
       <div class="section-title-wrapper">
         <p class="section-title">{{formDesc.sections.repairDetails.title}}</p>
