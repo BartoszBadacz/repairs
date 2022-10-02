@@ -14,7 +14,7 @@ export class RepairFormDetailsSectionComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  @Input() _form_group!: FormGroup;
-  @Input() _form_config!: ControlByName | undefined;
-  @Input() _title!: string;
+  @Input() form_group!: FormGroup;
+  @Input() form_config!: ControlByName | undefined;
+  @Input() title!: string;
 }

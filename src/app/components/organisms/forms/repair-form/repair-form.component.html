@@ -4,29 +4,29 @@
   </div>
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
     <app-repair-form-entry-section
-      [_form_group]="form.controls.repairEntrySection"
-      [_form_config]="newRepairFormConfig.sections['repairEntrySection']"
-      [_title]="formDesc.sections.repairEntry.title">
+      [form_group]="form.controls.repairEntrySection"
+      [form_config]="newRepairFormConfig.sections['repairEntrySection']"
+      [title]="formDesc.sections.repairEntry.title">
     </app-repair-form-entry-section>
     <app-repair-form-details-section
-      [_form_group]="form.controls.repairDetailsSection"
-      [_form_config]="newRepairFormConfig.sections['repairDetailsSection']"
-      [_title]="formDesc.sections.repairDetails.title">
+      [form_group]="form.controls.repairDetailsSection"
+      [form_config]="newRepairFormConfig.sections['repairDetailsSection']"
+      [title]="formDesc.sections.repairDetails.title">
     </app-repair-form-details-section>
     <app-repair-form-estimation-details-section
-      [_form_group]="form.controls.estimationDetailsSection"
-      [_form_config]="newRepairFormConfig.sections['estimationDetailsSection']"
-      [_title]="formDesc.sections.estimationDetails.title">
+      [form_group]="form.controls.estimationDetailsSection"
+      [form_config]="newRepairFormConfig.sections['estimationDetailsSection']"
+      [title]="formDesc.sections.estimationDetails.title">
     </app-repair-form-estimation-details-section>
     <app-repair-form-repair-progress-section
-      [_form_group]="form.controls.repairProgressSection"
-      [_form_config]="newRepairFormConfig.sections['repairProgressSection']"
-      [_title]="formDesc.sections.repairProgress.title">
+      [form_group]="form.controls.repairProgressSection"
+      [form_config]="newRepairFormConfig.sections['repairProgressSection']"
+      [title]="formDesc.sections.repairProgress.title">
     </app-repair-form-repair-progress-section>
     <app-repair-form-repair-return-section
-      [_form_group]="form.controls.repairReturnSection"
-      [_form_config]="newRepairFormConfig.sections['repairReturnSection']"
-      [_title]="formDesc.sections.repairReturn.title">
+      [form_group]="form.controls.repairReturnSection"
+      [form_config]="newRepairFormConfig.sections['repairReturnSection']"
+      [title]="formDesc.sections.repairReturn.title">
     </app-repair-form-repair-return-section>
     <button type="submit">Zapisz</button>
   </form>
