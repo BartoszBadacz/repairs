@@ -1,7 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {FormGroup} from "@angular/forms";
 import {
-  ControlByName,
   FormSectionConfig
 } from "../../../../../models/form/formConfig";
 
