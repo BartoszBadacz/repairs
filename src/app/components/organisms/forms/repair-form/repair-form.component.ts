@@ -15,8 +15,7 @@ export class RepairFormComponent implements OnInit {
 
   constructor() {
   }
-
-  formConfig = repairFormConfig;
+  formTemplateConfig = repairFormConfig;
 
   form = new FormGroup({
     repairEntrySection: new FormGroup({
@@ -56,6 +55,11 @@ export class RepairFormComponent implements OnInit {
     })
   })
 
+  isRepairEntrySectionValid: boolean = this.form.controls.repairEntrySection.valid;
+  isRepairDetailsSectionValid: boolean = this.form.controls.repairDetailsSection.valid;
+  isEstimationDetailSectionValid: boolean = this.form.controls.estimationDetailsSection.valid;
+  isRepairProgressSectionValid: boolean = this.form.controls.repairProgressSection.valid;
+  isRepairReturnSectionValid: boolean = this.form.controls.repairReturnSection.valid;
 
   onSubmit() {
     console.log(this.form.value)

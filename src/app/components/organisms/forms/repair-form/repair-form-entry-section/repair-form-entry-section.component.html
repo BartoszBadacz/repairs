@@ -1,4 +1,5 @@
-<app-form-section-holder [title]="form_config!['sectionTitle']">
+<app-form-section-holder (input)="isValid()" [title]="form_config!['sectionTitle']">
+  <H1>{{isSectionValid}}</H1>
   <app-form-control-input
     [state]="form_config.controls!['dateOfEntry']"
     [fGroup]="form_group">

@@ -1,28 +1,35 @@
 <main class="form--">
   <div class="form-title">
-    <h2>{{formConfig.formTitle}}</h2>
+    <h2>{{formTemplateConfig.formTitle}}</h2>
   </div>
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
     <app-repair-form-entry-section
       [form_group]="form.controls.repairEntrySection"
-      [form_config]="formConfig.sections['repairEntrySection']">
+      [form_config]="formTemplateConfig.sections['repairEntrySection']">
     </app-repair-form-entry-section>
     <app-repair-form-details-section
       [form_group]="form.controls.repairDetailsSection"
-      [form_config]="formConfig.sections['repairDetailsSection']">
+      [form_config]="formTemplateConfig.sections['repairDetailsSection']">
     </app-repair-form-details-section>
     <app-repair-form-estimation-details-section
       [form_group]="form.controls.estimationDetailsSection"
-      [form_config]="formConfig.sections['estimationDetailsSection']">
+      [form_config]="formTemplateConfig.sections['estimationDetailsSection']">
     </app-repair-form-estimation-details-section>
     <app-repair-form-repair-progress-section
       [form_group]="form.controls.repairProgressSection"
-      [form_config]="formConfig.sections['repairProgressSection']">
+      [form_config]="formTemplateConfig.sections['repairProgressSection']">
     </app-repair-form-repair-progress-section>
     <app-repair-form-repair-return-section
       [form_group]="form.controls.repairReturnSection"
-      [form_config]="formConfig.sections['repairReturnSection']">
+      [form_config]="formTemplateConfig.sections['repairReturnSection']">
     </app-repair-form-repair-return-section>
     <button type="submit">Zapisz</button>
   </form>
 </main>
+<div class="temp-is-valid-info">
+  <p>{{isRepairEntrySectionValid}}</p>
+  <p>{{isRepairDetailsSectionValid}}</p>
+  <p>{{isEstimationDetailSectionValid}}</p>
+  <p>{{isRepairProgressSectionValid}}</p>
+  <p>{{isRepairReturnSectionValid}}</p>
+</div>
