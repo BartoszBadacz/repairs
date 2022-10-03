@@ -1,6 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {FormGroup} from "@angular/forms";
-import {ControlByName} from "../../../../../models/form/formConfig";
+import {
+  FormSectionConfig
+} from "../../../../../models/form/formConfig";
 
 @Component({
   selector: 'app-repair-form-entry-section',
@@ -16,6 +18,5 @@ export class RepairFormEntrySectionComponent implements OnInit {
   }
 
   @Input() form_group!: FormGroup;
-  @Input() form_config!: ControlByName | undefined;
-  @Input() title!: string;
+  @Input() form_config!: FormSectionConfig;
 }

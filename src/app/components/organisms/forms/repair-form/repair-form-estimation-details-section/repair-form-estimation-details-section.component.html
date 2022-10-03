@@ -1,26 +1,26 @@
-<app-form-section-wrapper [title]="title">
+<app-form-section-holder [title]="form_config!['sectionTitle']">
   <app-form-control-input
-    [state]="form_config!['dateOfPriceQuotation']"
+    [state]="form_config.controls!['dateOfPriceQuotation']"
     [fGroup]="form_group">
   </app-form-control-input>
   <app-form-control-input
-    [state]="form_config!['priceQuotationNumber']"
+    [state]="form_config.controls!['priceQuotationNumber']"
     [fGroup]="form_group">
   </app-form-control-input>
   <app-form-control-input
-    [state]="form_config!['priceQuotationValue']"
+    [state]="form_config.controls!['priceQuotationValue']"
     [fGroup]="form_group">
   </app-form-control-input>
   <app-form-control-input
-    [state]="form_config!['dateOfDecision']"
+    [state]="form_config.controls!['dateOfDecision']"
     [fGroup]="form_group">
   </app-form-control-input>
   <app-form-control-input
-    [state]="form_config!['typeOfDecision']"
+    [state]="form_config.controls!['typeOfDecision']"
     [fGroup]="form_group">
   </app-form-control-input>
   <app-form-control-input
-    [state]="form_config!['customerDecisionNumber']"
+    [state]="form_config.controls!['customerDecisionNumber']"
     [fGroup]="form_group">
   </app-form-control-input>
-</app-form-section-wrapper>
+</app-form-section-holder>

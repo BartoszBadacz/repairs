@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FormSectionWrapperComponent } from './form-section-wrapper.component';
+import { FormSectionHolderComponent } from './form-section-holder.component';
 
 describe('FormSectionWrapperComponent', () => {
-  let component: FormSectionWrapperComponent;
-  let fixture: ComponentFixture<FormSectionWrapperComponent>;
+  let component: FormSectionHolderComponent;
+  let fixture: ComponentFixture<FormSectionHolderComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FormSectionWrapperComponent ]
+      declarations: [ FormSectionHolderComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(FormSectionWrapperComponent);
+    fixture = TestBed.createComponent(FormSectionHolderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,13 +1,13 @@
-<app-form-section-wrapper [title]="title">
+<app-form-section-holder [title]="form_config!['sectionTitle']">
     <app-form-control-input
-      [state]="form_config!['repairType']"
+      [state]="form_config.controls!['repairType']"
       [fGroup]="form_group">
     </app-form-control-input>
     <app-form-control-input
-      [state]="form_config!['notes']"
+      [state]="form_config.controls!['notes']"
       [fGroup]="form_group">
     </app-form-control-input>
-</app-form-section-wrapper>
+</app-form-section-holder>
 
 
 

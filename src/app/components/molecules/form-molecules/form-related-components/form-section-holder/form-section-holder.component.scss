@@ -1,16 +1,17 @@
 :host {
-  display: flex;
-  flex-direction: column;
-  margin-left: 0.25em;
-  margin-right: 0.25em;
-
-    .section-title {
+  .form-section {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+    &--title {
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: bold;
       align-self: center;
     }
+  }
 }
 
 

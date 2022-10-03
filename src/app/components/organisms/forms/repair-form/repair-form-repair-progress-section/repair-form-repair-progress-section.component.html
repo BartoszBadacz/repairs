@@ -1,18 +1,18 @@
-<app-form-section-wrapper [title]="title">
+<app-form-section-holder [title]="form_config!['sectionTitle']">
   <app-form-control-input
-    [state]="form_config!['dateOfSentToRepairCenter']"
+    [state]="form_config.controls!['dateOfSentToRepairCenter']"
     [fGroup]="form_group">
   </app-form-control-input>
   <app-form-control-input
-    [state]="form_config!['serviceRequestNumber']"
+    [state]="form_config.controls!['serviceRequestNumber']"
     [fGroup]="form_group">
   </app-form-control-input>
   <app-form-control-input
-    [state]="form_config!['dateOfReturnFromRepairCenter']"
+    [state]="form_config.controls!['dateOfReturnFromRepairCenter']"
     [fGroup]="form_group">
   </app-form-control-input>
   <app-form-control-input
-    [state]="form_config!['costOfRepair']"
+    [state]="form_config.controls!['costOfRepair']"
     [fGroup]="form_group">
   </app-form-control-input>
-</app-form-section-wrapper>
+</app-form-section-holder>

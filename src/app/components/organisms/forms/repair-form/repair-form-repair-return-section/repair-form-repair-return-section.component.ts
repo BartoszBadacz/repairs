@@ -1,6 +1,9 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {FormGroup} from "@angular/forms";
-import {ControlByName} from "../../../../../models/form/formConfig";
+import {
+  ControlByName,
+  FormSectionConfig
+} from "../../../../../models/form/formConfig";
 
 @Component({
   selector: 'app-repair-form-repair-return-section',
@@ -14,6 +17,5 @@ export class RepairFormRepairReturnSectionComponent implements OnInit {
   ngOnInit(): void {
   }
   @Input() form_group!: FormGroup;
-  @Input() form_config!: ControlByName | undefined;
-  @Input() title!: string;
+  @Input() form_config!: FormSectionConfig;
 }

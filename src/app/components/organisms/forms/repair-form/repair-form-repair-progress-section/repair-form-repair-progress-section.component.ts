@@ -1,6 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {FormGroup} from "@angular/forms";
-import {ControlByName} from "../../../../../models/form/formConfig";
+import {
+  FormSectionConfig
+} from "../../../../../models/form/formConfig";
 
 @Component({
   selector: 'app-repair-form-repair-progress-section',
@@ -14,6 +16,5 @@ export class RepairFormRepairProgressSectionComponent implements OnInit {
   ngOnInit(): void {
   }
   @Input() form_group!: FormGroup;
-  @Input() form_config!: ControlByName | undefined;
-  @Input() title!: string;
+  @Input() form_config!: FormSectionConfig;
 }

@@ -1,35 +1,35 @@
-<app-form-section-wrapper [title]="title">
+<app-form-section-holder [title]="form_config!['sectionTitle']">
   <app-form-control-input
-    [state]="form_config!['dateOfEntry']"
+    [state]="form_config.controls!['dateOfEntry']"
     [fGroup]="form_group">
   </app-form-control-input>
   <app-form-control-input
-    [state]="form_config!['itemRef']"
+    [state]="form_config.controls!['itemRef']"
     [fGroup]="form_group">
   </app-form-control-input>
   <app-form-control-input
-    [state]="form_config!['itemNumber']"
+    [state]="form_config.controls!['itemNumber']"
     [fGroup]="form_group">
   </app-form-control-input>
   <app-form-control-input
-    [state]="form_config!['customerAcc']"
+    [state]="form_config.controls!['customerAcc']"
     [fGroup]="form_group">
   </app-form-control-input>
   <app-form-control-input
-    [state]="form_config!['customerName']"
+    [state]="form_config.controls!['customerName']"
     [fGroup]="form_group">
   </app-form-control-input>
   <app-form-control-input
-    [state]="form_config!['customerDocumentNumber']"
+    [state]="form_config.controls!['customerDocumentNumber']"
     [fGroup]="form_group">
   </app-form-control-input>
   <app-form-control-input
-    [state]="form_config!['vendor']"
+    [state]="form_config.controls!['vendor']"
     [fGroup]="form_group">
   </app-form-control-input>
   <app-form-control-input
-    [state]="form_config!['initialNotes']"
+    [state]="form_config.controls!['initialNotes']"
     [fGroup]="form_group">
   </app-form-control-input>
-</app-form-section-wrapper>
+</app-form-section-holder>
 

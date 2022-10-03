@@ -5,7 +5,8 @@ export interface InputControlState {
   type: InputControlType,
   errorMessage: string,
   autocomplete: 'off' | '',
-  disabled: boolean;
+  isDisabled: boolean;
   label: string;
+  placeholder?: string,
 }
 

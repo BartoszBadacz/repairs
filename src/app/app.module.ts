@@ -50,10 +50,10 @@ import {
 } from "./components/molecules/basic-modal/basic-modal.component";
 import {
   FormControlInputComponent
-} from './components/molecules/form-controls/form-control-text/form-control-input.component';
+} from './components/molecules/form-molecules/form-controls/form-control-text/form-control-input.component';
 import {
   FormControlSelectComponent
-} from './components/molecules/form-controls/form-control-select/form-control-select.component';
+} from './components/molecules/form-molecules/form-controls/form-control-select/form-control-select.component';
 import {
   RepairFormComponent
 } from "./components/organisms/forms/repair-form/repair-form.component";
@@ -64,7 +64,7 @@ import { RepairFormDetailsSectionComponent } from './components/organisms/forms/
 import { RepairFormRepairProgressSectionComponent } from './components/organisms/forms/repair-form/repair-form-repair-progress-section/repair-form-repair-progress-section.component';
 import { RepairFormRepairReturnSectionComponent } from './components/organisms/forms/repair-form/repair-form-repair-return-section/repair-form-repair-return-section.component';
 import { RepairFormEstimationDetailsSectionComponent } from './components/organisms/forms/repair-form/repair-form-estimation-details-section/repair-form-estimation-details-section.component';
-import { FormSectionWrapperComponent } from './components/molecules/wrappers/form-section-wrapper/form-section-wrapper.component';
+import { FormSectionHolderComponent } from './components/molecules/form-molecules/form-related-components/form-section-holder/form-section-holder.component';
 
 @NgModule({
   declarations: [
@@ -92,7 +92,7 @@ import { FormSectionWrapperComponent } from './components/molecules/wrappers/for
     RepairFormRepairProgressSectionComponent,
     RepairFormRepairReturnSectionComponent,
     RepairFormEstimationDetailsSectionComponent,
-    FormSectionWrapperComponent
+    FormSectionHolderComponent
   ],
   imports: [
     BrowserModule,
