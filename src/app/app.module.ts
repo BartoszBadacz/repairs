@@ -64,7 +64,7 @@ import { RepairFormDetailsSectionComponent } from './components/organisms/forms/
 import { RepairFormRepairProgressSectionComponent } from './components/organisms/forms/repair-form/repair-form-repair-progress-section/repair-form-repair-progress-section.component';
 import { RepairFormRepairReturnSectionComponent } from './components/organisms/forms/repair-form/repair-form-repair-return-section/repair-form-repair-return-section.component';
 import { RepairFormEstimationDetailsSectionComponent } from './components/organisms/forms/repair-form/repair-form-estimation-details-section/repair-form-estimation-details-section.component';
-import { FormSectionHolderComponent } from './components/molecules/form-molecules/form-related-components/form-section-holder/form-section-holder.component';
+import { FormSectionHolderComponent } from './components/molecules/form-molecules/form-related-components/form-section/form-section-holder.component';
 
 @NgModule({
   declarations: [
@@ -92,7 +92,7 @@ import { FormSectionHolderComponent } from './components/molecules/form-molecule
     RepairFormRepairProgressSectionComponent,
     RepairFormRepairReturnSectionComponent,
     RepairFormEstimationDetailsSectionComponent,
-    FormSectionHolderComponent
+    FormSectionHolderComponent,
   ],
   imports: [
     BrowserModule,

@@ -16,5 +16,4 @@ export class RepairFormDetailsSectionComponent implements OnInit {
 
   @Input() form_group!: FormGroup;
   @Input() form_config!: FormSectionConfig;
-  @Input() title!: string;
 }

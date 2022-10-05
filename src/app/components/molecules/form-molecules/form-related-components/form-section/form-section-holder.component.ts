@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-form-section-holder',
+  selector: 'app-form-section',
   templateUrl: './form-section-holder.component.html',
   styleUrls: ['./form-section-holder.component.scss']
 })
