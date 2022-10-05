@@ -3,7 +3,7 @@ import {
   ControlValueAccessor,
   FormGroup,
 } from "@angular/forms";
-import {InputControlState} from "../../../../../models/form/InputControlState";
+import {InputControlState} from "../../../../../models/form/inputControlState";
 
 
 @Component({

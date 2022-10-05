@@ -1,26 +1,12 @@
-import {InputControlState} from "./InputControlState";
+import {FormSectionByName} from "./formSectionRecordByName";
 
 export interface FormConfig {
   formTitle: string,
-  sections: SectionByName;
+  sections: FormSectionByName
 }
 
-export type ControlByName = Record<string, InputControlState>
 
-export interface FormSectionConfig {
-  sectionTitle: string,
-  controls: ControlByName,
-}
 
-export type SectionByName = Record<string, FormSectionConfig>
 
-export type InputControlType = 'text'
-  | 'number'
-  | 'password'
-  | 'date'
-  | 'hidden'
 
-export type ControlType =
-  | 'select'
-  | 'switch'
-  | 'multiple';
+

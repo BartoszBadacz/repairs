@@ -1,8 +1,8 @@
-import {InputControlType} from "./formConfig";
+import {ControlInputType} from "./controlInput";
 
 export interface InputControlState {
   name: string,
-  type: InputControlType,
+  type: ControlInputType,
   errorMessage: string,
   autocomplete: 'off' | '',
   isDisabled: boolean;

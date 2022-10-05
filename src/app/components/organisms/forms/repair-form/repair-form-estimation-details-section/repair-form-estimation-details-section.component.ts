@@ -1,8 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {FormGroup} from "@angular/forms";
-import {
-  FormSectionConfig
-} from "../../../../../models/form/formConfig";
+import {FormSectionConfig} from "../../../../../models/form/formSectionConfig";
 
 @Component({
   selector: 'app-repair-form-estimation-details-section',

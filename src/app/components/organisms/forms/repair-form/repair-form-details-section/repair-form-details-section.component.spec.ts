@@ -1,6 +1,8 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { RepairFormDetailsSectionComponent } from './repair-form-details-section.component';
+import {
+  RepairFormDetailsSectionComponent
+} from './repair-form-details-section.component';
 
 describe('RepairFormDetailsSectionComponent', () => {
   let component: RepairFormDetailsSectionComponent;
@@ -8,9 +10,9 @@ describe('RepairFormDetailsSectionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RepairFormDetailsSectionComponent ]
+      declarations: [RepairFormDetailsSectionComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(RepairFormDetailsSectionComponent);
     component = fixture.componentInstance;
