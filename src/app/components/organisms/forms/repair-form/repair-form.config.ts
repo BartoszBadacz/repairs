@@ -1,6 +1,6 @@
-import {FormConfig} from "../../../../models/form/formConfig";
+import {FormConfigType} from "../../../../models/form/form-config.type";
 
-export const repairFormConfig: FormConfig = {
+export const repairFormConfig: FormConfigType = {
   formTitle: 'Nowa naprawa',
   sections: {
     repairEntrySection: {

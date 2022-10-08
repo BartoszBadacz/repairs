@@ -1,5 +1,3 @@
-export type Vendors = 'conmed' | 'optilus' | 'net';
-
 export type RepairType =
   'warranty-producer' |
   'warranty-distributor' |
@@ -8,10 +6,3 @@ export type RepairType =
   'paid' |
   'internal' |
   'not-repairable'
-
-export type CurrentRepairStep =
-  'to-quotation' |
-  'to-send-to-repair' |
-  'to-send-to-customer' |
-  'waiting-for-approval' |
-  'closed'

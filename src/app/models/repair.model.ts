@@ -1,4 +1,6 @@
-import {CurrentRepairStep, RepairType, Vendors} from "./dictionaries";
+import {Vendors} from "./vendors.type";
+import {RepairType} from "./repair.type";
+import {CurrentRepairStep} from "./form/current-repair-step.type";
 
 export interface RepairModel {
   id?: number,

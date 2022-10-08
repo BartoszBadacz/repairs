@@ -1,10 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {Icon} from "../../../models/icon.model";
+import {Icon} from "../../../models/icon.type";
 import {
   ColorScheme,
   ColorSchemeService
 } from "../../../services/color-scheme.service";
-import {MatDialog} from "@angular/material/dialog";
 import {
   BasicModalComponent
 } from "../../molecules/basic-modal/basic-modal.component";

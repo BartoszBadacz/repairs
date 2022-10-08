@@ -1,6 +1,6 @@
-import {ControlInputType} from "./controlInput";
+import {ControlInputType} from "./control-input.type";
 
-export interface InputControlState {
+export interface InputControlStateType {
   name: string,
   type: ControlInputType,
   errorMessage: string,

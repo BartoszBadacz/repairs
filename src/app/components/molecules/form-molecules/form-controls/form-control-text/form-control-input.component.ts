@@ -3,7 +3,7 @@ import {
   ControlValueAccessor,
   FormGroup,
 } from "@angular/forms";
-import {InputControlState} from "../../../../../models/form/inputControlState";
+import {InputControlStateType} from "../../../../../models/form/input-control-state.type";
 
 
 @Component({
@@ -31,7 +31,7 @@ export class FormControlInputComponent implements OnInit, ControlValueAccessor {
   }
 
   // @Input() control!: FormControl;
-  @Input() state!: InputControlState;
+  @Input() state!: InputControlStateType;
   @Input() fGroup!: FormGroup;
 
 }
