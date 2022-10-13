@@ -1,0 +1,22 @@
+:host {
+  section {
+    .section-form-wrapper {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .section-title {
+      font-weight: bold;
+      align-self: center;
+    }
+
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+  }
+}
+
+

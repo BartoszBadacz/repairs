@@ -151,7 +151,7 @@ export const repairFormConfig: FormConfigType = {
           isDisabled: false,
         },
         discount: {
-          name: 'dicount',
+          name: 'discount',
           type: 'text',
           label: 'Rabat',
           errorMessage: '',

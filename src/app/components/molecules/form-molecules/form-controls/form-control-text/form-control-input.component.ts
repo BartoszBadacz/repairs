@@ -30,7 +30,6 @@ export class FormControlInputComponent implements OnInit, ControlValueAccessor {
   registerOnTouched(fn: any) {
   }
 
-  // @Input() control!: FormControl;
   @Input() state!: InputControlStateType;
   @Input() fGroup!: FormGroup;
 

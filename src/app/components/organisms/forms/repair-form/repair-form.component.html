@@ -15,10 +15,18 @@
       [form_group]="form.controls.estimationDetailsSection"
       [form_config]="formTemplateConfig.sections['estimationDetailsSection']">
     </app-repair-form-estimation-details-section>
+    <app-customer-decision-section
+      [form_group]="form.controls.customerDecisionSection"
+      [form_config]="formTemplateConfig.sections['customerDecisionSection']">
+    </app-customer-decision-section>
     <app-repair-form-repair-progress-section
       [form_group]="form.controls.repairProgressSection"
       [form_config]="formTemplateConfig.sections['repairProgressSection']">
     </app-repair-form-repair-progress-section>
+    <app-repair-form-return-from-repair-center-section
+      [form_group]="form.controls.repairReturnFromRepairCenterSection"
+      [form_config]="formTemplateConfig.sections['repairReturnFromRepairCenterSection']">
+    </app-repair-form-return-from-repair-center-section>
     <app-repair-form-repair-return-section
       [form_group]="form.controls.repairReturnSection"
       [form_config]="formTemplateConfig.sections['repairReturnSection']">
