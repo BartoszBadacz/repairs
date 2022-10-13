@@ -1,38 +1,40 @@
 import {Vendors} from "./vendors.type";
 import {RepairType} from "./repair.type";
 import {CurrentRepairStep} from "./form/current-repair-step.type";
+import {DiscountType} from "./dicount.type";
+import {DecisionType} from "./form/decision.type";
 
 export interface RepairModel {
   id?: number,
   serviceYear?: number;
   currentStep?: CurrentRepairStep,
   currentStepDesc?: string,
-  vendor?: Vendors,
-  initialNotes?: string,
+  customerName?:  string,
+  invoiceValue?: number,
   dateOfEntry?: string,
-  entryComments?: string,
   itemRef?: string,
   itemNumber?: string,
   customerAcc?: string,
-  customerName?:  string,
   customerDocumentNumber?: string,
-  serviceRequestNumber?: string,
+  vendor?: Vendors,
+  entryComments?: string,
   repairType?: RepairType,
+  notes?: string
   dateOfPriceQuotation?: string,
   priceQuotationNumber?: string,
   priceQuotationValue?: number,
-  discount?: number,
-  customerApproval?: boolean,
   dateOfDecision?: string,
+  typeOfDecision?: DecisionType,
   customerDecisionNumber?: string,
+  discount?: number,
+  discountType?: DiscountType,
+  customerApproval?: boolean, // TODO to be removed,
   dateOfSentToRepairCenter?: string,
+  serviceRequestNumber?: string,
   dateOfReturnFromRepairCenter?: string,
   costOfRepair?: number,
-  returnComments?: string,
   invoiceSystemOrderNumber?: number,
   invoiceNumber?: string,
-  invoiceValue?: number,
-  dateOfClosureDate?: string,
   returnDocNumber?: string,
-  notes?: string
+  dateOfClosureDate?: string,
 }
