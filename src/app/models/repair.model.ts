@@ -19,7 +19,7 @@ export interface RepairModel {
   vendor?: Vendors,
   entryComments?: string,
   repairType?: RepairType,
-  notes?: string
+  damageDescription?: string
   dateOfPriceQuotation?: string,
   priceQuotationNumber?: string,
   priceQuotationValue?: number,

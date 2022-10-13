@@ -121,10 +121,23 @@ export const repairFormConfig: FormConfigType = {
           autocomplete: "off",
           isDisabled: false,
         },
+      }
+    },
+    customerDecisionSection: {
+      sectionTitle: "Decyzja klienta",
+      controls: {
         dateOfDecision: {
           name: 'dateOfDecision',
           type: 'date',
           label: 'Data decyzji klienta',
+          errorMessage: '',
+          autocomplete: "off",
+          isDisabled: false,
+        },
+        customerDecisionNumber: {
+          name: 'customerDecisionNumber',
+          type: 'text',
+          label: 'Numer decyzji klienta',
           errorMessage: '',
           autocomplete: "off",
           isDisabled: false,
@@ -137,14 +150,14 @@ export const repairFormConfig: FormConfigType = {
           autocomplete: "off",
           isDisabled: false,
         },
-        customerDecisionNumber: {
-          name: 'customerDecisionNumber',
+        discount: {
+          name: 'dicount',
           type: 'text',
-          label: 'Numer decyzji klienta',
+          label: 'Rabat',
           errorMessage: '',
           autocomplete: "off",
           isDisabled: false,
-        }
+        },
       }
     },
     repairProgressSection: {
@@ -166,6 +179,11 @@ export const repairFormConfig: FormConfigType = {
           autocomplete: "off",
           isDisabled: false,
         },
+      }
+    },
+    repairReturnFromRepairCenterSection: {
+      sectionTitle: 'Zwrot z Serwisu',
+      controls: {
         dateOfReturnFromRepairCenter: {
           name: 'dateOfReturnFromRepairCenter',
           type: 'date',

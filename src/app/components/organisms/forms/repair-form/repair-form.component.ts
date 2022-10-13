@@ -15,6 +15,7 @@ export class RepairFormComponent implements OnInit {
 
   constructor() {
   }
+
   formTemplateConfig = repairFormConfig;
 
   form = new FormGroup({
@@ -22,8 +23,8 @@ export class RepairFormComponent implements OnInit {
       dateOfEntry: new FormControl('', [Validators.required]),
       itemRef: new FormControl('', [Validators.required]),
       itemNumber: new FormControl('', [Validators.required]),
-      customerName: new FormControl('', [Validators.required]),
       customerAcc: new FormControl('', [Validators.required]),
+      customerName: new FormControl('', [Validators.required]),
       customerDocumentNumber: new FormControl(''),
       vendor: new FormControl('', [Validators.required]),
       initialNotes: new FormControl(''),
@@ -36,13 +37,20 @@ export class RepairFormComponent implements OnInit {
       dateOfPriceQuotation: new FormControl('', [Validators.required]),
       priceQuotationNumber: new FormControl('', [Validators.required]),
       priceQuotationValue: new FormControl('', [Validators.required]),
+
+    }),
+    customerDecisionSection: new FormGroup({
       dateOfDecision: new FormControl('', [Validators.required]),
-      typeOfDecision: new FormControl('', [Validators.required]),
       customerDecisionNumber: new FormControl('', [Validators.required]),
+      typeOfDecision: new FormControl('', [Validators.required]),
+      discount: new FormControl('')
     }),
     repairProgressSection: new FormGroup({
       dateOfSentToRepairCenter: new FormControl('', [Validators.required]),
       serviceRequestNumber: new FormControl('', [Validators.required]),
+
+    }),
+    repairReturnFromRepairCenterSection: new FormGroup({
       dateOfReturnFromRepairCenter: new FormControl('', [Validators.required]),
       costOfRepair: new FormControl('', [Validators.required]),
     }),
@@ -58,7 +66,9 @@ export class RepairFormComponent implements OnInit {
   isRepairEntrySectionValid: boolean = this.form.controls.repairEntrySection.valid;
   isRepairDetailsSectionValid: boolean = this.form.controls.repairDetailsSection.valid;
   isEstimationDetailSectionValid: boolean = this.form.controls.estimationDetailsSection.valid;
+  isCustomerDecisionSectionValid: boolean = this.form.controls.customerDecisionSection.valid;
   isRepairProgressSectionValid: boolean = this.form.controls.repairProgressSection.valid;
+  isRepairReturnFromRepairCenterSectionValid = this.form.controls.repairReturnFromRepairCenterSection.valid;
   isRepairReturnSectionValid: boolean = this.form.controls.repairReturnSection.valid;
 
   onSubmit() {
