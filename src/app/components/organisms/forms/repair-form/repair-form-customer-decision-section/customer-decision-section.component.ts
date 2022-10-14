@@ -11,9 +11,16 @@ import {
 })
 export class CustomerDecisionSectionComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
+  }
+
+  isSectionValid: boolean = false;
+
+  isValid(): void {
+    this.isSectionValid = this.form_group.valid;
   }
 
   @Input() form_group!: FormGroup;

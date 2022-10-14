@@ -16,6 +16,12 @@ export class RepairFormReturnFromRepairCenterSectionComponent implements OnInit 
   ngOnInit(): void {
   }
 
+  isSectionValid: boolean = false;
+
+  isValid(): void {
+    this.isSectionValid = this.form_group.valid;
+  }
+
   @Input() form_group!: FormGroup;
   @Input() form_config!: FormSectionConfigType;
 }
