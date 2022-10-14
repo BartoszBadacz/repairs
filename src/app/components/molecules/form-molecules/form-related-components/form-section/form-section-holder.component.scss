@@ -4,12 +4,36 @@
     flex-direction: column;
     margin-left: 0.25em;
     margin-right: 0.25em;
-    &--title {
+
+    &__front {
       display: flex;
-      align-items: center;
+      flex-direction: row;
       justify-content: center;
-      font-weight: bold;
-      align-self: center;
+      position: relative;
+      background-color: var(--color-primary);
+      border-radius: .5em .5em 0 0;
+
+      &--title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        align-self: center;
+      }
+
+      &--icon {
+        position: absolute;
+        right: 0.5em;
+        top: 0.5em;
+      }
+    }
+
+    &__wrapper {
+      background-color: aliceblue;
+
+      &--hidden {
+        display: none;
+      }
     }
   }
 }

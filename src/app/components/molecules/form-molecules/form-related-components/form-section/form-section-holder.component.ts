@@ -12,5 +12,11 @@ export class FormSectionHolderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  toggleVisible() {
+    this.isVisible = !this.isVisible;
+  }
+
+  isVisible: boolean = false;
+
   @Input() title!: string;
 }

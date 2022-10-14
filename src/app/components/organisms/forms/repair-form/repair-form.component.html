@@ -1,8 +1,8 @@
-<main class="form--">
-  <div class="form-title">
+<main class="form">
+  <div class="form--title">
     <h2>{{formTemplateConfig.formTitle}}</h2>
   </div>
-  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <form class="form--sections" [formGroup]="form" (ngSubmit)="onSubmit()">
     <app-repair-form-entry-section
       [form_group]="form.controls.repairEntrySection"
       [form_config]="formTemplateConfig.sections['repairEntrySection']">
