@@ -1,8 +1,8 @@
 <main class="form">
-  <div class="form--title">
+  <div class="form__title">
     <h2>{{formTemplateConfig.formTitle}}</h2>
   </div>
-  <form class="form--sections" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <form class="form__sections" [formGroup]="form" (ngSubmit)="onSubmit()">
     <app-repair-form-entry-section
       [form_group]="form.controls.repairEntrySection"
       [form_config]="formTemplateConfig.sections['repairEntrySection']">
@@ -34,12 +34,3 @@
     <button type="submit">Zapisz</button>
   </form>
 </main>
-<div class="temp-is-valid-info">
-  <p>{{isRepairEntrySectionValid}}</p>
-  <p>{{isRepairDetailsSectionValid}}</p>
-  <p>{{isEstimationDetailSectionValid}}</p>
-  <p>{{isCustomerDecisionSectionValid}}</p>
-  <p>{{isRepairProgressSectionValid}}</p>
-  <p>{{isRepairReturnFromRepairCenterSectionValid}}</p>
-  <p>{{isRepairReturnSectionValid}}</p>
-</div>

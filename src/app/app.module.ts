@@ -64,7 +64,7 @@ import { RepairFormDetailsSectionComponent } from './components/organisms/forms/
 import { RepairFormRepairProgressSectionComponent } from './components/organisms/forms/repair-form/repair-form-repair-progress-section/repair-form-repair-progress-section.component';
 import { RepairFormRepairReturnSectionComponent } from './components/organisms/forms/repair-form/repair-form-repair-return-section/repair-form-repair-return-section.component';
 import { RepairFormEstimationDetailsSectionComponent } from './components/organisms/forms/repair-form/repair-form-estimation-details-section/repair-form-estimation-details-section.component';
-import { FormSectionHolderComponent } from './components/molecules/form-molecules/form-related-components/form-section/form-section-holder.component';
+import { FormSectionComponent } from './components/molecules/form-molecules/form-related-components/form-section/form-section.component';
 import { CustomerDecisionSectionComponent } from './components/organisms/forms/repair-form/repair-form-customer-decision-section/customer-decision-section.component';
 import { RepairFormReturnFromRepairCenterSectionComponent } from './components/organisms/forms/repair-form/repair-form-return-from-repair-center-section/repair-form-return-from-repair-center-section.component';
 
@@ -94,7 +94,7 @@ import { RepairFormReturnFromRepairCenterSectionComponent } from './components/o
     RepairFormRepairProgressSectionComponent,
     RepairFormRepairReturnSectionComponent,
     RepairFormEstimationDetailsSectionComponent,
-    FormSectionHolderComponent,
+    FormSectionComponent,
     CustomerDecisionSectionComponent,
     RepairFormReturnFromRepairCenterSectionComponent,
   ],

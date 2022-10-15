@@ -1,4 +1,7 @@
-<app-form-section (input)="isValid()" [title]="form_config!['sectionTitle']">
+<app-form-section
+  (input)="isValid()"
+  [title]="form_config!['sectionTitle']"
+  [form_group]="form_group">
   <app-form-control-input
     [state]="form_config.controls!['dateOfEntry']"
     [fGroup]="form_group">
