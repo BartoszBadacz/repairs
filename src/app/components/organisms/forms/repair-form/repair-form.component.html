@@ -5,31 +5,38 @@
   <form class="form__sections" [formGroup]="form" (ngSubmit)="onSubmit()">
     <app-repair-form-entry-section
       [form_group]="form.controls.repairEntrySection"
-      [form_config]="formTemplateConfig.sections['repairEntrySection']">
+      [form_config]="formTemplateConfig.sections['repairEntrySection']"
+      [isSectionDisabled]=false>
     </app-repair-form-entry-section>
     <app-repair-form-details-section
       [form_group]="form.controls.repairDetailsSection"
-      [form_config]="formTemplateConfig.sections['repairDetailsSection']">
+      [form_config]="formTemplateConfig.sections['repairDetailsSection']"
+      [isSectionDisabled]="!this.isRepairEntrySectionValid">
     </app-repair-form-details-section>
     <app-repair-form-estimation-details-section
       [form_group]="form.controls.estimationDetailsSection"
-      [form_config]="formTemplateConfig.sections['estimationDetailsSection']">
+      [form_config]="formTemplateConfig.sections['estimationDetailsSection']"
+      [isSectionDisabled]="!this.isRepairDetailsSectionValid">
     </app-repair-form-estimation-details-section>
     <app-repair-form-customer-decision-section
       [form_group]="form.controls.customerDecisionSection"
-      [form_config]="formTemplateConfig.sections['customerDecisionSection']">
+      [form_config]="formTemplateConfig.sections['customerDecisionSection']"
+      [isSectionDisabled]="!this.isEstimationDetailSectionValid">
     </app-repair-form-customer-decision-section>
     <app-repair-form-repair-progress-section
       [form_group]="form.controls.repairProgressSection"
-      [form_config]="formTemplateConfig.sections['repairProgressSection']">
+      [form_config]="formTemplateConfig.sections['repairProgressSection']"
+      [isSectionDisabled]="!this.isCustomerDecisionSectionValid">
     </app-repair-form-repair-progress-section>
     <app-repair-form-return-from-repair-center-section
       [form_group]="form.controls.repairReturnFromRepairCenterSection"
-      [form_config]="formTemplateConfig.sections['repairReturnFromRepairCenterSection']">
+      [form_config]="formTemplateConfig.sections['repairReturnFromRepairCenterSection']"
+      [isSectionDisabled]="!this.isRepairProgressSectionValid">
     </app-repair-form-return-from-repair-center-section>
     <app-repair-form-repair-return-section
       [form_group]="form.controls.repairReturnSection"
-      [form_config]="formTemplateConfig.sections['repairReturnSection']">
+      [form_config]="formTemplateConfig.sections['repairReturnSection']"
+      [isSectionDisabled]="!this.isRepairReturnFromRepairCenterSectionValid">
     </app-repair-form-repair-return-section>
     <button type="submit">Zapisz</button>
   </form>

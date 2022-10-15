@@ -21,6 +21,7 @@ export class FormSectionComponent implements OnInit {
 
   @Input() title!: string;
   @Input() form_group!: FormGroup;
+  @Input() isSectionDisabled: boolean = false;
 
   isVisible: boolean = false;
   statusIcon: Icon = ''

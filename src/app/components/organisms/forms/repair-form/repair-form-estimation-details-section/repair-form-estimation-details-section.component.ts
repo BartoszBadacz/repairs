@@ -21,4 +21,5 @@ export class RepairFormEstimationDetailsSectionComponent implements OnInit {
 
   @Input() form_group!: FormGroup;
   @Input() form_config!: FormSectionConfigType;
+  @Input() isSectionDisabled!: boolean;
 }

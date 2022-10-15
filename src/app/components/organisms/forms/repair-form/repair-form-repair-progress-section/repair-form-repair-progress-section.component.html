@@ -1,6 +1,7 @@
 <app-form-section
   [title]="form_config!['sectionTitle']"
-  [form_group]="form_group">
+  [form_group]="form_group"
+  [isSectionDisabled]="isSectionDisabled">
   <app-form-control-input
     [state]="form_config.controls!['dateOfSentToRepairCenter']"
     [fGroup]="form_group">

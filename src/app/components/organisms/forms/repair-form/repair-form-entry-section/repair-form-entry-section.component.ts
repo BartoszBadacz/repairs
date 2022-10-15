@@ -23,4 +23,5 @@ export class RepairFormEntrySectionComponent implements OnInit {
 
   @Input() form_group!: FormGroup;
   @Input() form_config!: FormSectionConfigType;
+  @Input() isSectionDisabled!: boolean;
 }

@@ -15,27 +15,32 @@ export class RepairFormComponent implements OnInit {
   formTemplateConfig = repairFormConfig;
   form = repairFormGroup;
 
-
-  isRepairEntrySectionValid: boolean =
-    this.form.controls.repairEntrySection.valid;
-  isRepairDetailsSectionValid: boolean =
-    this.form.controls.repairDetailsSection.valid;
-  isEstimationDetailSectionValid: boolean =
-    this.form.controls.estimationDetailsSection.valid;
-  isCustomerDecisionSectionValid: boolean =
-    this.form.controls.customerDecisionSection.valid;
-  isRepairProgressSectionValid: boolean =
-    this.form.controls.repairProgressSection.valid;
-  isRepairReturnFromRepairCenterSectionValid =
-    this.form.controls.repairReturnFromRepairCenterSection.valid;
-  isRepairReturnSectionValid: boolean =
-    this.form.controls.repairReturnSection.valid;
+  isRepairEntrySectionValid!: boolean;
+  isRepairDetailsSectionValid!: boolean;
+  isEstimationDetailSectionValid!: boolean;
+  isCustomerDecisionSectionValid!: boolean;
+  isRepairProgressSectionValid!: boolean;
+  isRepairReturnFromRepairCenterSectionValid!: boolean;
+  isRepairReturnSectionValid!: boolean;
 
   onSubmit() {
     console.log(this.form.value)
   }
 
   ngOnInit(): void {
+    this.initSectionsValidationsSubscription()
+  }
+
+  private initSectionsValidationsSubscription() {
+    this.form.valueChanges.subscribe(value => {
+      this.isRepairEntrySectionValid = this.form.controls.repairEntrySection.valid;
+      this.isRepairDetailsSectionValid = this.form.controls.repairDetailsSection.valid;
+      this.isEstimationDetailSectionValid = this.form.controls.estimationDetailsSection.valid;
+      this.isCustomerDecisionSectionValid = this.form.controls.customerDecisionSection.valid;
+      this.isRepairProgressSectionValid = this.form.controls.repairProgressSection.valid;
+      this.isRepairReturnFromRepairCenterSectionValid = this.form.controls.repairReturnFromRepairCenterSection.valid;
+      this.isRepairReturnSectionValid = this.form.controls.repairReturnSection.valid;
+    })
   }
 
 }

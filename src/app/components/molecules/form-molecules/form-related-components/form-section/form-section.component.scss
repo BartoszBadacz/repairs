@@ -17,6 +17,10 @@
       &-rolled-up {
         border-radius: .5em;
       }
+      &-disabled {
+       pointer-events: none;
+        opacity: 0.5;
+      }
 
       &-title {
         display: flex;
