@@ -1,6 +1,6 @@
 <section class="form-section">
   <div class="form-section__front"
-       [ngClass]="[isVisible ? '' : 'form-section__front-rolled-up', isSectionDisabled ? 'form-section__front-disabled' : '']"
+       [ngClass]="[isVisible ? '' : 'form-section__front--rolled-up', isSectionDisabled ? 'form-section__front--disabled' : '']"
        (click)="toggleVisible()">
     <p class="form-section__front-title">{{title}}</p>
     <app-icon
@@ -8,8 +8,8 @@
       [iconName]="statusIcon">
     </app-icon>
   </div>
-  <div class="form-section__wrapper-visible"
-       [ngClass]="isVisible ? '' : 'form-section__wrapper-hidden'">
+  <div class="form-section__wrapper--visible"
+       [ngClass]="isVisible ? '' : 'form-section__wrapper--hidden'">
     <ng-content class="content"></ng-content>
   </div>
 </section>
