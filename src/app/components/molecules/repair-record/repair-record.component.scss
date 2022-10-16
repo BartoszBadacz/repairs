@@ -3,7 +3,7 @@
 :host {
   width: 100%;
 
-  .main {
+  .repair {
     margin: 0 0.5em 0 0.5em;
     display: flex;
     flex-direction: column;
@@ -19,6 +19,18 @@
       row-gap: 0.1em;
       @include repair-record.grid-parent;
       @include repair-record.grid-children;
+    }
+    &__details {
+      max-height: 50em;
+      opacity: 1;
+      transition: all 500ms ease-out;
+      overflow: hidden;
+
+      &--hidden {
+        opacity: 1;
+        max-height: 0;
+        overflow: hidden;
+      }
     }
   }
 

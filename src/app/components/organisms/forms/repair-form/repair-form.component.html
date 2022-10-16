@@ -13,12 +13,12 @@
       [form_config]="formTemplateConfig.sections['repairDetailsSection']"
       [isSectionDisabled]="!this.isRepairEntrySectionValid">
     </app-repair-form-details-section>
-    <app-repair-form-estimation-details-section
+    <app-repair-form-estimation-details-section *ngIf="showEstimationSection"
       [form_group]="form.controls.estimationDetailsSection"
       [form_config]="formTemplateConfig.sections['estimationDetailsSection']"
       [isSectionDisabled]="!this.isRepairDetailsSectionValid">
     </app-repair-form-estimation-details-section>
-    <app-repair-form-customer-decision-section
+    <app-repair-form-customer-decision-section *ngIf="showEstimationSection"
       [form_group]="form.controls.customerDecisionSection"
       [form_config]="formTemplateConfig.sections['customerDecisionSection']"
       [isSectionDisabled]="!this.isEstimationDetailSectionValid">
@@ -26,7 +26,7 @@
     <app-repair-form-repair-progress-section
       [form_group]="form.controls.repairProgressSection"
       [form_config]="formTemplateConfig.sections['repairProgressSection']"
-      [isSectionDisabled]="!this.isCustomerDecisionSectionValid">
+      [isSectionDisabled]="!shouldRepairProgressSectionBeEnabled()">
     </app-repair-form-repair-progress-section>
     <app-repair-form-return-from-repair-center-section
       [form_group]="form.controls.repairReturnFromRepairCenterSection"

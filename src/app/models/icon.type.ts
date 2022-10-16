@@ -13,4 +13,5 @@ export type Icon =
   | 'sentiment_satisfied'
   | 'pending'
   | 'block'
+  | 'star'
   | '';
