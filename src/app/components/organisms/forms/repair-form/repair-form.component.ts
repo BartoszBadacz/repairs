@@ -57,7 +57,6 @@ export class RepairFormComponent implements OnInit {
       } else {
         this.showEstimationSection = false;
       }
-      console.log(this.showEstimationSection);
     })
   }
 

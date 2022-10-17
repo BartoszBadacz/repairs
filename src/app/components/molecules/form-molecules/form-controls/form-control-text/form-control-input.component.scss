@@ -11,22 +11,17 @@
     padding-bottom: 0.5em;
     width: 90vw;
 
-    label {
+    &__label {
       font-size: var(--text-small);
       margin-left: 0;
       padding: 0.25em;
     }
 
-    label:before {
+    &__label--required:before {
       content: "*";
-      margin-right: 0.25em;
-      color: red;
-      visibility: hidden;
-    }
-
-    label.required:before {
       visibility: visible;
       margin-left: 0.5em;
+      color: var(--color-warning);
     }
 
     input {
@@ -47,7 +42,7 @@
       border-radius: 0.25em;
     }
 
-    .error-wrapper {
+    .error-container {
       width: 100%;
       padding-left: 0.25em;
 

@@ -1,10 +1,12 @@
-<main class="main">
-  <div class="top">
+<main class="layout">
+  <div class="layout__top">
     <app-header></app-header>
     <app-title *ngIf="!notFound"></app-title>
   </div>
-  <ng-content class="content"></ng-content>
-  <div class="bottom">
+  <div class="layout__content">
+    <ng-content></ng-content>
+  </div>
+  <div class="layout__bottom">
     <app-header></app-header>
   </div>
 </main>

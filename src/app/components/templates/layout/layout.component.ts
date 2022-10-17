@@ -2,7 +2,6 @@ import {
   Component,
   OnInit,
 } from '@angular/core';
-import {ColorSchemeService} from "../../../services/color-scheme.service";
 
 @Component({
   selector: 'app-layout',

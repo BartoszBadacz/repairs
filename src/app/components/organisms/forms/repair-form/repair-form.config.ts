@@ -13,6 +13,7 @@ export const repairFormConfig: FormConfigType = {
           errorMessage: 'pole jest wymagane',
           autocomplete: "off",
           isDisabled: false,
+          required: true,
         },
         itemRef: {
           name: 'itemRef',
@@ -21,7 +22,8 @@ export const repairFormConfig: FormConfigType = {
           errorMessage: 'pole jest wymagane',
           autocomplete: "off",
           isDisabled: false,
-          placeholder: 'numer referencyjny urządzenia'
+          placeholder: 'numer referencyjny urządzenia',
+          required: true,
         },
         itemNumber: {
           name: 'itemNumber',
@@ -30,6 +32,7 @@ export const repairFormConfig: FormConfigType = {
           errorMessage: '',
           autocomplete: "off",
           isDisabled: false,
+          required: true,
         },
         customerAcc: {
           name: 'customerAcc',
@@ -38,6 +41,7 @@ export const repairFormConfig: FormConfigType = {
           errorMessage: '',
           autocomplete: "off",
           isDisabled: false,
+          required: true,
         },
         customerName: {
           name: 'customerName',
@@ -46,6 +50,7 @@ export const repairFormConfig: FormConfigType = {
           errorMessage: '',
           autocomplete: "off",
           isDisabled: false,
+          required: true,
         },
         customerDocumentNumber: {
           name: 'customerDocumentNumber',
@@ -62,6 +67,7 @@ export const repairFormConfig: FormConfigType = {
           errorMessage: '',
           autocomplete: "off",
           isDisabled: false,
+          required: true,
         },
         initialNotes: {
           name: 'initialNotes',

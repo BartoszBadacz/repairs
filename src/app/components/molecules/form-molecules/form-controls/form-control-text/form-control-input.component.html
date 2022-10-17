@@ -1,18 +1,17 @@
 <div class="control" [formGroup]="fGroup">
-  <label
-    [for]="state.name"
-    [class]="">
+  <label class="control__label"
+         [for]="state.name"
+         [ngClass]="state.required ? 'control__label--required' : ''">
     {{state.label}}
   </label>
-  <input
-    [placeholder]="state.placeholder ? state.placeholder : ''"
-    [formControlName]="state.name"
-    [name]="state.name"
-    [id]="state.name"
-    [type]="state.type"
-    [autocomplete]="state.autocomplete">
-  <div
-    class="error-wrapper">
-    <p class="error">{{state.errorMessage}}</p>
+  <input class="control__input"
+         [placeholder]="state.placeholder ? state.placeholder : ''"
+         [formControlName]="state.name"
+         [name]="state.name"
+         [id]="state.name"
+         [type]="state.type"
+         [autocomplete]="state.autocomplete">
+  <div class="control__error">
+    <p class="control__error-message">{{state.errorMessage}}</p>
   </div>
 </div>

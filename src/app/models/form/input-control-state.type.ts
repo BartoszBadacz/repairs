@@ -7,6 +7,7 @@ export interface InputControlStateType {
   autocomplete: 'off' | '',
   isDisabled: boolean;
   label: string;
+  required?: boolean,
   placeholder?: string,
 }
 
