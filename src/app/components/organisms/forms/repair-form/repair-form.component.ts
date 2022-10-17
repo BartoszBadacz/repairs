@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {repairFormConfig} from "./repair-form.config";
 import {repairFormGroup} from "./repair-form-group";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-repair-form',
@@ -23,6 +24,8 @@ export class RepairFormComponent implements OnInit {
   isRepairReturnFromRepairCenterSectionValid!: boolean;
   isRepairReturnSectionValid!: boolean;
   showEstimationSection: boolean = false;
+
+  subscription: Subscription = this.form.valueChanges.subscribe()
 
   onSubmit() {
     console.log(this.form.value)

@@ -1,6 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {FormGroup} from "@angular/forms";
-import {FormSectionConfigType} from "../../../../../models/form/form-section-config.type";
+import {
+  FormSectionConfigType
+} from "../../../../../models/form/form-section-config.type";
 
 @Component({
   selector: 'app-repair-form-entry-section',
@@ -15,6 +17,14 @@ export class RepairFormEntrySectionComponent implements OnInit {
   isSectionValid: boolean = false;
 
   ngOnInit(): void {
+  }
+
+  errorMessageHandler(controlName: string) {
+    return (
+      this.form_group.controls![`${controlName}`].status === 'INVALID' &&
+      this.form_group.controls![`${controlName}`].touched) ?
+      'Pole jest wymagane' :
+      '';
   }
 
   isValid(): void {

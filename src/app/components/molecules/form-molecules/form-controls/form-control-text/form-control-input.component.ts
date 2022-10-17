@@ -1,9 +1,11 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
 import {
   ControlValueAccessor,
   FormGroup,
 } from "@angular/forms";
-import {InputControlStateType} from "../../../../../models/form/input-control-state.type";
+import {
+  InputControlStateType
+} from "../../../../../models/form/input-control-state.type";
 
 
 @Component({
@@ -17,7 +19,13 @@ export class FormControlInputComponent implements OnInit, ControlValueAccessor {
   constructor() {
   }
 
+  // hasInputError: boolean = false;
+
   ngOnInit(): void {
+
+    // this.form_group.controls[`${this.input_state.name}`].valueChanges.subscribe(value => {
+    //   this.form_group.controls[`${this.input_state.name}`].errors ? this.hasInputError = true : false;
+    // })
   }
 
 
@@ -30,7 +38,8 @@ export class FormControlInputComponent implements OnInit, ControlValueAccessor {
   registerOnTouched(fn: any) {
   }
 
-  @Input() state!: InputControlStateType;
-  @Input() fGroup!: FormGroup;
+  @Input() input_state!: InputControlStateType;
+  @Input() form_group!: FormGroup;
+  @Input() error_message!: string;
 
 }

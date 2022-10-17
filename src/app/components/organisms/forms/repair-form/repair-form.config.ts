@@ -10,26 +10,26 @@ export const repairFormConfig: FormConfigType = {
           name: 'dateOfEntry',
           type: 'date',
           label: 'Data wprowadzenia',
-          errorMessage: 'pole jest wymagane',
           autocomplete: "off",
           isDisabled: false,
           required: true,
+          errorMessage: 'Pole jest wymagane',
         },
         itemRef: {
           name: 'itemRef',
           type: 'text',
           label: 'Numer REF',
-          errorMessage: 'pole jest wymagane',
           autocomplete: "off",
           isDisabled: false,
           placeholder: 'numer referencyjny urządzenia',
           required: true,
+          errorMessage: 'Pole jest wymagane',
         },
         itemNumber: {
           name: 'itemNumber',
           type: 'text',
           label: 'Numer seryjny / LOT',
-          errorMessage: '',
+
           autocomplete: "off",
           isDisabled: false,
           required: true,
@@ -38,7 +38,7 @@ export const repairFormConfig: FormConfigType = {
           name: 'customerAcc',
           type: 'number',
           label: 'Numer konta klienta',
-          errorMessage: '',
+
           autocomplete: "off",
           isDisabled: false,
           required: true,
@@ -47,7 +47,7 @@ export const repairFormConfig: FormConfigType = {
           name: 'customerName',
           type: 'text',
           label: 'Nazwa Klienta',
-          errorMessage: '',
+
           autocomplete: "off",
           isDisabled: false,
           required: true,
@@ -56,7 +56,7 @@ export const repairFormConfig: FormConfigType = {
           name: 'customerDocumentNumber',
           type: 'text',
           label: 'Numer zgłoszenia klienta',
-          errorMessage: '',
+
           autocomplete: "off",
           isDisabled: false,
         },
@@ -64,7 +64,7 @@ export const repairFormConfig: FormConfigType = {
           name: 'vendor',
           type: 'text',
           label: 'Dostawca',
-          errorMessage: '',
+
           autocomplete: "off",
           isDisabled: false,
           required: true,
@@ -73,7 +73,7 @@ export const repairFormConfig: FormConfigType = {
           name: 'initialNotes',
           type: 'text',
           label: 'Notatki',
-          errorMessage: '',
+
           autocomplete: "off",
           isDisabled: false,
         },
@@ -86,7 +86,7 @@ export const repairFormConfig: FormConfigType = {
           name: 'repairType',
           type: 'text',
           label: 'Typ naprawy',
-          errorMessage: '',
+
           autocomplete: "off",
           isDisabled: false,
         },
@@ -94,7 +94,7 @@ export const repairFormConfig: FormConfigType = {
           name: 'notes',
           type: 'text',
           label: 'Opis uszkodzeń',
-          errorMessage: '',
+
           autocomplete: "off",
           isDisabled: false,
         }
@@ -107,7 +107,7 @@ export const repairFormConfig: FormConfigType = {
           name: 'dateOfPriceQuotation',
           type: 'date',
           label: 'Data wystawienia kosztorysu',
-          errorMessage: '',
+
           autocomplete: "off",
           isDisabled: false,
         },
@@ -115,7 +115,7 @@ export const repairFormConfig: FormConfigType = {
           name: 'priceQuotationNumber',
           type: 'text',
           label: 'Numer kosztorysu',
-          errorMessage: '',
+
           autocomplete: "off",
           isDisabled: false,
         },
@@ -123,7 +123,7 @@ export const repairFormConfig: FormConfigType = {
           name: 'priceQuotationValue',
           type: 'number',
           label: 'Kwota kosztorysu',
-          errorMessage: '',
+
           autocomplete: "off",
           isDisabled: false,
         },
@@ -136,7 +136,7 @@ export const repairFormConfig: FormConfigType = {
           name: 'dateOfDecision',
           type: 'date',
           label: 'Data decyzji klienta',
-          errorMessage: '',
+
           autocomplete: "off",
           isDisabled: false,
         },
@@ -144,7 +144,7 @@ export const repairFormConfig: FormConfigType = {
           name: 'customerDecisionNumber',
           type: 'text',
           label: 'Numer decyzji klienta',
-          errorMessage: '',
+
           autocomplete: "off",
           isDisabled: false,
         },
@@ -152,7 +152,7 @@ export const repairFormConfig: FormConfigType = {
           name: 'typeOfDecision',
           type: 'text',
           label: 'Rodzaj decyzji klienta',
-          errorMessage: '',
+
           autocomplete: "off",
           isDisabled: false,
         },
@@ -160,7 +160,7 @@ export const repairFormConfig: FormConfigType = {
           name: 'discount',
           type: 'text',
           label: 'Rabat',
-          errorMessage: '',
+
           autocomplete: "off",
           isDisabled: false,
         },
@@ -173,7 +173,7 @@ export const repairFormConfig: FormConfigType = {
           name: 'dateOfSentToRepairCenter',
           type: 'date',
           label: 'Data wysyłki do naprawy',
-          errorMessage: '',
+
           autocomplete: "off",
           isDisabled: false,
         },
@@ -181,7 +181,7 @@ export const repairFormConfig: FormConfigType = {
           name: 'serviceRequestNumber',
           type: 'text',
           label: 'Numer zgłoszenia serwisowego',
-          errorMessage: '',
+
           autocomplete: "off",
           isDisabled: false,
         },
@@ -194,7 +194,7 @@ export const repairFormConfig: FormConfigType = {
           name: 'dateOfReturnFromRepairCenter',
           type: 'date',
           label: 'Data powrotu z serwisu',
-          errorMessage: '',
+
           autocomplete: "off",
           isDisabled: false,
         },
@@ -202,7 +202,7 @@ export const repairFormConfig: FormConfigType = {
           name: 'costOfRepair',
           type: 'number',
           label: 'Koszt naprawy',
-          errorMessage: '',
+
           autocomplete: "off",
           isDisabled: false,
         },
@@ -215,7 +215,7 @@ export const repairFormConfig: FormConfigType = {
           name: 'invoiceValue',
           type: 'number',
           label: 'Wartość fakturowana',
-          errorMessage: '',
+
           autocomplete: "off",
           isDisabled: false,
         },
@@ -223,7 +223,7 @@ export const repairFormConfig: FormConfigType = {
           name: 'invoiceSystemOrderNumber',
           type: 'number',
           label: 'Numer zamówienia Oracle',
-          errorMessage: '',
+
           autocomplete: "off",
           isDisabled: false,
         },
@@ -231,7 +231,7 @@ export const repairFormConfig: FormConfigType = {
           name: 'invoiceNumber',
           type: 'number',
           label: 'Numer faktury',
-          errorMessage: '',
+
           autocomplete: "off",
           isDisabled: false,
         },
@@ -239,7 +239,7 @@ export const repairFormConfig: FormConfigType = {
           name: 'returnDocNumber',
           type: 'text',
           label: 'Numer WZ',
-          errorMessage: '',
+
           autocomplete: "off",
           isDisabled: false,
         },
@@ -247,7 +247,7 @@ export const repairFormConfig: FormConfigType = {
           name: 'dateOfClosureDate',
           type: 'date',
           label: 'Data odesłania do klienta',
-          errorMessage: '',
+
           autocomplete: "off",
           isDisabled: false,
         }

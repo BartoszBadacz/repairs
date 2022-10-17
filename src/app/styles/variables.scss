@@ -4,15 +4,18 @@ body {
   --color-primary: #89d7e3;
   --color-secondary: #1b8fb8;
   --color-warning: #EB1407;
+  --color-input: var(--color--background);
 
   --text-small: 0.8em;
   --ref-quarter: 0.25em;
   --ref-half: 0.5em;
 
-  --menu-height: 3em;
+  --header-height: 3em;
+  --footer-height: 3em;
 }
 
 body[color-scheme="dark"] {
+  --color-input: #e0d5d5;
   --color--background: #444444;
   --color-text: white;
   --color-secondary: #1b8fb8;

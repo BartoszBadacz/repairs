@@ -3,36 +3,44 @@
   [form_group]="form_group"
   [isSectionDisabled]="isSectionDisabled">
   <app-form-control-input
-    [state]="form_config.controls!['dateOfEntry']"
-    [fGroup]="form_group">
+    [input_state]="form_config.controls!['dateOfEntry']"
+    [form_group]="form_group"
+    [error_message]="errorMessageHandler('dateOfEntry')">
   </app-form-control-input>
   <app-form-control-input
-    [state]="form_config.controls!['itemRef']"
-    [fGroup]="form_group">
+    [input_state]="form_config.controls!['itemRef']"
+    [form_group]="form_group"
+    [error_message]="errorMessageHandler('itemRef')">
   </app-form-control-input>
   <app-form-control-input
-    [state]="form_config.controls!['itemNumber']"
-    [fGroup]="form_group">
+    [input_state]="form_config.controls!['itemNumber']"
+    [form_group]="form_group"
+  [error_message]="errorMessageHandler('itemNumber')">
   </app-form-control-input>
   <app-form-control-input
-    [state]="form_config.controls!['customerAcc']"
-    [fGroup]="form_group">
+    [input_state]="form_config.controls!['customerAcc']"
+    [form_group]="form_group"
+    [error_message]="errorMessageHandler('customerAcc')">
   </app-form-control-input>
   <app-form-control-input
-    [state]="form_config.controls!['customerName']"
-    [fGroup]="form_group">
+    [input_state]="form_config.controls!['customerName']"
+    [form_group]="form_group"
+    [error_message]="errorMessageHandler('customerName')">
   </app-form-control-input>
   <app-form-control-input
-    [state]="form_config.controls!['customerDocumentNumber']"
-    [fGroup]="form_group">
+    [input_state]="form_config.controls!['customerDocumentNumber']"
+    [form_group]="form_group"
+    [error_message]="errorMessageHandler('customerDocumentNumber')">
   </app-form-control-input>
   <app-form-control-input
-    [state]="form_config.controls!['vendor']"
-    [fGroup]="form_group">
+    [input_state]="form_config.controls!['vendor']"
+    [form_group]="form_group"
+    [error_message]="errorMessageHandler('vendor')">
   </app-form-control-input>
   <app-form-control-input
-    [state]="form_config.controls!['initialNotes']"
-    [fGroup]="form_group">
+    [input_state]="form_config.controls!['initialNotes']"
+    [form_group]="form_group"
+    [error_message]="errorMessageHandler('initialNotes')">
   </app-form-control-input>
 </app-form-section>
 

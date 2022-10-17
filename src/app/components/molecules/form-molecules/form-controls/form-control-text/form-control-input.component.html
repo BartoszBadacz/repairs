@@ -1,17 +1,17 @@
-<div class="control" [formGroup]="fGroup">
+<div class="control" [formGroup]="form_group">
   <label class="control__label"
-         [for]="state.name"
-         [ngClass]="state.required ? 'control__label--required' : ''">
-    {{state.label}}
+         [for]="input_state.name"
+         [ngClass]="input_state.required ? 'control__label--required' : ''">
+    {{input_state.label}}
   </label>
   <input class="control__input"
-         [placeholder]="state.placeholder ? state.placeholder : ''"
-         [formControlName]="state.name"
-         [name]="state.name"
-         [id]="state.name"
-         [type]="state.type"
-         [autocomplete]="state.autocomplete">
+         [placeholder]="input_state.placeholder ? input_state.placeholder : ''"
+         [formControlName]="input_state.name"
+         [name]="input_state.name"
+         [id]="input_state.name"
+         [type]="input_state.type"
+         [autocomplete]="input_state.autocomplete">
   <div class="control__error">
-    <p class="control__error-message">{{state.errorMessage}}</p>
+    <p class="control__error-message">{{error_message}}</p>
   </div>
 </div>
