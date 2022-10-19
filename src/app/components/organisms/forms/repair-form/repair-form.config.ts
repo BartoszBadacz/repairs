@@ -23,13 +23,11 @@ export const repairFormConfig: FormConfigType = {
           isDisabled: false,
           placeholder: 'numer referencyjny urządzenia',
           required: true,
-          errorMessage: 'Pole jest wymagane',
         },
         itemNumber: {
           name: 'itemNumber',
           type: 'text',
           label: 'Numer seryjny / LOT',
-
           autocomplete: "off",
           isDisabled: false,
           required: true,
@@ -38,7 +36,6 @@ export const repairFormConfig: FormConfigType = {
           name: 'customerAcc',
           type: 'number',
           label: 'Numer konta klienta',
-
           autocomplete: "off",
           isDisabled: false,
           required: true,
@@ -47,7 +44,6 @@ export const repairFormConfig: FormConfigType = {
           name: 'customerName',
           type: 'text',
           label: 'Nazwa Klienta',
-
           autocomplete: "off",
           isDisabled: false,
           required: true,
@@ -56,7 +52,6 @@ export const repairFormConfig: FormConfigType = {
           name: 'customerDocumentNumber',
           type: 'text',
           label: 'Numer zgłoszenia klienta',
-
           autocomplete: "off",
           isDisabled: false,
         },
@@ -64,7 +59,6 @@ export const repairFormConfig: FormConfigType = {
           name: 'vendor',
           type: 'text',
           label: 'Dostawca',
-
           autocomplete: "off",
           isDisabled: false,
           required: true,
@@ -73,7 +67,6 @@ export const repairFormConfig: FormConfigType = {
           name: 'initialNotes',
           type: 'text',
           label: 'Notatki',
-
           autocomplete: "off",
           isDisabled: false,
         },
@@ -86,7 +79,6 @@ export const repairFormConfig: FormConfigType = {
           name: 'repairType',
           type: 'text',
           label: 'Typ naprawy',
-
           autocomplete: "off",
           isDisabled: false,
         },
@@ -94,7 +86,6 @@ export const repairFormConfig: FormConfigType = {
           name: 'notes',
           type: 'text',
           label: 'Opis uszkodzeń',
-
           autocomplete: "off",
           isDisabled: false,
         }
@@ -107,7 +98,6 @@ export const repairFormConfig: FormConfigType = {
           name: 'dateOfPriceQuotation',
           type: 'date',
           label: 'Data wystawienia kosztorysu',
-
           autocomplete: "off",
           isDisabled: false,
         },
@@ -115,7 +105,6 @@ export const repairFormConfig: FormConfigType = {
           name: 'priceQuotationNumber',
           type: 'text',
           label: 'Numer kosztorysu',
-
           autocomplete: "off",
           isDisabled: false,
         },
@@ -123,7 +112,6 @@ export const repairFormConfig: FormConfigType = {
           name: 'priceQuotationValue',
           type: 'number',
           label: 'Kwota kosztorysu',
-
           autocomplete: "off",
           isDisabled: false,
         },
@@ -136,7 +124,6 @@ export const repairFormConfig: FormConfigType = {
           name: 'dateOfDecision',
           type: 'date',
           label: 'Data decyzji klienta',
-
           autocomplete: "off",
           isDisabled: false,
         },
@@ -144,7 +131,6 @@ export const repairFormConfig: FormConfigType = {
           name: 'customerDecisionNumber',
           type: 'text',
           label: 'Numer decyzji klienta',
-
           autocomplete: "off",
           isDisabled: false,
         },
@@ -152,7 +138,6 @@ export const repairFormConfig: FormConfigType = {
           name: 'typeOfDecision',
           type: 'text',
           label: 'Rodzaj decyzji klienta',
-
           autocomplete: "off",
           isDisabled: false,
         },
@@ -160,7 +145,6 @@ export const repairFormConfig: FormConfigType = {
           name: 'discount',
           type: 'text',
           label: 'Rabat',
-
           autocomplete: "off",
           isDisabled: false,
         },
@@ -173,7 +157,6 @@ export const repairFormConfig: FormConfigType = {
           name: 'dateOfSentToRepairCenter',
           type: 'date',
           label: 'Data wysyłki do naprawy',
-
           autocomplete: "off",
           isDisabled: false,
         },
@@ -181,7 +164,6 @@ export const repairFormConfig: FormConfigType = {
           name: 'serviceRequestNumber',
           type: 'text',
           label: 'Numer zgłoszenia serwisowego',
-
           autocomplete: "off",
           isDisabled: false,
         },
@@ -194,7 +176,6 @@ export const repairFormConfig: FormConfigType = {
           name: 'dateOfReturnFromRepairCenter',
           type: 'date',
           label: 'Data powrotu z serwisu',
-
           autocomplete: "off",
           isDisabled: false,
         },
@@ -202,7 +183,6 @@ export const repairFormConfig: FormConfigType = {
           name: 'costOfRepair',
           type: 'number',
           label: 'Koszt naprawy',
-
           autocomplete: "off",
           isDisabled: false,
         },
@@ -215,7 +195,6 @@ export const repairFormConfig: FormConfigType = {
           name: 'invoiceValue',
           type: 'number',
           label: 'Wartość fakturowana',
-
           autocomplete: "off",
           isDisabled: false,
         },
@@ -223,7 +202,6 @@ export const repairFormConfig: FormConfigType = {
           name: 'invoiceSystemOrderNumber',
           type: 'number',
           label: 'Numer zamówienia Oracle',
-
           autocomplete: "off",
           isDisabled: false,
         },
@@ -231,7 +209,6 @@ export const repairFormConfig: FormConfigType = {
           name: 'invoiceNumber',
           type: 'number',
           label: 'Numer faktury',
-
           autocomplete: "off",
           isDisabled: false,
         },
@@ -239,7 +216,6 @@ export const repairFormConfig: FormConfigType = {
           name: 'returnDocNumber',
           type: 'text',
           label: 'Numer WZ',
-
           autocomplete: "off",
           isDisabled: false,
         },
@@ -247,7 +223,6 @@ export const repairFormConfig: FormConfigType = {
           name: 'dateOfClosureDate',
           type: 'date',
           label: 'Data odesłania do klienta',
-
           autocomplete: "off",
           isDisabled: false,
         }

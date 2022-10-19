@@ -1,13 +1,12 @@
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {hasDupaValidator} from "../../../../custom-validators/hasDupaValidator";
 
 export const repairFormGroup = new FormGroup({
   repairEntrySection: new FormGroup({
     dateOfEntry: new FormControl<string>('', [Validators.required]),
-    itemRef: new FormControl<string>('', [hasDupaValidator]),
-    itemNumber: new FormControl<string>('', [Validators.required]),
+    itemRef: new FormControl<string>('', [Validators.required, Validators.maxLength(5)]),
+    itemNumber: new FormControl<string>('', [Validators.required, Validators.minLength(5)]),
     customerAcc: new FormControl<string>('', [Validators.required]),
-    customerName: new FormControl<string>('', [Validators.required]),
+    customerName: new FormControl<string>('', [Validators.required,  Validators.email]),
     customerDocumentNumber: new FormControl(''),
     vendor: new FormControl('', [Validators.required]),
     initialNotes: new FormControl(''),

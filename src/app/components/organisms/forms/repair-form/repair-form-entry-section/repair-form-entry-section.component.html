@@ -5,42 +5,42 @@
   <app-form-control-input
     [input_state]="form_config.controls!['dateOfEntry']"
     [form_group]="form_group"
-    [error_message]="errorMessageHandler('dateOfEntry')">
+    [error_message]="controlError.message(form_group.controls['dateOfEntry'])">
   </app-form-control-input>
   <app-form-control-input
     [input_state]="form_config.controls!['itemRef']"
     [form_group]="form_group"
-    [error_message]="errorMessageHandler('itemRef')">
+    [error_message]="controlError.message(form_group.controls['itemRef'])">
   </app-form-control-input>
   <app-form-control-input
     [input_state]="form_config.controls!['itemNumber']"
     [form_group]="form_group"
-  [error_message]="errorMessageHandler('itemNumber')">
+    [error_message]="controlError.message(form_group.controls['itemNumber'])">
   </app-form-control-input>
   <app-form-control-input
     [input_state]="form_config.controls!['customerAcc']"
     [form_group]="form_group"
-    [error_message]="errorMessageHandler('customerAcc')">
+    [error_message]="controlError.message(form_group.controls['customerAcc'])">
   </app-form-control-input>
   <app-form-control-input
     [input_state]="form_config.controls!['customerName']"
     [form_group]="form_group"
-    [error_message]="errorMessageHandler('customerName')">
+    [error_message]="controlError.message(form_group.controls['customerName'])">
   </app-form-control-input>
   <app-form-control-input
     [input_state]="form_config.controls!['customerDocumentNumber']"
     [form_group]="form_group"
-    [error_message]="errorMessageHandler('customerDocumentNumber')">
+    [error_message]="controlError.message(form_group.controls['customerDocumentNumber'])">
   </app-form-control-input>
   <app-form-control-input
     [input_state]="form_config.controls!['vendor']"
     [form_group]="form_group"
-    [error_message]="errorMessageHandler('vendor')">
+    [error_message]="controlError.message(form_group.controls['vendor'])">
   </app-form-control-input>
   <app-form-control-input
     [input_state]="form_config.controls!['initialNotes']"
     [form_group]="form_group"
-    [error_message]="errorMessageHandler('initialNotes')">
+    [error_message]="controlError.message(form_group.controls['initialNotes'])">
   </app-form-control-input>
 </app-form-section>
 
