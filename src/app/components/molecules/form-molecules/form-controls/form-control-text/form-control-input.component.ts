@@ -19,7 +19,6 @@ export class FormControlInputComponent implements OnInit, ControlValueAccessor {
   constructor() {
   }
 
-  // hasInputError: boolean = false;
 
   ngOnInit(): void {
 

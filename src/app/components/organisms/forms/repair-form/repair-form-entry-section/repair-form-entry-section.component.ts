@@ -19,7 +19,8 @@ export class RepairFormEntrySectionComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  errorMessageHandler(controlName: string) {
+  errorMessageHandler(controlName: string): string {
+console.log(this.form_group.controls![`${controlName}`].errors)
     return (
       this.form_group.controls![`${controlName}`].status === 'INVALID' &&
       this.form_group.controls![`${controlName}`].touched) ?

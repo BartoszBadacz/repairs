@@ -51,22 +51,24 @@ export class RepairFormComponent implements OnInit {
   private repairTypeSubscription(): void {
     this.form.controls.repairDetailsSection.controls.repairType.valueChanges.subscribe(value => {
       this.shouldRepairProgressSectionBeEnabled();
-      if (value !== 'warranty' && value !== 'paid') {
+      if (value === 'warranty') {
         this.showEstimationSection = false;
-      } else if (value === 'warranty') {
-        this.showEstimationSection = false
-      } else if (value === 'paid') {
-        this.showEstimationSection = true;
       } else {
-        this.showEstimationSection = false;
+        this.showEstimationSection = true;
       }
     })
   }
 
   shouldRepairProgressSectionBeEnabled(): boolean {
-    if (this.showEstimationSection && this.isCustomerDecisionSectionValid) {
+    if (
+      this.showEstimationSection &&
+      this.isCustomerDecisionSectionValid
+    ) {
       return true
-    } else if (!this.showEstimationSection && this.isRepairDetailsSectionValid) {
+    } else if (
+      !this.showEstimationSection &&
+      this.isRepairDetailsSectionValid
+    ) {
       return true
     } else {
       return false

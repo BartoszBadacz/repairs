@@ -24,7 +24,7 @@
       color: var(--color-warning);
     }
 
-    input {
+    &__input {
       border: 1px solid black;
       border-radius: 0.25em;
       outline: none;
@@ -36,27 +36,25 @@
       background-color: var(--color-input);
     }
 
-    input:focus {
+    &__input:focus {
       background-color: var(--color-primary);
       outline: none;
       border: 1px solid green;
       border-radius: 0.25em;
     }
 
-    .error-container {
+    &__error {
       width: 100%;
       padding-left: 0.25em;
+      height: var(--text-small);
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
 
-      p {
+      &-message {
         font-size: var(--text-small);
-        padding: 0.25em;
-        visibility: hidden;
-        margin: 0 0 0.5em 0.5em;
-      }
-
-      p.error {
-        visibility: visible;
         color: var(--color-warning);
+        padding-left: 0.25em;
       }
     }
   }
