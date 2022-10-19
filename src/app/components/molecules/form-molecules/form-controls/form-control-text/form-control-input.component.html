@@ -5,6 +5,7 @@
     {{input_state.label}}
   </label>
   <input class="control__input"
+         [ngClass]="(form_group.controls[input_state.name].invalid && !form_group.controls[input_state.name].pristine) ? 'control__input--invalid' : ''"
          [placeholder]="input_state.placeholder ? input_state.placeholder : ''"
          [formControlName]="input_state.name"
          [name]="input_state.name"
