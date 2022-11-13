@@ -1,13 +1,7 @@
 import {ControlInputType} from "./control-input.type";
+import {InputBaseState} from "./input-base-state.type";
 
-export interface InputControlStateType {
-  name: string,
+export interface InputControlState extends InputBaseState{
   type: ControlInputType,
-  autocomplete: 'off' | '',
-  isDisabled: boolean;
-  label: string;
-  required?: boolean,
-  placeholder?: string,
-  errorMessage?: string,
 }
 

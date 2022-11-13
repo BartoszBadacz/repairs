@@ -1,8 +1,21 @@
-<div [formGroup]="form">
-<!--  <label [for]="meta.name">{{meta.label}}</label>-->
-<!--  <select [id]="meta.name" [disabled]="meta.disabled" [formControlName]="meta.name">-->
-<!--    <option *ngFor="let option of meta.options" [value]="option.value">{{option.value}}</option>-->
-<!--  </select>-->
-<!--  <p *ngIf="meta.errorMessage"-->
-<!--     class="error">{{meta.errorMessage}}</p>-->
+<div class="control" [formGroup]="form_group">
+  <label
+    class="control__label"
+    [for]="control_state.name"
+    [ngClass]="control_state.required ? 'control__label--required' : ''">
+    {{control_state.label}}
+  </label>
+  <select
+    class="control__select"
+    [ngClass]="(form_group.controls[control_state.name].invalid &&
+    !form_group.controls[control_state.name].pristine) ?
+    'control__input--invalid' :
+    ''"
+    [formControlName]="control_state.name"
+    [name]="control_state.name"
+    [id]="control_state.name"
+  >
+    <option *ngFor="let option of control_state.options">{{option.name}}</option>
+  </select>
+  <p></p>
 </div>

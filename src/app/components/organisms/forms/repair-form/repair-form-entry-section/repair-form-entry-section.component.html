@@ -3,42 +3,42 @@
   [form_group]="form_group"
   [isSectionDisabled]="isSectionDisabled">
   <app-form-control-input
-    [input_state]="form_config.controls!['dateOfEntry']"
+    [control_state]="form_config.controls!['dateOfEntry']"
     [form_group]="form_group"
     [error_message]="controlError.message(form_group.controls['dateOfEntry'])">
   </app-form-control-input>
   <app-form-control-input
-    [input_state]="form_config.controls!['itemRef']"
+    [control_state]="form_config.controls!['itemRef']"
     [form_group]="form_group"
     [error_message]="controlError.message(form_group.controls['itemRef'])">
   </app-form-control-input>
   <app-form-control-input
-    [input_state]="form_config.controls!['itemNumber']"
+    [control_state]="form_config.controls!['itemNumber']"
     [form_group]="form_group"
     [error_message]="controlError.message(form_group.controls['itemNumber'])">
   </app-form-control-input>
   <app-form-control-input
-    [input_state]="form_config.controls!['customerAcc']"
+    [control_state]="form_config.controls!['customerAcc']"
     [form_group]="form_group"
     [error_message]="controlError.message(form_group.controls['customerAcc'])">
   </app-form-control-input>
   <app-form-control-input
-    [input_state]="form_config.controls!['customerName']"
+    [control_state]="form_config.controls!['customerName']"
     [form_group]="form_group"
     [error_message]="controlError.message(form_group.controls['customerName'])">
   </app-form-control-input>
   <app-form-control-input
-    [input_state]="form_config.controls!['customerDocumentNumber']"
+    [control_state]="form_config.controls!['customerDocumentNumber']"
     [form_group]="form_group"
     [error_message]="controlError.message(form_group.controls['customerDocumentNumber'])">
   </app-form-control-input>
-  <app-form-control-input
-    [input_state]="form_config.controls!['vendor']"
+  <app-form-control-select
+    [control_state]="form_config.controls!['vendor']"
     [form_group]="form_group"
     [error_message]="controlError.message(form_group.controls['vendor'])">
-  </app-form-control-input>
+  </app-form-control-select>
   <app-form-control-input
-    [input_state]="form_config.controls!['initialNotes']"
+    [control_state]="form_config.controls!['initialNotes']"
     [form_group]="form_group"
     [error_message]="controlError.message(form_group.controls['initialNotes'])">
   </app-form-control-input>

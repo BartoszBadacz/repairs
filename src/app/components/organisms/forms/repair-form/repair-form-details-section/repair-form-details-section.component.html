@@ -2,12 +2,12 @@
   [title]="form_config!['sectionTitle']"
   [form_group]="form_group"
   [isSectionDisabled]="isSectionDisabled">
-    <app-form-control-input
-      [input_state]="form_config.controls!['repairType']"
+    <app-form-control-select
+      [control_state]="form_config.controls!['repairType']"
       [form_group]="form_group">
-    </app-form-control-input>
+    </app-form-control-select>
     <app-form-control-input
-      [input_state]="form_config.controls!['notes']"
+      [control_state]="form_config.controls!['notes']"
       [form_group]="form_group">
     </app-form-control-input>
 </app-form-section>

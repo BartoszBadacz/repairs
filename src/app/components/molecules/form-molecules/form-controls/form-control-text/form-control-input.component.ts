@@ -3,7 +3,7 @@ import {
   FormGroup,
 } from "@angular/forms";
 import {
-  InputControlStateType
+  InputControlState
 } from "../../../../../models/form/input-control-state.type";
 
 
@@ -20,7 +20,7 @@ export class FormControlInputComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  @Input() input_state!: InputControlStateType;
+  @Input() control_state!: InputControlState;
   @Input() form_group!: FormGroup;
   @Input() error_message!: string;
 

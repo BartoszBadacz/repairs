@@ -1,4 +1,10 @@
 import {FormConfigType} from "../../../../models/form/form-config.type";
+import {
+  SelectControlState
+} from "../../../../models/form/select-control-state.type";
+import {
+  InputControlState
+} from "../../../../models/form/input-control-state.type";
 
 export const repairFormConfig: FormConfigType = {
   formTitle: 'Nowa naprawa',
@@ -6,7 +12,7 @@ export const repairFormConfig: FormConfigType = {
     repairEntrySection: {
       sectionTitle: "Informacje podstawowe",
       controls: {
-        dateOfEntry: {
+        dateOfEntry: <InputControlState>{
           name: 'dateOfEntry',
           type: 'date',
           label: 'Data wprowadzenia',
@@ -15,7 +21,7 @@ export const repairFormConfig: FormConfigType = {
           required: true,
           errorMessage: 'Pole jest wymagane',
         },
-        itemRef: {
+        itemRef: <InputControlState>{
           name: 'itemRef',
           type: 'text',
           label: 'Numer REF',
@@ -24,7 +30,7 @@ export const repairFormConfig: FormConfigType = {
           placeholder: 'numer referencyjny urządzenia',
           required: true,
         },
-        itemNumber: {
+        itemNumber: <InputControlState>{
           name: 'itemNumber',
           type: 'text',
           label: 'Numer seryjny / LOT',
@@ -32,7 +38,7 @@ export const repairFormConfig: FormConfigType = {
           isDisabled: false,
           required: true,
         },
-        customerAcc: {
+        customerAcc: <InputControlState>{
           name: 'customerAcc',
           type: 'number',
           label: 'Numer konta klienta',
@@ -40,7 +46,7 @@ export const repairFormConfig: FormConfigType = {
           isDisabled: false,
           required: true,
         },
-        customerName: {
+        customerName: <InputControlState>{
           name: 'customerName',
           type: 'text',
           label: 'Nazwa Klienta',
@@ -48,22 +54,35 @@ export const repairFormConfig: FormConfigType = {
           isDisabled: false,
           required: true,
         },
-        customerDocumentNumber: {
+        customerDocumentNumber: <InputControlState>{
           name: 'customerDocumentNumber',
           type: 'text',
           label: 'Numer zgłoszenia klienta',
           autocomplete: "off",
           isDisabled: false,
         },
-        vendor: {
+        vendor: <SelectControlState>{
           name: 'vendor',
-          type: 'text',
           label: 'Dostawca',
           autocomplete: "off",
           isDisabled: false,
           required: true,
+          options: [
+            {
+              name: "Conmed Belgia",
+              id: '1'
+            },
+            {
+              name: "Optilus Polska",
+              id: '2'
+            },
+            {
+              name: "MediCapture - Holandia",
+              id: '3'
+            }
+          ]
         },
-        initialNotes: {
+        initialNotes: <InputControlState>{
           name: 'initialNotes',
           type: 'text',
           label: 'Notatki',
@@ -75,14 +94,43 @@ export const repairFormConfig: FormConfigType = {
     repairDetailsSection: {
       sectionTitle: "Informacje o urządzeniu",
       controls: {
-        repairType: {
+        repairType: <SelectControlState>{
           name: 'repairType',
-          type: 'text',
           label: 'Typ naprawy',
           autocomplete: "off",
           isDisabled: false,
+          options: [
+            {
+              name: "Naprawa płatna",
+              id: '1'
+            },
+            {
+              name: "Gwarancja - Linvatec USA",
+              id: '2'
+            },
+            {
+              name: "Gwarancja - Linvatec PL",
+              id: '3'
+            },
+            {
+              name: "Gwarancja po naprawie - Linvatec USA",
+              id: '4'
+            },
+            {
+              name: "Gwarancja po naprawie - Linvatec PL",
+              id: '5'
+            },
+            {
+              name: "Naprawa wewnętrzna - koszt Linvatec PL",
+              id: '6'
+            },
+            {
+              name: "Nie podlega naprawie",
+              id: '7'
+            },
+          ]
         },
-        notes: {
+        notes: <InputControlState>{
           name: 'notes',
           type: 'text',
           label: 'Opis uszkodzeń',
@@ -94,21 +142,21 @@ export const repairFormConfig: FormConfigType = {
     estimationDetailsSection: {
       sectionTitle: "Informacje o kosztorysie",
       controls: {
-        dateOfPriceQuotation: {
+        dateOfPriceQuotation: <InputControlState>{
           name: 'dateOfPriceQuotation',
           type: 'date',
           label: 'Data wystawienia kosztorysu',
           autocomplete: "off",
           isDisabled: false,
         },
-        priceQuotationNumber: {
+        priceQuotationNumber: <InputControlState>{
           name: 'priceQuotationNumber',
           type: 'text',
           label: 'Numer kosztorysu',
           autocomplete: "off",
           isDisabled: false,
         },
-        priceQuotationValue: {
+        priceQuotationValue: <InputControlState>{
           name: 'priceQuotationValue',
           type: 'number',
           label: 'Kwota kosztorysu',
@@ -120,28 +168,41 @@ export const repairFormConfig: FormConfigType = {
     customerDecisionSection: {
       sectionTitle: "Decyzja klienta",
       controls: {
-        dateOfDecision: {
+        dateOfDecision: <InputControlState>{
           name: 'dateOfDecision',
           type: 'date',
           label: 'Data decyzji klienta',
           autocomplete: "off",
           isDisabled: false,
         },
-        customerDecisionNumber: {
+        customerDecisionNumber: <InputControlState>{
           name: 'customerDecisionNumber',
           type: 'text',
           label: 'Numer decyzji klienta',
           autocomplete: "off",
           isDisabled: false,
         },
-        typeOfDecision: {
+        typeOfDecision: <SelectControlState>{
           name: 'typeOfDecision',
-          type: 'text',
           label: 'Rodzaj decyzji klienta',
           autocomplete: "off",
           isDisabled: false,
+          options: [
+            {
+              name: "Akceptacja",
+              id: '1'
+            },
+            {
+              name: "Odmowa",
+              id: '2'
+            },
+            {
+              name: "Brak decyzji",
+              id: '3'
+            },
+          ]
         },
-        discount: {
+        discount: <InputControlState>{
           name: 'discount',
           type: 'text',
           label: 'Rabat',
@@ -153,14 +214,14 @@ export const repairFormConfig: FormConfigType = {
     repairProgressSection: {
       sectionTitle: "Proces naprawy",
       controls: {
-        dateOfSentToRepairCenter: {
+        dateOfSentToRepairCenter: <InputControlState>{
           name: 'dateOfSentToRepairCenter',
           type: 'date',
           label: 'Data wysyłki do naprawy',
           autocomplete: "off",
           isDisabled: false,
         },
-        serviceRequestNumber: {
+        serviceRequestNumber: <InputControlState>{
           name: 'serviceRequestNumber',
           type: 'text',
           label: 'Numer zgłoszenia serwisowego',
@@ -172,14 +233,14 @@ export const repairFormConfig: FormConfigType = {
     repairReturnFromRepairCenterSection: {
       sectionTitle: 'Zwrot z Serwisu',
       controls: {
-        dateOfReturnFromRepairCenter: {
+        dateOfReturnFromRepairCenter: <InputControlState>{
           name: 'dateOfReturnFromRepairCenter',
           type: 'date',
           label: 'Data powrotu z serwisu',
           autocomplete: "off",
           isDisabled: false,
         },
-        costOfRepair: {
+        costOfRepair: <InputControlState>{
           name: 'costOfRepair',
           type: 'number',
           label: 'Koszt naprawy',
@@ -191,35 +252,35 @@ export const repairFormConfig: FormConfigType = {
     repairReturnSection: {
       sectionTitle: "Zwrot do klienta",
       controls: {
-        invoiceValue: {
+        invoiceValue: <InputControlState>{
           name: 'invoiceValue',
           type: 'number',
           label: 'Wartość fakturowana',
           autocomplete: "off",
           isDisabled: false,
         },
-        invoiceSystemOrderNumber: {
+        invoiceSystemOrderNumber: <InputControlState>{
           name: 'invoiceSystemOrderNumber',
           type: 'number',
           label: 'Numer zamówienia Oracle',
           autocomplete: "off",
           isDisabled: false,
         },
-        invoiceNumber: {
+        invoiceNumber: <InputControlState>{
           name: 'invoiceNumber',
           type: 'number',
           label: 'Numer faktury',
           autocomplete: "off",
           isDisabled: false,
         },
-        returnDocNumber: {
+        returnDocNumber: <InputControlState>{
           name: 'returnDocNumber',
           type: 'text',
           label: 'Numer WZ',
           autocomplete: "off",
           isDisabled: false,
         },
-        dateOfClosureDate: {
+        dateOfClosureDate: <InputControlState>{
           name: 'dateOfClosureDate',
           type: 'date',
           label: 'Data odesłania do klienta',
