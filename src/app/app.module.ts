@@ -67,6 +67,7 @@ import { RepairFormEstimationDetailsSectionComponent } from './components/organi
 import { FormSectionComponent } from './components/molecules/form-molecules/form-related-components/form-section/form-section.component';
 import { CustomerDecisionSectionComponent } from './components/organisms/forms/repair-form/repair-form-customer-decision-section/customer-decision-section.component';
 import { RepairFormReturnFromRepairCenterSectionComponent } from './components/organisms/forms/repair-form/repair-form-return-from-repair-center-section/repair-form-return-from-repair-center-section.component';
+import { SvgIconComponent } from './components/atoms/svg-icon/svg-icon.component';
 
 @NgModule({
   declarations: [
@@ -97,6 +98,7 @@ import { RepairFormReturnFromRepairCenterSectionComponent } from './components/o
     FormSectionComponent,
     CustomerDecisionSectionComponent,
     RepairFormReturnFromRepairCenterSectionComponent,
+    SvgIconComponent,
   ],
   imports: [
     BrowserModule,

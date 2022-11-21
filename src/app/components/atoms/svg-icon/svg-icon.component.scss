@@ -1,0 +1,21 @@
+:host {
+
+  --icon-color: red;
+  margin-top: 10em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .figure {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+
+    .line {
+      transition: stroke-dashoffset 1s;
+    }
+  }
+  .figure:hover .line {
+    stroke-dashoffset: 79.99999 ;
+  }
+}
