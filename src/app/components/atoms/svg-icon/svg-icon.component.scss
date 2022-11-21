@@ -1,21 +1,89 @@
 :host {
-
-  --icon-color: red;
+  --icon-color: black;
+  --rotation: 45deg;
   margin-top: 10em;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 1em;
 
-  .figure {
+  .figure-one {
     width: 100px;
     height: 100px;
     border: 1px solid black;
 
-    .line {
-      transition: stroke-dashoffset 1s;
+    .line-top {
+      --rotation: -45deg;
+      animation: state-hover-off 1s forwards;
+      transform-origin: center;
+    }
+
+    .line-bottom {
+      --rotation: 45deg;
+      animation: state-hover-off 1s forwards;
+      transform-origin: 65px 45px;
+    }
+
+  }
+
+  .figure-one:hover .line-top {
+    animation: state-hover-on 1s forwards;
+  }
+
+  .figure-one:hover .line-bottom {
+    animation: state-hover-on 1s forwards;
+  }
+
+  @keyframes state-hover-off {
+    0% {
+      stroke-dashoffset: -79.9
+    }
+    100% {
+      stroke-dashoffset: 0;
     }
   }
-  .figure:hover .line {
-    stroke-dashoffset: 79.99999 ;
+
+  @keyframes state-hover-on {
+    0% {
+      stroke-dashoffset: 0;
+    }
+    40% {
+      rotate: var(--rotation);
+      stroke-dashoffset: -79.9;
+    }
+    100% {
+      stroke-dashoffset: 0;
+      rotate: var(--rotation);
+    }
+  }
+
+
+  .figure-two {
+
+    --icon-color: red;
+    width: 100px;
+    height: 100px;
+    border: 6px solid black;
+
+    .path {
+      stroke-width: 6px;
+      stroke-dasharray: 45 1000 ;
+      stroke-linecap: round;
+    }
+  }
+  .figure-two:hover .path {
+    transition: 2s;
+    stroke-dasharray: 0 0 90 190;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
